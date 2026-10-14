@@ -117,14 +117,14 @@ zoneless (без zone.js), строгий TypeScript и строгие шабл�
 `consent`, `support`, `delete-account`, `contact`, `404`, `**` → страница 404. На выходе:
 `dist/.../browser/` — английская версия в корне, `ru/` и `es/` рядом, у каждой страницы `<route>/index.html`.
 Пост-сборочный шаг (Nx-таргет): скопировать `404/index.html` английской версии в корень как `404.html`
-(GitHub Pages отдаёт только его), положить `.nojekyll` и `CNAME` (`mantikai.com`). `<html lang>` у каждой
+(GitHub Pages отдаёт только его). `.nojekyll` и `CNAME` не нужны: деплой через Actions без Jekyll, домен — в настройках Pages. `<html lang>` у каждой
 локали свой. Переключение языка — обычные `<a href>` на тот же путь в другой локали (это другая сборка,
 полная загрузка страницы). Таргет `serve-static`: раздать собранную папку через `http-server` (он отдаёт
 `404.html` как GitHub Pages) — по нему гоняется e2e. Первый e2e — контрактный: все шесть адресов приложения
 (`/privacy`, `/terms`, `/ru/privacy`, `/ru/terms`, `/es/privacy`, `/es/terms`) отдают 200 и содержат `<h1>`;
 главная каждой локали отдаёт 200 с правильным `lang`; несуществующий адрес отдаёт 404-страницу.
 
-**1.3. CI и деплой.** Проверки на PR сделаны раньше 1.2 (`.github/workflows/ci.yml`), деплой — после 1.2. GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
+**1.3. CI и деплой.** ✅ Выполнено раньше 1.2 (`.github/workflows/ci.yml`): проверки на PR, деплой заглушки на push в `main`. GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
 на push в `main` — полная сборка, e2e, затем `actions/upload-pages-artifact` + `actions/deploy-pages`
 (окружение `github-pages`, права `pages: write`, `id-token: write`). Concurrency: отменять устаревший деплой.
 Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. Готово, когда пустой сайт открывается на `mantikai.com`.

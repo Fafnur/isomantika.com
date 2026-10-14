@@ -1,0 +1,103 @@
+{
+  "name": "site",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "mk",
+  "sourceRoot": "apps/site/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/site",
+        "browser": "apps/site/src/main.ts",
+        "tsConfig": "apps/site/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/site/public"
+          }
+        ],
+        "styles": ["apps/site/src/styles.scss"],
+        "server": "apps/site/src/main.server.ts",
+        "outputMode": "static",
+        "polyfills": [
+          "core-js/stable/array/at",
+          "core-js/stable/array/find-last",
+          "core-js/stable/array/find-last-index",
+          "core-js/stable/array/flat",
+          "core-js/stable/array/flat-map",
+          "core-js/stable/global-this",
+          "core-js/stable/object/from-entries",
+          "core-js/stable/object/has-own",
+          "core-js/stable/promise/all-settled",
+          "core-js/stable/promise/any",
+          "core-js/stable/queue-microtask",
+          "core-js/stable/string/at",
+          "core-js/stable/string/match-all",
+          "core-js/stable/string/replace-all"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      }
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@angular/build:dev-server",
+      "defaultConfiguration": "development",
+      "configurations": {
+        "production": {
+          "buildTarget": "site:build:production"
+        },
+        "development": {
+          "buildTarget": "site:build:development"
+        }
+      }
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore",
+        "{workspaceRoot}/eslint.config.mjs",
+        "{workspaceRoot}/tools/eslint-rules/**/*",
+        {
+          "externalDependencies": ["eslint"]
+        }
+      ]
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "watch": false
+      }
+    },
+    "serve-static": {
+      "continuous": true,
+      "dependsOn": ["build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "http-server dist/apps/site/browser -p 4200 -c-1 --silent"
+      }
+    }
+  }
+}

@@ -47,3 +47,14 @@ Thumbs.db
 .angular
 vitest.config.*.timestamp*
 .vitest
+
+__screenshots__/
+
+# Yarn (Berry, nodeLinker: node-modules)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

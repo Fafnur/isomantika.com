@@ -9,8 +9,11 @@
 - **Перед выполнением любой задачи — grill me.** Сначала расспроси владельца о неочевидных решениях
   (поведение, UX, тексты, крайние случаи), предложи свои варианты с рекомендацией; код — только после ответов.
   Принятые решения — в `docs/decisions.md`.
+- **Каждая задача — в отдельной ветке** от свежего `main`: `feature/<номер>-<кратко>` (например,
+  `feature/1.2-ssg-i18n`), исправления — `fix/<кратко>`. В `main` — только через PR после зелёного CI;
+  в `main` напрямую не коммитим.
 - **Nx — только через генераторы.** Приложения, библиотеки, компоненты, сервисы и прочие сущности Nx
-  создаются консольными командами Nx (`npx nx g @nx/angular:library …`, `npx nx g @nx/angular:component …`
+  создаются консольными командами Nx (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`
   и т. п.), а не руками: так корректно появляются `project.json`, пути в `tsconfig.base.json`, теги и таргеты.
   Перед запуском — `--dry-run`, чтобы проверить, что и куда будет создано.
 - **Все библиотеки — в `libs/`** (например, `libs/ui`, `libs/content`, `libs/analytics`), приложения — в `apps/`.
@@ -29,10 +32,18 @@
 - **Рендеринг:** SSG — `outputMode: "static"`, все серверные роуты `RenderMode.Prerender`. Гидрация включена.
 - **Языки:** встроенный i18n Angular (`@angular/localize`, XLF). `en` — исходный, в корне (`subPath: ""`);
   `ru` → `/ru/`, `es` → `/es/`. Без автоперенаправления по языку браузера.
-- **Тесты:** Vitest — юнит, Playwright — e2e по собранной статике.
-- **Стили:** Tailwind CSS v4. Токены приложения — в `@theme` глобального `styles.css`; классы — в шаблонах и
-  `host: { class: '…' }`. У компонентов нет своих файлов стилей. SCSS не подключаем, пока не понадобится
-  то, что не решается утилитами (Tailwind v4 несовместим с препроцессорами: Sass — только без директив Tailwind).
+- **Пакетный менеджер:** Yarn 4 (Corepack, `nodeLinker: node-modules`), npm не используем.
+- **Тесты:** Vitest через `@angular/build:unit-test` — юнит, Playwright (Chromium desktop + mobile) — e2e по
+  собранной статике.
+- **Браузеры:** сайт работает в старых браузерах (`.browserslistrc`: Chrome > 63, Firefox > 66, последние
+  Safari/iOS и т. д.). Синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в
+  `polyfills` (`apps/site/project.json`). Предупреждение Angular о неподдерживаемых браузерах — ожидаемое.
+- **Стили:** Tailwind CSS 3.4 (v4 не работает в старых браузерах: `@layer`, `@property`, `color-mix()`).
+  Конфиг — `apps/site/tailwind.config.js` (Angular подхватывает сам), токены приложения — в `theme.extend`;
+  глобальный `styles.scss`. Классы — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов
+  стилей. Прозрачность — модификаторами (`bg-gold/50`), утилиты `*-opacity-*` выключены.
+- **Линт и формат:** ESLint (общий конфиг в корне, строгие правила — см. `docs/decisions.md`), Prettier
+  (`printWidth: 140`).
 - **Компоненты:** Angular CDK — только если понадобится сложное поведение (оверлей, фокус-ловушка, a11y).
 - **Формы:** Angular Signal Forms для всех форм.
 - **Дизайн:** как в приложении — тёмная тема, палитра и шрифты из приложения (ниже), знак `mark.svg`.
@@ -90,10 +101,10 @@
 
 ## Этап 1. Каркас
 
-**1.1. Рабочее пространство.** Создай Nx-воркспейс с Angular-приложением `apps/site` и Playwright-проектом
+**1.1. Рабочее пространство.** ✅ Выполнено (см. `docs/progress.md`, `docs/decisions.md`). Создай Nx-воркспейс с Angular-приложением `apps/site` и Playwright-проектом
 `apps/site-e2e`: сборщик `@angular/build` (esbuild), юнит-тесты Vitest, ESLint + Prettier, standalone,
 zoneless (без zone.js), строгий TypeScript и строгие шаблоны, `changeDetection: OnPush` по умолчанию в генераторах.
-Подключи Tailwind v4 через PostCSS (глобальный `styles.css`, без токенов — они в 2.1). Создай `CLAUDE.md`
+Подключи Tailwind 3.4 (глобальный `styles.scss`, без токенов — они в 2.1) и полифилы core-js. Создай `CLAUDE.md`
 (что это за проект, команды; правила из раздела «Правила работы» этого плана — grill me перед задачей, Nx только
 через генераторы, библиотеки в `libs/`; сигналы везде, классы Tailwind в шаблонах и `host`, без файлов стилей у
 компонентов, Signal Forms для форм; отступления от плана — в `docs/decisions.md`) и `docs/progress.md`, `docs/decisions.md`; этот план — `docs/plan.md`.
@@ -115,16 +126,18 @@ zoneless (без zone.js), строгий TypeScript и строгие шабл�
 **1.3. CI и деплой.** GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
 на push в `main` — полная сборка, e2e, затем `actions/upload-pages-artifact` + `actions/deploy-pages`
 (окружение `github-pages`, права `pages: write`, `id-token: write`). Concurrency: отменять устаревший деплой.
-Node — LTS, кэш npm и Nx. Готово, когда пустой сайт открывается на `mantikai.com`.
+Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. Готово, когда пустой сайт открывается на `mantikai.com`.
 
 ## Этап 2. Дизайн и оболочка
 
-**2.1. Токены и типографика.** В `styles.css` — `@theme` с цветами, радиусами и шрифтами из таблицы выше
-(имена: `--color-background`, `--color-surface`, `--color-gold`, …; `--font-display`, `--font-text`).
+**2.1. Токены и типографика.** В `apps/site/tailwind.config.js` (`theme.extend`) — цвета, радиусы и шрифты из
+таблицы выше (имена: `background`, `surface`, `gold`, … → классы `bg-surface`, `text-gold`; шрифты `display`,
+`text` → `font-display`, `font-text`).
 Шрифты — пакеты `@fontsource` (Cormorant Garamond: 500, 600, 700, 500-italic; Manrope variable или 400–700),
 подмножества latin + cyrillic, `font-display: swap`, preload основного начертания. Базовые стили: фон
 `background`, текст `text-primary` Manrope 500, заголовки Cormorant 700 с увеличенными размерами, ссылки
-`gold`, видимый `:focus-visible`. `@tailwindcss/typography`: тема `prose` под палитру (для юридических
+`gold`, видимый `:focus-visible` (базовые стили — в `@layer base` `styles.scss`). `@tailwindcss/typography`
+(версия для Tailwind 3): тема `prose` под палитру (для юридических
 текстов). Скопируй из приложения `assets/branding/mark.svg` → фавикон (SVG + PNG 32/180/192/512),
 `site.webmanifest`, `theme-color`. Готово, когда есть страница-витрина `/_styleguide` (только в dev, не
 пререндерится) с цветами, шрифтами, кнопками.

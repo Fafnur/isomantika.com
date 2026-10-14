@@ -123,7 +123,7 @@ zoneless (без zone.js), строгий TypeScript и строгие шабл�
 (`/privacy`, `/terms`, `/ru/privacy`, `/ru/terms`, `/es/privacy`, `/es/terms`) отдают 200 и содержат `<h1>`;
 главная каждой локали отдаёт 200 с правильным `lang`; несуществующий адрес отдаёт 404-страницу.
 
-**1.3. CI и деплой.** GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
+**1.3. CI и деплой.** Проверки на PR сделаны раньше 1.2 (`.github/workflows/ci.yml`), деплой — после 1.2. GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
 на push в `main` — полная сборка, e2e, затем `actions/upload-pages-artifact` + `actions/deploy-pages`
 (окружение `github-pages`, права `pages: write`, `id-token: write`). Concurrency: отменять устаревший деплой.
 Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. Готово, когда пустой сайт открывается на `mantikai.com`.

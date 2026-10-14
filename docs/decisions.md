@@ -45,3 +45,12 @@
 - **Настройки репозитория GitHub:** разрешён только «Rebase and merge», ветки удаляются после мёржа. Ruleset `main`:
   только через PR (без обязательного ревью), обязательная проверка `Lint, test, build, e2e` на свежем `main`,
   линейная история, запрет force push и удаления. Раннер CI — `ubuntu-latest`.
+
+## 2026-10-14 — деплой (1.3, часть 2)
+
+- **Деплой заглушки до 1.2:** Pages успели включиться в режиме «Deploy from branch» и опубликовали README через
+  Jekyll; чтобы его не проиндексировали, деплой из Actions сделан сразу. `noindex` на заглушку не ставим.
+- **Pages — источник «GitHub Actions»** (`build_type: workflow`), домен `mantikai.com` — в настройках Pages.
+  Файлы `CNAME` и `.nojekyll` не кладём: при деплое артефакта через Actions они не нужны. В режиме «Deploy from
+  branch» GitHub коммитил бы `CNAME` в `main`, что запрещено ruleset.
+- **DNS** — у reg.ru (NS не меняли): A/AAAA на адреса GitHub Pages, `www` → CNAME `fafnur.github.io`.

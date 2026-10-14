@@ -73,6 +73,12 @@ jobs:
         if: github.event_name == 'push'
         run: yarn nx run-many -t lint test build e2e
 
+      - name: Upload site for GitHub Pages
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist/apps/site/browser
+
       - name: Upload Playwright report
         if: failure()
         uses: actions/upload-artifact@v7
@@ -80,3 +86,19 @@ jobs:
           name: playwright-report
           path: dist/.playwright
           retention-days: 7
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push'
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

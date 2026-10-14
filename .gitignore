@@ -43,6 +43,7 @@ Thumbs.db
 .nx/migrate-runs
 .claude/worktrees
 .claude/settings.local.json
+.claude/projects
 
 .angular
 vitest.config.*.timestamp*
@@ -58,3 +59,13 @@ __screenshots__/
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Custom
+package-lock.json
+/mocks/tmp
+junit.xml
+/junit
+*.patch
+
+# Apps generated files
+/apps/**/source.xlf

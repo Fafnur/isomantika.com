@@ -37,7 +37,9 @@ yarn nx run-many -t lint test build e2e
 - `.claude/skills/angular-developer` — официальный скилл Angular (`angular/skills`): справочник по сигналам,
   Signal Forms, роутингу, SSR/пререндеру, ARIA, тестам. Обновление: `npx skills update -p`; версия
   зафиксирована в `skills-lock.json`. Файлы скилла руками не править.
-- Где скилл расходится с правилами ниже — побеждают правила этого файла: вместо `ng generate`/`ng build` —
+- `.claude/skills/update-vendors` — свой скилл обновления зависимостей («обнови вендоры»): `nx migrate`, `ncu` с
+  исключениями (Tailwind 3, vitest по peer `@angular/build`), проверки старых браузеров, PR в `main`.
+- Где скилл Angular расходится с правилами ниже — побеждают правила этого файла: вместо `ng generate`/`ng build` —
   генераторы и таргеты Nx (`yarn nx g …`, `yarn nx build site`), стили — Tailwind в шаблонах без файлов
   стилей у компонентов.
 

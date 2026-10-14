@@ -41,3 +41,4 @@
 - **Node 24** зафиксирован в `.nvmrc` (CI и локально), не `lts/*`: с Node 25 Corepack не входит в поставку Node,
   а Yarn 4 ставится через него.
 - **`dependencies` / `devDependencies`** — разделение оставляем: в `dependencies` то, что попадает в бандл.
+- **Линейная история git:** ветки ребейзим на `main`, PR мёржим через «Rebase and merge».

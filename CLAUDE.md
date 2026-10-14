@@ -6,7 +6,8 @@
 ## Стек
 
 - Nx-монорепа, Yarn 4 (`nodeLinker: node-modules`). Только `yarn`, не `npm`.
-- Angular 22: standalone, zoneless, `OnPush`, гидрация. Сборщик `@angular/build` (esbuild).
+- Angular 22: standalone, zoneless, гидрация. `OnPush` — по умолчанию в Angular 22: `changeDetection` в компонентах
+  не пишем; `Eager` (бывший `Default`) — только с обоснованием в `docs/decisions.md`. Сборщик `@angular/build` (esbuild).
 - SSG: `outputMode: "static"`, все серверные роуты `RenderMode.Prerender`. Express/Node-сервера нет.
 - Стили: глобальный `apps/site/src/styles.scss`, **Tailwind 3.4** (`apps/site/tailwind.config.js`, Angular
   подхватывает его сам). Не v4: сайт должен работать в старых браузерах из `.browserslistrc`. Токены — в

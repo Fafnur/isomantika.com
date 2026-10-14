@@ -79,3 +79,7 @@
 - **Переводы ru/es пишет агент** в `messages.{ru,es}.xlf`; `messages.xlf` (результат `extract-i18n`) коммитим —
   по его диффу видно, какие строки добавились или изменились.
 - `index.csr.html` в выходе — CSR-фолбэк Angular для непререндеренных путей; не мешает, не трогаем.
+- **`OnPush` — по умолчанию в Angular 22**, `changeDetection` в компонентах не пишем. Проверено: в рантайме
+  `onPush = changeDetection !== Eager`, компилятор подставляет `OnPush`; у скомпилированного компонента без
+  `changeDetection` `ɵcmp.onPush === true`, у явного `Eager` — `false`. `Default` переименован в `Eager`.
+  Настройка `changeDetection: OnPush` в `nx.json` оставлена — генератор и так не пишет его в код.

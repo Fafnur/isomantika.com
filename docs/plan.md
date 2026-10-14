@@ -30,7 +30,8 @@
 
 - **Репозиторий:** публичный `mantikai.com` на GitHub. Никаких секретов в репозитории; ID счётчиков, адрес и
   publishable-ключ Supabase публичны по своей природе и лежат в конфиге.
-- **Стек:** Angular 22 в Nx-монорепе (`apps/site`, `apps/site-e2e`, библиотеки — в `libs/`), standalone, zoneless, `OnPush`,
+- **Стек:** Angular 22 в Nx-монорепе (`apps/site`, `apps/site-e2e`, библиотеки — в `libs/`), standalone, zoneless, `OnPush` (в Angular 22 —
+  по умолчанию, `changeDetection` не пишем),
   сигналы везде (`signal`, `computed`, `input()`, `output()`, `viewChild()`; без `@Input`/`@Output`/RxJS там,
   где хватает сигналов). Перед использованием API сверяться с актуальной документацией angular.dev и nx.dev.
 - **Рендеринг:** SSG — `outputMode: "static"`, все серверные роуты `RenderMode.Prerender`. Гидрация включена.

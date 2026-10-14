@@ -17,6 +17,13 @@
 - Тесты: Vitest через `@angular/build:unit-test`; e2e — Playwright по собранной статике (`site:serve-static`
   на `http-server`), Chromium desktop + mobile.
 
+## Переводы
+
+- Строки в шаблонах — `i18n="Meaning|Description"`, в коде — `$localize`, без `@@id`.
+- После изменения строк: `yarn nx extract-i18n site` → в `apps/site/src/locale/messages.{ru,es}.xlf` добавить или
+  обновить `<target>` для новых и изменённых `trans-unit`. Без перевода сборка падает (`i18nMissingTranslation: error`).
+- Адреса — со слешем на конце (`/privacy/`, `/ru/support/`).
+
 ## Проекты
 
 - `apps/site` — сайт (префикс селекторов `mk`).
@@ -27,7 +34,8 @@
 
 ```sh
 yarn nx serve site
-yarn nx build site
+yarn nx build site            # все локали + 404.html
+yarn nx extract-i18n site
 yarn nx serve-static site
 yarn nx run-many -t lint test build e2e
 ```

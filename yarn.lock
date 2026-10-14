@@ -408,6 +408,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/localize@npm:~22.1.0":
+  version: 22.1.8
+  resolution: "@angular/localize@npm:22.1.8"
+  dependencies:
+    "@babel/core": "npm:8.0.1"
+    tinyglobby: "npm:^0.2.12"
+    yargs: "npm:^18.0.0"
+  peerDependencies:
+    "@angular/compiler": 22.1.8
+    "@angular/compiler-cli": 22.1.8
+  bin:
+    localize-extract: tools/bundles/src/extract/cli.js
+    localize-migrate: tools/bundles/src/migrate/cli.js
+    localize-translate: tools/bundles/src/translate/cli.js
+  checksum: 10c0/66940f1b3e70b91965a614148d2f302cde3492febd267474b6ec8412164d5312b10d238548ebda607c97ffd48a190c90697a661949c88ff091e6bb68aa55c849
+  languageName: node
+  linkType: hard
+
 "@angular/platform-browser@npm:~22.1.0":
   version: 22.1.8
   resolution: "@angular/platform-browser@npm:22.1.8"
@@ -2863,6 +2881,7 @@ __metadata:
     "@angular/core": "npm:~22.1.0"
     "@angular/forms": "npm:~22.1.0"
     "@angular/language-service": "npm:~22.1.0"
+    "@angular/localize": "npm:~22.1.0"
     "@angular/platform-browser": "npm:~22.1.0"
     "@angular/platform-server": "npm:~22.1.0"
     "@angular/router": "npm:~22.1.0"

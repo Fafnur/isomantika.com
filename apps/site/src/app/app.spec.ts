@@ -1,20 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 
 import { App } from './app';
+import { appRoutes } from './app.routes';
 
 describe('App', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [App],
-      providers: [provideRouter([])],
-    }).compileComponents();
+      providers: [provideRouter(appRoutes)],
+    });
   });
 
-  it('should render title', async () => {
-    const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Mantikai');
+  it('should render the home page', async () => {
+    const harness = await RouterTestingHarness.create('/');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Mantikai');
+  });
+
+  it('should render the not found page for unknown routes', async () => {
+    const harness = await RouterTestingHarness.create('/unknown');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Page not found');
   });
 });

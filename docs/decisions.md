@@ -34,3 +34,11 @@
   типизированного линта: RxJS почти не используется, а типизированный линт заметно медленнее.
 - **Скилл `angular-developer`** (`angular/skills`) установлен в `.claude/skills` через `npx skills add … --copy`,
   версия — в `skills-lock.json`. Скилл `angular-new-app` не ставили: приложение уже создано.
+
+## 2026-10-14 — CI (1.3, часть 1)
+
+- **Проверки на PR — до 1.2**, деплой — после 1.2: деплою нужны `404.html`, `.nojekyll`, `CNAME` и настройка Pages.
+- **Node 24** зафиксирован в `.nvmrc` (CI и локально), не `lts/*`: с Node 25 Corepack не входит в поставку Node,
+  а Yarn 4 ставится через него.
+- **`dependencies` / `devDependencies`** — разделение оставляем: в `dependencies` то, что попадает в бандл.
+- **Линейная история git:** ветки ребейзим на `main`, PR мёржим через «Rebase and merge».

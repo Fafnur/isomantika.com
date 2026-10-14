@@ -8,7 +8,7 @@
 
 ## Требования
 
-- Node.js ≥ 22
+- Node.js 24 (`.nvmrc`)
 - Yarn 4 через Corepack: `corepack enable`
 
 ## Команды

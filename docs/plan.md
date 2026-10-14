@@ -11,7 +11,8 @@
   Принятые решения — в `docs/decisions.md`.
 - **Каждая задача — в отдельной ветке** от свежего `main`: `feature/<номер>-<кратко>` (например,
   `feature/1.2-ssg-i18n`), исправления — `fix/<кратко>`. В `main` — только через PR после зелёного CI;
-  в `main` напрямую не коммитим.
+  в `main` напрямую не коммитим. История линейная: перед мёржем ветку ребейзим на свежий `main`
+  (`git rebase main`, `git push --force-with-lease`), мёржим через «Rebase and merge», без merge-коммитов.
 - **Nx — только через генераторы.** Приложения, библиотеки, компоненты, сервисы и прочие сущности Nx
   создаются консольными командами Nx (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`
   и т. п.), а не руками: так корректно появляются `project.json`, пути в `tsconfig.base.json`, теги и таргеты.
@@ -123,7 +124,7 @@ zoneless (без zone.js), строгий TypeScript и строгие шабл�
 (`/privacy`, `/terms`, `/ru/privacy`, `/ru/terms`, `/es/privacy`, `/es/terms`) отдают 200 и содержат `<h1>`;
 главная каждой локали отдаёт 200 с правильным `lang`; несуществующий адрес отдаёт 404-страницу.
 
-**1.3. CI и деплой.** GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
+**1.3. CI и деплой.** Проверки на PR сделаны раньше 1.2 (`.github/workflows/ci.yml`), деплой — после 1.2. GitHub Actions: на PR — `nx affected -t lint test build e2e` (Playwright с кэшем браузеров);
 на push в `main` — полная сборка, e2e, затем `actions/upload-pages-artifact` + `actions/deploy-pages`
 (окружение `github-pages`, права `pages: write`, `id-token: write`). Concurrency: отменять устаревший деплой.
 Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. Готово, когда пустой сайт открывается на `mantikai.com`.

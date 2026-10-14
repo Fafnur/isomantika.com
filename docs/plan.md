@@ -114,7 +114,7 @@ zoneless (без zone.js), строгий TypeScript и строгие шабл�
 компонентов, Signal Forms для форм; отступления от плана — в `docs/decisions.md`) и `docs/progress.md`, `docs/decisions.md`; этот план — `docs/plan.md`.
 Готово, когда `nx lint`, `nx test`, `nx build` проходят на пустом приложении.
 
-**1.2. SSG и языки.** Настрой `@angular/localize`: `sourceLocale: "en"` с `subPath: ""`, локали `ru`, `es`
+**1.2. SSG и языки.** ✅ Выполнено. Настрой `@angular/localize`: `sourceLocale: "en"` с `subPath: ""`, локали `ru`, `es`
 (файлы `apps/site/src/locale/messages.{ru,es}.xlf`), `localize: true`, `outputMode: "static"`, серверные роуты
 (`app.routes.server.ts`) — все `RenderMode.Prerender`. Роуты-заглушки: `''` (главная), `privacy`, `terms`,
 `consent`, `support`, `delete-account`, `contact`, `404`, `**` → страница 404. На выходе:
@@ -161,7 +161,7 @@ Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. �
 сайта — ненавязчивая плашка «Эта страница есть на русском» со ссылкой и крестиком (выбор помнится в
 `localStorage`, обёрнут в try/catch; на сервере не рендерится). Сервис метаданных: `title`, `description`
 (переводимые), `canonical`, `hreflang` для всех трёх локалей + `x-default` → en, Open Graph и Twitter Card.
-Все строки интерфейса — через `i18n`/`$localize` с осмысленными ID; переводы ru и es — в XLF.
+Все строки интерфейса — через `i18n`/`$localize` с `meaning|description` (ID генерирует Angular); переводы ru и es — в XLF.
 
 ## Этап 3. Контент
 

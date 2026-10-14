@@ -6,7 +6,7 @@
   "sourceRoot": "apps/site/src",
   "tags": [],
   "targets": {
-    "build": {
+    "build-angular": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
@@ -38,8 +38,11 @@
           "core-js/stable/queue-microtask",
           "core-js/stable/string/at",
           "core-js/stable/string/match-all",
-          "core-js/stable/string/replace-all"
-        ]
+          "core-js/stable/string/replace-all",
+          "@angular/localize/init"
+        ],
+        "localize": true,
+        "i18nMissingTranslation": "error"
       },
       "configurations": {
         "production": {
@@ -55,8 +58,19 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "localize": ["en"]
         }
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build-angular"],
+      "cache": true,
+      "inputs": ["production", "^production"],
+      "outputs": ["{workspaceRoot}/dist/apps/site/browser/404.html"],
+      "options": {
+        "command": "node -e \"require('node:fs').copyFileSync('dist/apps/site/browser/404/index.html', 'dist/apps/site/browser/404.html')\""
       }
     },
     "serve": {
@@ -65,10 +79,10 @@
       "defaultConfiguration": "development",
       "configurations": {
         "production": {
-          "buildTarget": "site:build:production"
+          "buildTarget": "site:build-angular:production"
         },
         "development": {
-          "buildTarget": "site:build:development"
+          "buildTarget": "site:build-angular:development"
         }
       }
     },
@@ -88,7 +102,8 @@
     "test": {
       "executor": "@angular/build:unit-test",
       "options": {
-        "watch": false
+        "watch": false,
+        "buildTarget": "site:build-angular:development"
       }
     },
     "serve-static": {
@@ -97,6 +112,30 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "http-server dist/apps/site/browser -p 4200 -c-1 --silent"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular/build:extract-i18n",
+      "options": {
+        "buildTarget": "site:build-angular",
+        "format": "xlf",
+        "outputPath": "apps/site/src/locale"
+      }
+    }
+  },
+  "i18n": {
+    "sourceLocale": {
+      "code": "en",
+      "subPath": ""
+    },
+    "locales": {
+      "ru": {
+        "translation": "apps/site/src/locale/messages.ru.xlf",
+        "subPath": "ru"
+      },
+      "es": {
+        "translation": "apps/site/src/locale/messages.es.xlf",
+        "subPath": "es"
       }
     }
   }

@@ -244,4 +244,3 @@ libs/home/page --name=home/page`.
   история прямая, `main` merge-коммитом не загрязняется.
 - **Настройки GitHub:** разрешён только «Create a merge commit» (заголовок — «Merge pull request #N …», текст —
   заголовок PR). В ruleset `main` снято правило линейной истории, метод мёржа — `merge`; остальное без изменений.
-

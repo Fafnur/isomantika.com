@@ -11,7 +11,12 @@
 - SSG: `outputMode: "static"`, все серверные роуты `RenderMode.Prerender`. Express/Node-сервера нет.
 - Стили: глобальный `apps/site/src/styles.scss`, **Tailwind 3.4** (`apps/site/tailwind.config.js`, Angular
   подхватывает его сам). Не v4: сайт должен работать в старых браузерах из `.browserslistrc`. Токены — в
-  `theme.extend` конфига. Модификаторы прозрачности (`bg-gold/50`) — да, утилиты `bg-opacity-*` выключены.
+  `theme.extend` конфига (`bg-surface`, `text-gold`, `font-display`, `font-text`). Радиусы 8/16/24/pill — штатные
+  `rounded-lg`/`-2xl`/`-3xl`/`-full`. Модификаторы прозрачности (`bg-gold/50`) — да, утилиты `bg-opacity-*` выключены.
+- Шрифты: Cormorant Garamond (заголовки, `font-display`) и Manrope variable (текст, `font-text`, основной вес 500) —
+  файлы `@fontsource` копируются в `/fonts/` (`assets`), `@font-face` — в `styles.scss`. У Manrope нет курсива:
+  выделение в тексте — толщиной (`font-semibold`), курсив — только у Cormorant.
+- Юридические тексты — `prose` (`@tailwindcss/typography`, `target: 'legacy'`, тема под палитру в конфиге).
 - Старые браузеры: синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в
   `polyfills` (`apps/site/project.json`). Новый API в коде или в бандле Angular — добавить модуль туда.
   `.ts`-файл в `polyfills` не класть: Angular тогда считает приложение zone-based и ломает пререндер.

@@ -1,16 +1,16 @@
 import { Route } from '@angular/router';
 
-export const appRoutes: Route[] = [
-  { path: '', pathMatch: 'full', loadComponent: () => import('./pages/home/home-page').then((m) => m.HomePage) },
-  { path: 'privacy', loadComponent: () => import('./pages/privacy/privacy-page').then((m) => m.PrivacyPage) },
-  { path: 'terms', loadComponent: () => import('./pages/terms/terms-page').then((m) => m.TermsPage) },
-  { path: 'consent', loadComponent: () => import('./pages/consent/consent-page').then((m) => m.ConsentPage) },
-  { path: 'support', loadComponent: () => import('./pages/support/support-page').then((m) => m.SupportPage) },
-  {
-    path: 'delete-account',
-    loadComponent: () => import('./pages/delete-account/delete-account-page').then((m) => m.DeleteAccountPage),
-  },
-  { path: 'contact', loadComponent: () => import('./pages/contact/contact-page').then((m) => m.ContactPage) },
-  { path: '404', loadComponent: () => import('./pages/not-found/not-found-page').then((m) => m.NotFoundPage) },
-  { path: '**', loadComponent: () => import('./pages/not-found/not-found-page').then((m) => m.NotFoundPage) },
-];
+import { PATHS, toRoutes } from '@mantikai/core';
+
+export const appRoutes: Route[] = toRoutes([
+  { path: PATHS.home, pathMatch: 'full', loadComponent: () => import('@mantikai/home/page') },
+  { path: PATHS.privacy, loadComponent: () => import('@mantikai/privacy/page') },
+  { path: PATHS.terms, loadComponent: () => import('@mantikai/terms/page') },
+  { path: PATHS.consent, loadComponent: () => import('@mantikai/consent/page') },
+  { path: PATHS.support, loadComponent: () => import('@mantikai/support/page') },
+  { path: PATHS.deleteAccount, loadComponent: () => import('@mantikai/delete-account/page') },
+  { path: PATHS.contact, loadComponent: () => import('@mantikai/contact/page') },
+  { path: PATHS.notFound, loadComponent: () => import('@mantikai/not-found/page') },
+  // Must be the last one.
+  { path: PATHS.any, loadComponent: () => import('@mantikai/not-found/page') },
+]);

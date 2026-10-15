@@ -15,7 +15,8 @@
 - Старые браузеры: синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в
   `polyfills` (`apps/site/project.json`). Новый API в коде или в бандле Angular — добавить модуль туда.
   `.ts`-файл в `polyfills` не класть: Angular тогда считает приложение zone-based и ломает пререндер.
-- Тесты: Vitest через `@angular/build:unit-test`; e2e — Playwright по собранной статике (`site:serve-static`
+- Тесты: Vitest — в приложении через `@angular/build:unit-test`, в библиотеках через `@nx/vitest` + AnalogJS
+  (`vitest-analog`, умолчание генератора); e2e — Playwright по собранной статике (`site:serve-static`
   на `http-server`), Chromium desktop + mobile.
 
 ## Переводы
@@ -32,7 +33,13 @@
 
 - `apps/site` — сайт (префикс селекторов `mk`).
 - `apps/site-e2e` — e2e.
-- `libs/*` — библиотеки, импорт только через алиас `@mantikai/<имя>`.
+- `libs/core` (`@mantikai/core`) — общее без UI: адреса `PATHS` и `toRoutes`, позже — метаданные, хранилище.
+- `libs/ui/<имя>` (`@mantikai/ui/<имя>`) — по библиотеке на UI-элемент (кнопки, шапка, футер…).
+- `libs/<страница>/page` (`@mantikai/<страница>/page`) — по библиотеке на страницу; `index.ts` — `export default`
+  компонента для `loadComponent`. В приложении — только конфиг и роуты.
+- Адреса — только через `PATHS` из `@mantikai/core`, строки путей в коде не пишем.
+- Импорт библиотек — только через алиас `@mantikai/…`. У библиотеки без спеков тестового таргета нет
+  (`--unitTestRunner=none`): Vitest падает на пустом наборе; добавить — `yarn nx g @nx/vitest:configuration`.
 
 ## Команды
 

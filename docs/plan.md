@@ -38,7 +38,7 @@
 - **Языки:** встроенный i18n Angular (`@angular/localize`, XLF). `en` — исходный, в корне (`subPath: ""`);
   `ru` → `/ru/`, `es` → `/es/`. Без автоперенаправления по языку браузера.
 - **Пакетный менеджер:** Yarn 4 (Corepack, `nodeLinker: node-modules`), npm не используем.
-- **Тесты:** Vitest через `@angular/build:unit-test` — юнит, Playwright (Chromium desktop + mobile) — e2e по
+- **Тесты:** Vitest — юнит (приложение — `@angular/build:unit-test`, библиотеки — `@nx/vitest` + AnalogJS), Playwright (Chromium desktop + mobile) — e2e по
   собранной статике.
 - **Браузеры:** сайт работает в старых браузерах (`.browserslistrc`: Chrome > 63, Firefox > 66, последние
   Safari/iOS и т. д.). Синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в

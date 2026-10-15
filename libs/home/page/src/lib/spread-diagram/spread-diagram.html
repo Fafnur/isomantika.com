@@ -1,0 +1,10 @@
+<div class="mx-auto grid w-40 grid-cols-3 grid-rows-3 gap-2" aria-hidden="true">
+  @for (slot of $slots(); track slot.label) {
+    <div
+      class="flex aspect-[2/3] items-center justify-center rounded-lg border border-gold/60 bg-surface-high font-display text-lg font-bold text-gold shadow-md shadow-black/30"
+      [style.grid-area]="slot.area"
+    >
+      {{ slot.label }}
+    </div>
+  }
+</div>

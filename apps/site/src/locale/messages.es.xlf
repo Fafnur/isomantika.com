@@ -36,26 +36,6 @@
         <note priority="1" from="description">Page heading: how to delete a Mantikai account</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="180103799659142160" datatype="html">
-        <source>Mantikai</source>
-        <target>Mantikai</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-        <note priority="1" from="description">Page heading: app name</note>
-        <note priority="1" from="meaning">Home page</note>
-      </trans-unit>
-      <trans-unit id="3711186631780584757" datatype="html">
-        <source>AI tarot readings for your question.</source>
-        <target>Lecturas de tarot con IA para tu pregunta.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
-        <note priority="1" from="description">Subheading under the app name</note>
-        <note priority="1" from="meaning">Home page</note>
-      </trans-unit>
       <trans-unit id="3223372976039553190" datatype="html">
         <source>Page not found</source>
         <target>Página no encontrada</target>
@@ -556,6 +536,10 @@
         <source>How many readings can I do per day?</source>
         <target>¿Cuántas tiradas puedo hacer al día?</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
@@ -565,6 +549,10 @@
       <trans-unit id="4559581354646187002" datatype="html">
         <source>Every day you get 1 Card of the Day and 3 readings with a question (Three Cards and The Cross share these 3). The limits reset at midnight UTC; the Home screen shows how many are left.</source>
         <target>Cada día tienes 1 Carta del día y 3 tiradas con pregunta (Tres cartas y La cruz comparten esas 3). Los límites se renuevan a medianoche UTC; en Inicio puedes ver cuántas te quedan.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">30</context>
@@ -596,6 +584,10 @@
         <source>Why do I need to sign in?</source>
         <target>¿Por qué tengo que iniciar sesión?</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
@@ -605,6 +597,10 @@
       <trans-unit id="3660783787362392263" datatype="html">
         <source>Your readings and history are stored in your account, so they are not lost when you change or reinstall your phone, and daily limits are counted per account. You can sign in with Google or Apple.</source>
         <target>Tus lecturas y tu historial se guardan en tu cuenta, así que no se pierden si cambias o reinstalas el teléfono, y los límites diarios se cuentan por cuenta. Puedes iniciar sesión con Google o Apple.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">38</context>
@@ -686,6 +682,10 @@
         <source>Are the readings predictions?</source>
         <target>¿Las lecturas son predicciones?</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">57</context>
         </context-group>
@@ -695,6 +695,10 @@
       <trans-unit id="922004847715467550" datatype="html">
         <source>No. Mantikai is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.</source>
         <target>No. Mantikai es solo para entretenimiento. Las interpretaciones las escribe la IA: tómalas como una invitación a reflexionar, no como una predicción ni un consejo profesional.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">58</context>
@@ -721,6 +725,452 @@
         </context-group>
         <note priority="1" from="description">Answer; «Settings → About → Contact support» must match the app menu</note>
         <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="6192024017145416583" datatype="html">
+        <source> Mantikai · tarot app for iOS and Android </source>
+        <target> Mantikai · tarot para iOS y Android </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description">Eyebrow above the main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3057247190218331312" datatype="html">
+        <source>Ask a question. Draw the cards.</source>
+        <target>Haz una pregunta. Saca las cartas.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <note priority="1" from="description">Main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4975739543943596028" datatype="html">
+        <source> Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English, Russian or Spanish. </source>
+        <target> Mantikai interpreta el tarot clásico Rider-Waite para tu pregunta: cada carta en su lugar, con una lectura serena, en español, inglés o ruso. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">11,17</context>
+        </context-group>
+        <note priority="1" from="description">Subheading under the main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6835828117814875798" datatype="html">
+        <source>Three Cards</source>
+        <target>Tres cartas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Name of the three-card spread in the app</note>
+        <note priority="1" from="meaning">Spread name</note>
+      </trans-unit>
+      <trans-unit id="422836231871519603" datatype="html">
+        <source>How it works</source>
+        <target>Cómo funciona</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1924016709606391266" datatype="html">
+        <source>Three spreads</source>
+        <target>Tres tiradas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="336734778938873393" datatype="html">
+        <source>What makes it different</source>
+        <target>Qué la hace diferente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4379191226021262085" datatype="html">
+        <source>Inside the app</source>
+        <target>Dentro de la app</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6644760913968706550" datatype="html">
+        <source>Questions</source>
+        <target>Preguntas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6909647173103904098" datatype="html">
+        <source>All questions and support</source>
+        <target>Todas las preguntas y soporte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">140,145</context>
+        </context-group>
+        <note priority="1" from="description">Link to the support page under the short FAQ</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3799943330223368265" datatype="html">
+        <source>Your question is waiting for its cards</source>
+        <target>Tu pregunta espera sus cartas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+        <note priority="1" from="description">Final call heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2925372017173813141" datatype="html">
+        <source>Mantikai is coming to iPhone and Android.</source>
+        <target>Mantikai llegará pronto a iPhone y Android.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+        <note priority="1" from="description">Final call text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2923350455727661003" datatype="html">
+        <source> This app is made for entertainment
+</source>
+        <target> Esta aplicación es solo para entretenimiento
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">152,154</context>
+        </context-group>
+        <note priority="1" from="description">Disclaimer at the bottom of the home page, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1716711047573284393" datatype="html">
+        <source>Ask your question</source>
+        <target>Haz tu pregunta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 1 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4787671180099239137" datatype="html">
+        <source>About love, work or a choice you are facing — in your own words.</source>
+        <target>Sobre el amor, el trabajo o una decisión que tienes delante, con tus propias palabras.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 1 text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2241970982823590369" datatype="html">
+        <source>Draw the cards</source>
+        <target>Saca las cartas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 2 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5882381186476236251" datatype="html">
+        <source>Pick a spread and draw from a shuffled deck of 78 cards.</source>
+        <target>Elige una tirada y saca cartas de una baraja barajada de 78 cartas.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 2 text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4180991298326470324" datatype="html">
+        <source>Read the interpretation</source>
+        <target>Lee la interpretación</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 3 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1688815176131655492" datatype="html">
+        <source>Every card is read in its position and tied to your question.</source>
+        <target>Cada carta se interpreta en su posición y en relación con tu pregunta.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 3 text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7876537578226003926" datatype="html">
+        <source>Card of the Day</source>
+        <target>Carta del día</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Name of the one-card spread in the app</note>
+        <note priority="1" from="meaning">Spread name</note>
+      </trans-unit>
+      <trans-unit id="9058911195700840370" datatype="html">
+        <source>A hint for the day ahead</source>
+        <target>Una pista para el día que empieza</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <note priority="1" from="description">Description of the Card of the Day spread, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6365325177795992964" datatype="html">
+        <source>The day ahead</source>
+        <target>El día que empieza</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Card of the Day position</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6640639037723640192" datatype="html">
+        <source>Past, present and future of your question</source>
+        <target>Pasado, presente y futuro de tu pregunta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Description of the Three Cards spread, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3132460436227072636" datatype="html">
+        <source>Past</source>
+        <target>Pasado</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description">Three Cards position 1</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="8652871188686840353" datatype="html">
+        <source>Present</source>
+        <target>Presente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">Three Cards position 2</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7766913912105835769" datatype="html">
+        <source>Future</source>
+        <target>Futuro</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Three Cards position 3</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="9171294881337655373" datatype="html">
+        <source>The Cross</source>
+        <target>La cruz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">Name of the four-card cross spread in the app</note>
+        <note priority="1" from="meaning">Spread name</note>
+      </trans-unit>
+      <trans-unit id="973359289203543836" datatype="html">
+        <source>The heart of the matter, what to avoid, what to do and the outcome</source>
+        <target>La esencia, qué evitar, qué hacer y el resultado</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <note priority="1" from="description">Description of The Cross spread, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4996767793721801646" datatype="html">
+        <source>The heart of the matter</source>
+        <target>La esencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">The Cross position 1</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2686966941199868772" datatype="html">
+        <source>What to avoid</source>
+        <target>Qué evitar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">The Cross position 2</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="564522354245945116" datatype="html">
+        <source>What to do</source>
+        <target>Qué hacer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">The Cross position 3</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6949674280307645365" datatype="html">
+        <source>The outcome</source>
+        <target>El resultado</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description">The Cross position 4</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2229270488878414893" datatype="html">
+        <source>An interpretation for your question</source>
+        <target>Una interpretación para tu pregunta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3236775010365921400" datatype="html">
+        <source>Not a list of card meanings: each card is read in its place in the spread and tied to what you asked.</source>
+        <target>No es una lista de significados: cada carta se interpreta en su lugar en la tirada y en relación con lo que preguntaste.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3824696747734328857" datatype="html">
+        <source>The classic Rider–Waite deck</source>
+        <target>La clásica baraja Rider-Waite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4997786132170046111" datatype="html">
+        <source>All 78 cards of the 1909 Rider–Waite deck, the one most tarot books are written about.</source>
+        <target>Las 78 cartas de la baraja Rider-Waite de 1909, sobre la que se han escrito la mayoría de los libros de tarot.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="8290980955114709994" datatype="html">
+        <source>Your card back</source>
+        <target>Tu reverso</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3966654921080272384" datatype="html">
+        <source>Choose one of five card back designs.</source>
+        <target>Elige uno de los cinco diseños del reverso de las cartas.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5707635799213628212" datatype="html">
+        <source>Three languages</source>
+        <target>Tres idiomas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2074908690116010167" datatype="html">
+        <source>The app and the interpretations are in English, Russian and Spanish.</source>
+        <target>La app y las interpretaciones están en español, inglés y ruso.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3746410959997335065" datatype="html">
+        <source>History of readings</source>
+        <target>Historial de lecturas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1697169796270407315" datatype="html">
+        <source>Every reading is saved, so you can come back to it later.</source>
+        <target>Cada lectura se guarda para que puedas volver a ella más tarde.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5248760516300986425" datatype="html">
+        <source>Coming soon to the App Store</source>
+        <target>Próximamente en App Store</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder until the app is in the App Store</note>
+        <note priority="1" from="meaning">Store buttons</note>
+      </trans-unit>
+      <trans-unit id="7945430791195849972" datatype="html">
+        <source>Coming soon to Google Play</source>
+        <target>Próximamente en Google Play</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder until the app is in Google Play</note>
+        <note priority="1" from="meaning">Store buttons</note>
       </trans-unit>
     </body>
   </file>

@@ -9,7 +9,11 @@
   </nav>
 
   <div class="ml-auto flex items-center gap-2">
-    <mk-language-menu />
+    <!-- CDK Menu is ~22 KB gzip: hydrated when the browser is idle, after the first paint. Not «on interaction»: Enter
+         fires keydown and click, both get replayed, and the menu opens and closes at once. -->
+    @defer (hydrate on idle) {
+      <mk-language-menu />
+    }
     <button
       #toggle
       type="button"

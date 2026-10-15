@@ -1,3 +1,4 @@
+export * from './lib/fonts/font-preload';
 export * from './lib/locales/locales';
 export * from './lib/navigation/navigation';
 export * from './lib/navigation/navigation.provider';

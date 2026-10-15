@@ -1,2 +1,153 @@
-<h1 i18n="Home page|Page heading: app name">Mantikai</h1>
-<p i18n="Home page|Subheading under the app name">AI tarot readings for your question.</p>
+<!-- First screen -->
+<section
+  class="bg-stars -mx-4 -mt-12 grid items-center gap-12 px-4 pb-16 pt-12 md:-mx-8 md:px-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16 lg:pb-24 lg:pt-20"
+>
+  <div class="space-y-6">
+    <p class="text-sm font-semibold uppercase tracking-widest text-gold" i18n="Home page|Eyebrow above the main heading">
+      Mantikai · tarot app for iOS and Android
+    </p>
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl" i18n="Home page|Main heading">Ask a question. Draw the cards.</h1>
+    <p class="max-w-xl text-lg text-text-secondary md:text-xl" i18n="Home page|Subheading under the main heading">
+      Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English,
+      Russian or Spanish.
+    </p>
+    <mk-store-buttons />
+  </div>
+
+  <!-- Phone with a Three Cards reading: cards instead of screenshots until they exist. -->
+  <div class="mx-auto w-64 sm:w-72" aria-hidden="true">
+    <div class="rounded-[2.5rem] border-[10px] border-surface-high bg-background p-4 shadow-2xl shadow-black/50">
+      <div class="mx-auto mb-5 h-1.5 w-16 rounded-full bg-surface-high"></div>
+      <p class="text-center font-display text-xl font-bold" i18n="Spread name|Name of the three-card spread in the app">Three Cards</p>
+      <div class="mt-4 flex justify-center gap-2">
+        @for (card of cards; track card; let i = $index) {
+          <img
+            class="w-[30%] rounded-md shadow-lg shadow-black/40"
+            [ngSrc]="card"
+            ngSrcset="120w, 240w"
+            sizes="90px"
+            width="120"
+            height="195"
+            alt=""
+            loading="eager"
+          />
+        }
+      </div>
+      <div class="mt-5 space-y-2">
+        <div class="h-2 w-full rounded-full bg-surface-high"></div>
+        <div class="h-2 w-11/12 rounded-full bg-surface-high"></div>
+        <div class="h-2 w-4/5 rounded-full bg-surface-high"></div>
+        <div class="h-2 w-2/3 rounded-full bg-surface-high"></div>
+      </div>
+      <div class="mt-5 h-9 rounded-full bg-gold/90"></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="py-16 lg:py-24" aria-labelledby="how">
+  <h2 id="how" class="text-center" i18n="Home page|Section heading">How it works</h2>
+  <ol class="mt-12 grid gap-6 md:grid-cols-3">
+    @for (step of steps; track step.title; let i = $index) {
+      <li class="rounded-3xl border border-outline bg-surface p-6">
+        <span class="font-display text-4xl font-bold text-gold">{{ i + 1 }}</span>
+        <h3 class="mt-2 text-2xl">{{ step.title }}</h3>
+        <p class="mt-2 text-text-secondary">{{ step.text }}</p>
+      </li>
+    }
+  </ol>
+</section>
+
+<!-- Spreads -->
+<section class="py-16 lg:py-24" [id]="fragments.spreads" aria-labelledby="spreads-heading">
+  <h2 id="spreads-heading" class="text-center" i18n="Home page|Section heading">Three spreads</h2>
+  <div class="mt-12 grid gap-6 lg:grid-cols-3">
+    @for (spread of spreads; track spread.type) {
+      <article class="flex flex-col rounded-3xl border border-outline bg-surface p-6">
+        <mk-spread-diagram [type]="spread.type" />
+        <h3 class="mt-6 text-2xl">{{ spread.title }}</h3>
+        <p class="mt-2 text-text-secondary">{{ spread.description }}</p>
+        <ol class="mt-4 space-y-1 text-sm text-text-muted">
+          @for (position of spread.positions; track position; let i = $index) {
+            <li>
+              <span class="font-semibold text-gold">{{ i + 1 }}</span> · {{ position }}
+            </li>
+          }
+        </ol>
+      </article>
+    }
+  </div>
+</section>
+
+<!-- Features -->
+<section class="py-16 lg:py-24" [id]="fragments.features" aria-labelledby="features-heading">
+  <h2 id="features-heading" class="text-center" i18n="Home page|Section heading">What makes it different</h2>
+  <ul class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    @for (feature of features; track feature.title) {
+      <li class="rounded-3xl border border-outline bg-surface p-6">
+        <h3 class="text-2xl">{{ feature.title }}</h3>
+        <p class="mt-2 text-text-secondary">{{ feature.text }}</p>
+      </li>
+    }
+  </ul>
+</section>
+
+<!-- Screenshots: hidden until files are listed in SITE.screenshots -->
+@if (screenshots.length) {
+  <section class="py-16 lg:py-24" aria-labelledby="screens-heading">
+    <h2 id="screens-heading" class="text-center" i18n="Home page|Section heading">Inside the app</h2>
+    <ul class="-mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:-mx-8 md:px-8">
+      @for (shot of screenshots; track shot.name) {
+        <li class="w-60 shrink-0 snap-center">
+          <img
+            class="rounded-3xl border border-outline"
+            [src]="'/screenshots/en/' + shot.name + '.webp'"
+            width="240"
+            height="520"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      }
+    </ul>
+  </section>
+}
+
+<!-- Short FAQ -->
+<section class="mx-auto max-w-3xl py-16 lg:py-24" aria-labelledby="faq-heading">
+  <h2 id="faq-heading" class="text-center" i18n="Home page|Section heading">Questions</h2>
+  <div class="mt-10 divide-y divide-outline/60 border-y border-outline/60">
+    @for (item of questions; track item.title) {
+      <details class="group">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-text-primary [&::-webkit-details-marker]:hidden"
+        >
+          <span>{{ item.title }}</span>
+          <svg
+            class="h-5 w-5 shrink-0 text-gold transition-transform group-open:rotate-45"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 4a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H5a1 1 0 1 1 0-2h4V5a1 1 0 0 1 1-1Z" />
+          </svg>
+        </summary>
+        <p class="pb-5 text-text-secondary">{{ item.text }}</p>
+      </details>
+    }
+  </div>
+  <p class="mt-6 text-center">
+    <a [routerLink]="paths.support" i18n="Home page|Link to the support page under the short FAQ">All questions and support</a>
+  </p>
+</section>
+
+<!-- Final call -->
+<section class="bg-stars rounded-3xl border border-outline px-6 py-12 text-center md:px-12 md:py-16" aria-labelledby="cta-heading">
+  <h2 id="cta-heading" i18n="Home page|Final call heading">Your question is waiting for its cards</h2>
+  <p class="mx-auto mt-4 max-w-xl text-text-secondary" i18n="Home page|Final call text">Mantikai is coming to iPhone and Android.</p>
+  <mk-store-buttons class="mt-8 justify-center" />
+</section>
+
+<p class="mt-12 text-center text-sm text-text-muted" i18n="Home page|Disclaimer at the bottom of the home page, as in the app">
+  This app is made for entertainment
+</p>

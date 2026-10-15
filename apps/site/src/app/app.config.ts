@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideClientHydration, withEventReplay, withI18nSupport } from '@angular/platform-browser';
+import { provideClientHydration, withEventReplay, withI18nSupport, withIncrementalHydration } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
 import { provideSiteNavigation } from '@mantikai/core';
@@ -8,7 +8,7 @@ import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideClientHydration(withEventReplay(), withI18nSupport()),
+    provideClientHydration(withEventReplay(), withI18nSupport(), withIncrementalHydration()),
     provideBrowserGlobalErrorListeners(),
     provideRouter(
       appRoutes,

@@ -1,3 +1,5 @@
+import { addTrailingSlash } from '../navigation/trailing-slash';
+
 export type LocaleId = 'en' | 'ru' | 'es';
 
 export interface Locale {
@@ -58,7 +60,7 @@ export function getLocale(id: string): Locale {
  * `url` is a router URL (relative to the base href).
  */
 export function localeUrl(locale: Locale, url: string): string {
-  return locale.base + url.replace(/^\//, '').replace(/[?#].*$/, '');
+  return addTrailingSlash(locale.base + url.replace(/^\//, '').replace(/[?#].*$/, ''));
 }
 
 /**

@@ -3,7 +3,7 @@ import { Component, computed, inject, input, LOCALE_ID } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 
-import { getLocale } from '@mantikai/core';
+import { getLocale, removeTrailingSlash } from '@mantikai/core';
 import { LegalDocument } from '@mantikai/legal/content';
 
 /**
@@ -37,7 +37,7 @@ export class LegalPage {
 
     if (href.startsWith(this.locale.base)) {
       event.preventDefault();
-      void this.router.navigateByUrl(href.slice(this.locale.base.length - 1));
+      void this.router.navigateByUrl(removeTrailingSlash(href.slice(this.locale.base.length - 1)));
     }
   }
 }

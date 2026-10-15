@@ -76,7 +76,8 @@ yarn nx run-many -t lint test build e2e
   имена которых задаёт контракт (`FormValueControl`: `value`, `touched`, `disabled`…).
 - Слушатели и привязки хоста — только в `host: {}`, без `@HostListener`/`@HostBinding`. Обработчики — `onX` по
   действию, без типа события: `onClose`, не `onCloseClick`. Состояния — классы `is-*` (`'[class.is-open]': '$open()'`).
-- Кнопки и ссылки — атрибутные компоненты на нативных элементах (`button[mkButton]`, `a[mkButton]`), без обёрток.
+- Кнопки и ссылки — атрибутные директивы на нативных элементах (`button[mkButton]`, `a[mkButton]`) с классами в
+  `host`, без компонентов-обёрток.
 - Пустые `imports: []` и `host: {}` не пишем. Зависимости — `inject()` в `private readonly` поля.
 - Классы Tailwind — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов стилей.
 - Формы — Angular Signal Forms.

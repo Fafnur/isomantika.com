@@ -17,6 +17,14 @@ export const PATHS = {
   notFound: '/404',
 } as const;
 
+/**
+ * Sections of the home page, linked as `/#features`.
+ */
+export const FRAGMENTS = {
+  features: 'features',
+  spreads: 'spreads',
+} as const;
+
 export type PathValues = (typeof PATHS)[keyof typeof PATHS];
 
 export interface NavigationRoute extends Route {

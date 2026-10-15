@@ -29,6 +29,11 @@
             "glob": "cormorant-garamond-{latin,cyrillic}-{500-normal,600-normal,700-normal,500-italic}.woff2",
             "input": "node_modules/@fontsource/cormorant-garamond/files",
             "output": "fonts"
+          },
+          {
+            "glob": "{us,ru}.svg",
+            "input": "node_modules/flag-icons/flags/4x3",
+            "output": "flags"
           }
         ],
         "styles": ["apps/site/src/styles.scss"],

@@ -336,6 +336,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/cdk@npm:~22.1.0":
+  version: 22.1.8
+  resolution: "@angular/cdk@npm:22.1.8"
+  dependencies:
+    parse5: "npm:^8.0.0"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^22.0.0 || ^23.0.0
+    "@angular/core": ^22.0.0 || ^23.0.0
+    "@angular/forms": ^22.0.0 || ^23.0.0
+    "@angular/platform-browser": ^22.0.0 || ^23.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/5685349966e135007ef03a2d3b232ffde9a65a7e2cd840129ec930fb8c0c375f8e68fee92f26f8a6e03f5692a90c5285e924a5d1dc273cd703e5c7e0ce052275
+  languageName: node
+  linkType: hard
+
 "@angular/cli@npm:~22.1.0":
   version: 22.1.9
   resolution: "@angular/cli@npm:22.1.9"
@@ -2929,6 +2945,7 @@ __metadata:
     "@angular-devkit/core": "npm:~22.1.0"
     "@angular-devkit/schematics": "npm:~22.1.0"
     "@angular/build": "npm:~22.1.0"
+    "@angular/cdk": "npm:~22.1.0"
     "@angular/cli": "npm:~22.1.0"
     "@angular/common": "npm:~22.1.0"
     "@angular/compiler": "npm:~22.1.0"
@@ -2970,6 +2987,7 @@ __metadata:
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-playwright: "npm:^1.6.2"
     eslint-plugin-simple-import-sort: "npm:^14.0.0"
+    flag-icons: "npm:^7.5.0"
     http-server: "npm:^14.1.1"
     jsdom: "npm:^27.1.0"
     nx: "npm:23.3.0"
@@ -6863,6 +6881,13 @@ __metadata:
     locate-path: "npm:^6.0.0"
     path-exists: "npm:^4.0.0"
   checksum: 10c0/062c5a83a9c02f53cdd6d175a37ecf8f87ea5bbff1fdfb828f04bfa021441bc7583e8ebc0872a4c1baab96221fb8a8a275a19809fb93fbc40bd69ec35634069a
+  languageName: node
+  linkType: hard
+
+"flag-icons@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "flag-icons@npm:7.5.0"
+  checksum: 10c0/c81e20c1751833882c95633349ba7e76e74d7d86c317e4ac2bac86589325430a3181913453fa3824edabaa1a84469f7ae4fd50c388027079048a5c3be438874a
   languageName: node
   linkType: hard
 

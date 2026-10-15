@@ -1,1 +1,12 @@
-<router-outlet />
+<a
+  class="sr-only z-50 rounded-full bg-gold px-4 py-2 font-semibold text-on-gold focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+  href="#main"
+  i18n="Layout|Skip link for keyboard users, jumps over the header to the page content"
+  >Skip to content</a
+>
+<mk-header />
+<main id="main" class="mx-auto w-full max-w-6xl flex-1 px-4 py-12 md:px-8">
+  <router-outlet />
+</main>
+<mk-footer />
+<mk-language-hint />

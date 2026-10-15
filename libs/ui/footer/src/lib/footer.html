@@ -1,0 +1,43 @@
+<div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm md:flex-row md:items-start md:justify-between md:px-8">
+  <nav aria-label="Documents and support" i18n-aria-label="Footer|Accessible label of the footer navigation">
+    <ul class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6">
+      <li>
+        <a class="text-text-secondary hover:text-text-primary" [routerLink]="paths.privacy" i18n="Footer|Link to the privacy policy"
+          >Privacy Policy</a
+        >
+      </li>
+      <li>
+        <a class="text-text-secondary hover:text-text-primary" [routerLink]="paths.terms" i18n="Footer|Link to the terms of use"
+          >Terms of Use</a
+        >
+      </li>
+      <li>
+        <a class="text-text-secondary hover:text-text-primary" [routerLink]="paths.support" i18n="Footer|Link to the support page"
+          >Support</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-text-secondary hover:text-text-primary"
+          [routerLink]="paths.deleteAccount"
+          i18n="Footer|Link to the account deletion instructions"
+          >Delete account</a
+        >
+      </li>
+      <li>
+        <button
+          type="button"
+          class="text-text-secondary hover:text-text-primary hover:underline"
+          (click)="onCookieSettings()"
+          i18n="Footer|Button that opens cookie consent settings"
+        >
+          Cookie settings
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div class="flex flex-col gap-2 text-text-muted md:items-end">
+    <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+    <span>© {{ year }} {{ site.name }}</span>
+  </div>
+</div>

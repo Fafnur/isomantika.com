@@ -74,7 +74,8 @@ function render(markdown, ids) {
         return `<h2 id="${id}">${text}</h2>\n`;
       },
       table(token) {
-        return `<div class="overflow-x-auto">${Renderer.prototype.table.call(this, token)}</div>\n`;
+        // Focusable: a region that scrolls horizontally must be reachable from the keyboard (axe scrollable-region-focusable).
+        return `<div class="overflow-x-auto" tabindex="0">${Renderer.prototype.table.call(this, token)}</div>\n`;
       },
     },
   });

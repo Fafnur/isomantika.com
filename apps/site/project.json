@@ -91,10 +91,14 @@
       "executor": "nx:run-commands",
       "dependsOn": ["build-angular"],
       "cache": true,
-      "inputs": ["production", "^production"],
-      "outputs": ["{workspaceRoot}/dist/apps/site/browser/404.html"],
+      "inputs": ["production", "^production", "{workspaceRoot}/tools/scripts/postbuild.mjs"],
+      "outputs": [
+        "{workspaceRoot}/dist/apps/site/browser/404.html",
+        "{workspaceRoot}/dist/apps/site/browser/sitemap.xml",
+        "{workspaceRoot}/dist/apps/site/browser/robots.txt"
+      ],
       "options": {
-        "command": "node -e \"require('node:fs').copyFileSync('dist/apps/site/browser/404/index.html', 'dist/apps/site/browser/404.html')\""
+        "command": "node tools/scripts/postbuild.mjs"
       }
     },
     "serve": {

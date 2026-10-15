@@ -30,5 +30,10 @@ export default defineConfig({
       name: 'mobile-chrome',
       use: { ...devices['Pixel 7'] },
     },
+    {
+      // Tablet breakpoint (`md`, 768–1023 px) on Chromium: Playwright's iPad presets need WebKit.
+      name: 'tablet-chrome',
+      use: { ...devices['Desktop Chrome'], viewport: { width: 820, height: 1180 }, hasTouch: true },
+    },
   ],
 });

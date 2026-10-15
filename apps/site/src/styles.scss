@@ -53,15 +53,15 @@ $subsets: (
   h2,
   h3,
   h4 {
-    @apply font-display font-bold leading-tight text-text-primary;
+    @apply hyphens-auto break-words font-display font-bold leading-tight text-text-primary;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
 
   h3 {
@@ -95,4 +95,12 @@ $subsets: (
   ::selection {
     @apply bg-gold text-on-gold;
   }
+}
+
+// CDK overlay sets its z-index inside `@layer cdk-overlay`: browsers without cascade layers drop it.
+.cdk-overlay-container,
+.cdk-global-overlay-wrapper,
+.cdk-overlay-pane,
+.cdk-overlay-connected-position-bounding-box {
+  z-index: 1000;
 }

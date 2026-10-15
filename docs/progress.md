@@ -15,3 +15,6 @@
       variable (latin + cyrillic, preload), базовые стили, `prose` для документов, фавиконы и `site.webmanifest`,
       кнопки `@mantikai/ui/buttons` (primary / secondary / ghost). e2e: иконки, манифест, шрифты, цвета.
       Бейджи сторов — ждут официальные файлы.
+- [x] **2.2. Оболочка страниц** — 2026-10-15. Шапка (знак, вордмарк, навигация, мобильное меню), выбор языка на CDK
+      Menu с флагами, футер, подсказка о языке браузера, метаданные из роутов (title, description, canonical,
+      hreflang, Open Graph, Twitter Card, `og.png`), адреса со слешем на конце. e2e на handset, tablet и web.

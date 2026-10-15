@@ -16,6 +16,8 @@
 - Шрифты: Cormorant Garamond (заголовки, `font-display`) и Manrope variable (текст, `font-text`, основной вес 500) —
   файлы `@fontsource` копируются в `/fonts/` (`assets`), `@font-face` — в `styles.scss`. У Manrope нет курсива:
   выделение в тексте — толщиной (`font-semibold`), курсив — только у Cormorant.
+- Адаптивность — три разрешения на брейкпоинтах Tailwind, mobile-first: handset (< 768 px, без префикса),
+  tablet (`md:`, 768–1023 px), web (`lg:`, ≥ 1024 px). e2e гоняются на всех трёх (Pixel 7, 820×1180, Desktop).
 - Юридические тексты — `prose` (`@tailwindcss/typography`, `target: 'legacy'`, тема под палитру в конфиге).
 - Старые браузеры: синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в
   `polyfills` (`apps/site/project.json`). Новый API в коде или в бандле Angular — добавить модуль туда.

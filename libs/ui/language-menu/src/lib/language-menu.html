@@ -1,0 +1,36 @@
+<button
+  type="button"
+  class="flex items-center gap-2 rounded-full border border-outline px-3 py-2 text-sm font-semibold text-text-primary transition-colors hover:border-gold"
+  [cdkMenuTriggerFor]="menu"
+  aria-label="Choose language"
+  i18n-aria-label="Language menu|Accessible label of the language button"
+>
+  <img class="h-3 w-4 rounded-sm object-cover" [src]="current.flag" alt="" width="16" height="12" />
+  <span>{{ current.code }}</span>
+  <svg class="h-4 w-4 text-text-muted" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" />
+  </svg>
+</button>
+
+<ng-template #menu>
+  <div cdkMenu class="mt-2 min-w-44 rounded-2xl border border-outline bg-surface p-1 shadow-lg shadow-black/40">
+    @for (link of $links(); track link.locale.id) {
+      <a
+        cdkMenuItem
+        class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-primary no-underline outline-none hover:bg-surface-high hover:no-underline focus:bg-surface-high"
+        [href]="link.href"
+        [attr.hreflang]="link.locale.id"
+        [attr.lang]="link.locale.id"
+        [attr.aria-current]="link.current ? 'true' : null"
+      >
+        <img class="h-3 w-4 rounded-sm object-cover" [src]="link.locale.flag" alt="" width="16" height="12" />
+        <span class="flex-1">{{ link.locale.label }}</span>
+        @if (link.current) {
+          <svg class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" />
+          </svg>
+        }
+      </a>
+    }
+  </div>
+</ng-template>

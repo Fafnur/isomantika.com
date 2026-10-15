@@ -2,14 +2,168 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="3075139961583935117" datatype="html">
+        <source>Skip to content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">Skip link for keyboard users, jumps over the header to the page content</note>
+        <note priority="1" from="meaning">Layout</note>
+      </trans-unit>
+      <trans-unit id="2553559873688680949" datatype="html">
+        <source>Mantikai is an AI tarot app: ask a question, draw the cards and get a reading in your language.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Meta description of the home page</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4590274344239037044" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/privacy/page/src/lib/privacy-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Privacy page</note>
+      </trans-unit>
+      <trans-unit id="1222485317741226142" datatype="html">
+        <source>How the Mantikai app and website collect, use and protect personal data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Privacy page</note>
+      </trans-unit>
+      <trans-unit id="6356367486172472875" datatype="html">
+        <source>Terms of Use</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/terms/page/src/lib/terms-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Terms page</note>
+      </trans-unit>
+      <trans-unit id="7849496536010589894" datatype="html">
+        <source>Terms of use of the Mantikai app and website.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Terms page</note>
+      </trans-unit>
       <trans-unit id="3706492045074766153" datatype="html">
         <source>Consent to Personal Data Processing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/consent/page/src/lib/consent-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
-        <note priority="1" from="description">Page heading: consent to personal data processing from the contact form</note>
+        <note priority="1" from="description">Page title in the browser tab</note>
         <note priority="1" from="meaning">Consent page</note>
+      </trans-unit>
+      <trans-unit id="1177136775932893459" datatype="html">
+        <source>Consent to the processing of personal data sent through the Mantikai contact form.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Consent page</note>
+      </trans-unit>
+      <trans-unit id="324541860605189093" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="7925113565498619271" datatype="html">
+        <source>Answers to common questions about Mantikai and how to contact support.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="2722911537974880165" datatype="html">
+        <source>Delete Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="1578336360994886306" datatype="html">
+        <source>How to delete your Mantikai account and what happens to your data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="6475029266506632502" datatype="html">
+        <source>Contact Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5807943079214262124" datatype="html">
+        <source>Send a message to the Mantikai team.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="3223372976039553190" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Not found page</note>
       </trans-unit>
       <trans-unit id="4976405609760757335" datatype="html">
         <source>This page is coming soon.</source>
@@ -40,15 +194,6 @@
         <note priority="1" from="description">Placeholder text shown until the page content is ready</note>
         <note priority="1" from="meaning">Stub page</note>
       </trans-unit>
-      <trans-unit id="6475029266506632502" datatype="html">
-        <source>Contact Us</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-        <note priority="1" from="description">Page heading: contact form</note>
-        <note priority="1" from="meaning">Contact page</note>
-      </trans-unit>
       <trans-unit id="5329623031579584511" datatype="html">
         <source>Delete Your Account</source>
         <context-group purpose="location">
@@ -76,15 +221,6 @@
         <note priority="1" from="description">Subheading under the app name</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
-      <trans-unit id="3223372976039553190" datatype="html">
-        <source>Page not found</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-        <note priority="1" from="description">Page heading: requested page does not exist</note>
-        <note priority="1" from="meaning">Not found page</note>
-      </trans-unit>
       <trans-unit id="2065462700811440202" datatype="html">
         <source>The page you are looking for does not exist or has been moved.</source>
         <context-group purpose="location">
@@ -94,32 +230,117 @@
         <note priority="1" from="description">Explanation under the heading</note>
         <note priority="1" from="meaning">Not found page</note>
       </trans-unit>
-      <trans-unit id="4590274344239037044" datatype="html">
+      <trans-unit id="7416693212987066571" datatype="html">
+        <source>Documents and support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the footer navigation</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="3069458297716460483" datatype="html">
         <source>Privacy Policy</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">libs/privacy/page/src/lib/privacy-page.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">6,10</context>
         </context-group>
-        <note priority="1" from="description">Page heading</note>
-        <note priority="1" from="meaning">Privacy page</note>
+        <note priority="1" from="description">Link to the privacy policy</note>
+        <note priority="1" from="meaning">Footer</note>
       </trans-unit>
-      <trans-unit id="324541860605189093" datatype="html">
-        <source>Support</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-        <note priority="1" from="description">Page heading</note>
-        <note priority="1" from="meaning">Support page</note>
-      </trans-unit>
-      <trans-unit id="6356367486172472875" datatype="html">
+      <trans-unit id="3897697549281426782" datatype="html">
         <source>Terms of Use</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">libs/terms/page/src/lib/terms-page.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">11,15</context>
         </context-group>
-        <note priority="1" from="description">Page heading</note>
-        <note priority="1" from="meaning">Terms page</note>
+        <note priority="1" from="description">Link to the terms of use</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="9213317389349102501" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">16,20</context>
+        </context-group>
+        <note priority="1" from="description">Link to the support page</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="1513577516329277067" datatype="html">
+        <source>Delete account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">24,29</context>
+        </context-group>
+        <note priority="1" from="description">Link to the account deletion instructions</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6395372126226006005" datatype="html">
+        <source> Cookie settings </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">34,39</context>
+        </context-group>
+        <note priority="1" from="description">Button that opens cookie consent settings</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="2006418583085660987" datatype="html">
+        <source>Main</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the main navigation</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7803584757425428573" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the mobile menu button</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7573290588093625348" datatype="html">
+        <source>Features</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">53,58</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the features section of the home page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="8234101080880683848" datatype="html">
+        <source>Spreads</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">62,67</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the tarot spreads section of the home page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="8174959178187556041" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">70,75</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the support page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7837444525333605773" datatype="html">
+        <source>Choose language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/language-menu/src/lib/language-menu.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the language button</note>
+        <note priority="1" from="meaning">Language menu</note>
       </trans-unit>
     </body>
   </file>

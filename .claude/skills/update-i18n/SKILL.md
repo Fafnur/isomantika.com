@@ -19,7 +19,7 @@ complete.
 ## Step 1: Extract
 
 ```sh
-yarn nx extract-i18n site --no-tui
+yarn nx extract-i18n site
 ```
 
 Extraction compiles the app: if it fails, fix the compile error first (it is a real build error, not an i18n problem).
@@ -72,7 +72,7 @@ Remove the whole `<trans-unit>…</trans-unit>` block of each stale unit.
 ## Step 5: Verify
 
 ```sh
-yarn nx build site --no-tui
+yarn nx build site
 ```
 
 Re-run step 2: new = 0 and stale = 0 for both locales. The build must pass (it validates the XML and every target).

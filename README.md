@@ -1,43 +1,45 @@
-# Mantikai — AI tarot readings for your question
+# Mantikai — ask a question, draw the cards
 
-**[mantikai.com](https://mantikai.com)** · iOS and Android · English, Русский, Español
+**[mantikai.com](https://mantikai.com)** · tarot app for iOS and Android · English, Русский, Español
 
-Mantikai is a tarot app that reads the cards for _your_ question. Ask what is on your mind, draw the cards, and get
-an interpretation written for your situation — not a generic card meaning copied from a book. Each card is read
-in its position in the spread, so the same card says different things in "the past" and in "what to do".
+Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in
+English, Russian or Spanish.
 
 ## How it works
 
-1. **Ask a question** — about love, work, a decision, or just the day ahead.
-2. **Draw the cards** — pick a spread and pull the cards yourself.
-3. **Get your reading** — an AI interpretation of every card in its position and of the spread as a whole.
+1. **Ask your question** — about love, work or a choice you are facing — in your own words.
+2. **Draw the cards** — pick a spread and draw from a shuffled deck of 78 cards.
+3. **Read the interpretation** — every card is read in its position and tied to your question.
 
-## Spreads
+## Three spreads
 
-- **Card of the day** — one card and a short reading to start the day.
-- **Three cards** — past, present, future: how you got here and where things are heading.
-- **The cross** — the essence of the situation, what not to do, what to do, and the outcome.
+- **Card of the Day** — a hint for the day ahead.
+- **Three Cards** — past, present and future of your question.
+- **The Cross** — the heart of the matter, what to avoid, what to do and the outcome.
 
-## Why Mantikai
+## What makes it different
 
-- **Readings for your question.** The interpretation takes your question and each card's position into account.
-- **The classic deck.** The Rider–Waite tarot, first published in 1909.
-- **Choose your card back.** Pick the design you like for your deck.
-- **Three languages.** The app and the readings are available in English, Russian and Spanish.
-- **Reading history.** Every spread is saved, so you can come back to it later.
-- **Daily readings.** One card of the day and three spreads with a question every day (limits reset daily at
-  00:00 UTC).
+- **An interpretation for your question.** Not a list of card meanings: each card is read in its place in the spread
+  and tied to what you asked.
+- **The classic Rider–Waite deck.** All 78 cards of the 1909 Rider–Waite deck, the one most tarot books are written
+  about.
+- **Your card back.** Choose one of five card back designs.
+- **Three languages.** The app and the interpretations are in English, Russian and Spanish.
+- **History of readings.** Every reading is saved, so you can come back to it later.
+
+Every day you get 1 Card of the Day and 3 readings with a question; the limits reset at midnight UTC.
 
 ## Get the app
 
-Coming soon to the App Store and Google Play. Follow [mantikai.com](https://mantikai.com) for the launch.
+Coming soon to the App Store and Google Play.
 
 ## Support
 
-Questions, ideas or problems with the app — write to **[support@mantikai.com](mailto:support@mantikai.com)**.
+- [Questions and answers](https://mantikai.com/support/) · [Delete your account](https://mantikai.com/delete-account/)
+- Write to **[support@mantikai.com](mailto:support@mantikai.com)**
+- [Privacy Policy](https://mantikai.com/privacy/) · [Terms of Use](https://mantikai.com/terms/)
 
-Mantikai is made for entertainment. Readings are not predictions and are not a substitute for professional
-advice. The app is intended for users aged 18 and over.
+This app is made for entertainment. The app is intended for users aged 18 and over.
 
 ---
 

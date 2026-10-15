@@ -27,7 +27,7 @@ for (const { url, lang } of homes) {
 
     expect(response?.status()).toBe(200);
     await expect(page.locator('html')).toHaveAttribute('lang', lang);
-    await expect(page.locator('h1')).toHaveText('Mantikai');
+    await expect(page.locator('h1')).toBeVisible();
   });
 }
 

@@ -15,7 +15,7 @@ describe('App', () => {
 
   it('should render the home page', async () => {
     const harness = await RouterTestingHarness.create('/');
-    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Mantikai');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Ask a question');
   });
 
   it('should render the not found page for unknown routes', async () => {

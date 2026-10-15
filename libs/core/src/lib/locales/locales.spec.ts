@@ -5,6 +5,7 @@ describe('locales', () => {
     expect(localeUrl(getLocale('ru'), '/privacy/')).toBe('/ru/privacy/');
     expect(localeUrl(getLocale('en'), '/privacy/?a=1#top')).toBe('/privacy/');
     expect(localeUrl(getLocale('es'), '/')).toBe('/es/');
+    expect(localeUrl(getLocale('ru'), '/support')).toBe('/ru/support/');
   });
 
   it('finds the first browser language with its own build', () => {

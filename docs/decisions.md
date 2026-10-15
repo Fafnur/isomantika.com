@@ -132,7 +132,7 @@ libs/home/page --name=home/page`.
 
 ## 2026-10-15 — оболочка страниц (2.2)
 
-- **Адреса со слешем на конце:** `TrailingSlashUrlSerializer` (`@mantikai/core`) — `routerLink` и адресная строка
+- **Адреса со слешем на конце** (пересмотрено в 3.1 — встроенная стратегия вместо своего сериализатора): `TrailingSlashUrlSerializer` (`@mantikai/core`) — `routerLink` и адресная строка
   дают `/privacy/`, как раздаёт GitHub Pages (на `/privacy` — 301). Переходы внутри языка — SPA, смена языка — обычная
   ссылка на другую сборку.
 - **Метаданные — `SeoStrategy` (свой `TitleStrategy`):** `title` и `data` роута (`SeoRouteData`: `description`,
@@ -169,8 +169,10 @@ libs/home/page --name=home/page`.
 - **HTML документа — `bypassSecurityTrustHtml`:** собран при сборке из Markdown в репозитории, не ввод пользователя;
   санитайзер Angular вырезает `id` у заголовков.
 - **Ссылки внутри документов** (`/ru/privacy/`) перехватываются кликом и отдаются роутеру — переход без перезагрузки.
-- **Сериализатор разбирает `/privacy/` без пустого сегмента:** строковые адреса (`navigateByUrl`) со слешем на конце
-  раньше уходили в 404.
+- **Слеш на конце — встроенный `TrailingSlashPathLocationStrategy`** (`@angular/common`) вместо своего
+  `TrailingSlashUrlSerializer`: добавляет `/` в `href` у `routerLink` и в адресную строку. `router.url` остаётся без
+  слеша, поэтому `localeUrl()` (меню языков, подсказка, canonical, hreflang) добавляет его сам, а строковые переходы
+  (`navigateByUrl` из ссылок в документах) снимают — иначе `/privacy/` разбирается с пустым сегментом и уходит в 404.
 - **Оглавление:** на handset и tablet — свёрнутый `<details>`, чтобы текст начинался на первом экране; на web — колонка
   справа, `sticky`. Отступ прокрутки к разделу — 88 px (шапка 64 px).
 - Строка `TODO:` или нет `title`/`updated` во frontmatter — ошибка сборки. Нет перевода — английский текст с пометкой.

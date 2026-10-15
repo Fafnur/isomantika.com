@@ -4,10 +4,5 @@
   "sourceRoot": "libs/terms/page/src",
   "prefix": "mk",
   "projectType": "library",
-  "tags": [],
-  "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    }
-  }
+  "tags": []
 }

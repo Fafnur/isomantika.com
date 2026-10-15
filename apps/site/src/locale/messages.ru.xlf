@@ -9,14 +9,6 @@
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
         <note priority="1" from="description">Placeholder text shown until the page content is ready</note>
         <note priority="1" from="meaning">Stub page</note>
       </trans-unit>
@@ -357,6 +349,378 @@
         </context-group>
         <note priority="1" from="description">Accessible label of the table of contents</note>
         <note priority="1" from="meaning">Legal page</note>
+      </trans-unit>
+      <trans-unit id="753911897731909564" datatype="html">
+        <source> How to delete your Mantikai account and all your data in it.
+</source>
+        <target> Как удалить аккаунт Mantikai и все данные в нём.
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+        <note priority="1" from="description">Intro under the heading</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="7264637276155165821" datatype="html">
+        <source>In the app</source>
+        <target>В приложении</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">Section heading: deleting from the app</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="7019883240666992135" datatype="html">
+        <source>Open Mantikai and go to Settings.</source>
+        <target>Откройте Mantikai и перейдите в Настройки.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <note priority="1" from="description">Step 1; «Settings» is the tab name in the app</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="3736533664872419416" datatype="html">
+        <source> In the Account section, tap Delete account. </source>
+        <target> В разделе «Аккаунт» нажмите «Удалить аккаунт». </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+        <note priority="1" from="description">Step 2; «Account» and «Delete account» must match the app</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="9006079041292325378" datatype="html">
+        <source>Confirm the deletion.</source>
+        <target>Подтвердите удаление.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <note priority="1" from="description">Step 3</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="4011954482954457110" datatype="html">
+        <source> If you signed in with Apple, the app will ask you to confirm with Apple first. </source>
+        <target> Если вы входили через Apple, приложение сначала попросит подтвердить действие в Apple. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">16,20</context>
+        </context-group>
+        <note priority="1" from="description">Note for users who signed in with Apple</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="3545426161403387677" datatype="html">
+        <source>What is deleted</source>
+        <target>Что удаляется</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <note priority="1" from="description">Section heading: what is deleted</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="5301679376087881333" datatype="html">
+        <source> Your account and all your readings are deleted immediately and permanently. This can&apos;t be undone. </source>
+        <target> Аккаунт и все расклады удаляются сразу и навсегда. Отменить это нельзя. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">23,27</context>
+        </context-group>
+        <note priority="1" from="description">What deletion removes</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="7948379440139475126" datatype="html">
+        <source>What else we keep and for how long — see the Privacy Policy</source>
+        <target>Что ещё мы храним и как долго — в Политике конфиденциальности</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">30,35</context>
+        </context-group>
+        <note priority="1" from="description">Link to the data retention section of the privacy policy</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="7887688800459060455" datatype="html">
+        <source> No access to the app? </source>
+        <target> Нет доступа к приложению? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+        <note priority="1" from="description">Section heading: no access to the app</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="5743291348548059422" datatype="html">
+        <source> Send us a deletion request through the form, or write to <x id="INTERPOLATION" equiv-text="{{ site.email }}"/> from the email address you used to sign in. </source>
+        <target> Отправьте запрос на удаление через форму или напишите на <x id="INTERPOLATION" equiv-text="{{ site.email }}"/> с адреса, через который входили в приложение. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+        <note priority="1" from="description">How to request deletion without the app</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="5389494622663271619" datatype="html">
+        <source>Request deletion</source>
+        <target>Запросить удаление</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">48,51</context>
+        </context-group>
+        <note priority="1" from="description">Button to the contact form with the deletion topic</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="2108438051255272071" datatype="html">
+        <source>Account deletion</source>
+        <target>Удаление аккаунта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Subject of the deletion request email</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="8895415974922842216" datatype="html">
+        <source>Answers to common questions about the app.</source>
+        <target>Ответы на частые вопросы о приложении.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Intro under the heading</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="620641235554301952" datatype="html">
+        <source>Questions and answers</source>
+        <target>Вопросы и ответы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">Heading of the questions list, for screen readers</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="3620619451022296899" datatype="html">
+        <source>Didn&apos;t find an answer?</source>
+        <target>Не нашли ответа?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+        <note priority="1" from="description">Heading of the contact block</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="2309777339671300607" datatype="html">
+        <source>Write to us — we reply by email.</source>
+        <target>Напишите нам — ответим на email.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <note priority="1" from="description">Text of the contact block</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="6362390674258629334" datatype="html">
+        <source>Write to us</source>
+        <target>Написать нам</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+        <note priority="1" from="description">Button to the contact form</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="3862681005272261979" datatype="html">
+        <source>What is Mantikai?</source>
+        <target>Что такое Mantikai?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="5952009488058293477" datatype="html">
+        <source>Mantikai is a tarot app for iOS and Android. You ask a question, draw cards from the classic Rider–Waite deck, and AI writes an interpretation of the spread for your question — in English, Russian or Spanish.</source>
+        <target>Mantikai — приложение таро для iOS и Android. Вы задаёте вопрос, вытягиваете карты классической колоды Райдера — Уэйта, а ИИ пишет толкование расклада под ваш вопрос — на русском, английском или испанском.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Answer to «What is Mantikai?»</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="6861962368859058983" datatype="html">
+        <source>How many readings can I do per day?</source>
+        <target>Сколько раскладов можно сделать в день?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="4559581354646187002" datatype="html">
+        <source>Every day you get 1 Card of the Day and 3 readings with a question (Three Cards and The Cross share these 3). The limits reset at midnight UTC; the Home screen shows how many are left.</source>
+        <target>Каждый день доступны 1 карта дня и 3 расклада с вопросом («Три карты» и «Крест» делят эти 3). Лимиты обновляются в полночь по UTC; сколько осталось, видно на Главной.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Answer about daily limits; Three Cards and The Cross are spread names in the app</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="4190061077092947832" datatype="html">
+        <source>How do I change the language or the card back?</source>
+        <target>Как сменить язык или рубашку карт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="6937326502957554229" datatype="html">
+        <source>Open Settings → Appearance. There you can choose the language (System, English, Russian or Spanish) and one of five card back designs.</source>
+        <target>Откройте Настройки → Оформление. Там можно выбрать язык (системный, русский, английский или испанский) и одну из пяти рубашек.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Answer; «Settings → Appearance» must match the app menu</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="957063322577289433" datatype="html">
+        <source>Why do I need to sign in?</source>
+        <target>Зачем нужен вход?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="3660783787362392263" datatype="html">
+        <source>Your readings and history are stored in your account, so they are not lost when you change or reinstall your phone, and daily limits are counted per account. You can sign in with Google or Apple.</source>
+        <target>Расклады и история хранятся в вашем аккаунте, поэтому не пропадут при смене или переустановке телефона, а дневные лимиты считаются на аккаунт. Войти можно через Google или Apple.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Answer about sign-in</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="628617164498282377" datatype="html">
+        <source>Where can I find my past readings?</source>
+        <target>Где посмотреть прошлые расклады?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="7308549049242995525" datatype="html">
+        <source>In the History tab. Every reading is saved there automatically.</source>
+        <target>На вкладке «История». Каждый расклад сохраняется туда автоматически.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Answer; «History» is the tab name in the app</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="1095607653050526767" datatype="html">
+        <source>How do I remove a reading from history?</source>
+        <target>Как убрать расклад из истории?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="1179671216723363127" datatype="html">
+        <source>In History, swipe the reading away and confirm. Removing a reading doesn&apos;t give back a reading for today.</source>
+        <target>В «Истории» смахните расклад и подтвердите. Лимит раскладов на сегодня от этого не вернётся.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Answer about removing a reading from history</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="4054108628215597846" datatype="html">
+        <source>How do I delete my account?</source>
+        <target>Как удалить аккаунт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="7414912965751424994" datatype="html">
+        <source>Open Settings → Account → Delete account. Your account and all your readings are deleted immediately and permanently.</source>
+        <target>Откройте Настройки → Аккаунт → Удалить аккаунт. Аккаунт и все расклады удаляются сразу и навсегда.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Answer; «Settings → Account → Delete account» must match the app menu</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="4653896550697165046" datatype="html">
+        <source>More about deleting your account</source>
+        <target>Подробнее об удалении аккаунта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Link to the account deletion page</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="7307638789811524743" datatype="html">
+        <source>Are the readings predictions?</source>
+        <target>Расклады — это предсказания?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="922004847715467550" datatype="html">
+        <source>No. Mantikai is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.</source>
+        <target>Нет. Приложение создано для развлечения. Толкования пишет ИИ: относитесь к ним как к поводу поразмышлять, а не как к предсказанию или профессиональному совету.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">Answer about entertainment purpose</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="613494959986286434" datatype="html">
+        <source>How do I contact support from the app?</source>
+        <target>Как написать в поддержку из приложения?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="4480595861081226136" datatype="html">
+        <source>Open Settings → About → Contact support. The email already contains the app version and your user ID, which helps us answer faster.</source>
+        <target>Откройте Настройки → О приложении → Написать в поддержку. В письме уже будут версия приложения и ваш ID пользователя — так мы ответим быстрее.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Answer; «Settings → About → Contact support» must match the app menu</note>
+        <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
     </body>
   </file>

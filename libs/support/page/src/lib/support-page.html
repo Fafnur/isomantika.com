@@ -1,2 +1,42 @@
 <h1 i18n="Support page|Page heading">Support</h1>
-<p i18n="Stub page|Placeholder text shown until the page content is ready">This page is coming soon.</p>
+<p class="mt-4 text-lg text-text-secondary" i18n="Support page|Intro under the heading">Answers to common questions about the app.</p>
+
+<section class="mt-10" aria-labelledby="faq">
+  <h2 id="faq" class="sr-only" i18n="Support page|Heading of the questions list, for screen readers">Questions and answers</h2>
+  <div class="divide-y divide-outline/60 border-y border-outline/60">
+    @for (item of questions; track item.question) {
+      <details class="group">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-text-primary [&::-webkit-details-marker]:hidden"
+        >
+          <span>{{ item.question }}</span>
+          <svg
+            class="h-5 w-5 shrink-0 text-gold transition-transform group-open:rotate-45"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 4a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H5a1 1 0 1 1 0-2h4V5a1 1 0 0 1 1-1Z" />
+          </svg>
+        </summary>
+        <div class="space-y-3 pb-5 text-text-secondary">
+          <p>{{ item.answer }}</p>
+          @if (item.link; as link) {
+            <p>
+              <a [routerLink]="link.path">{{ link.label }}</a>
+            </p>
+          }
+        </div>
+      </details>
+    }
+  </div>
+</section>
+
+<section class="mt-12 rounded-3xl border border-outline bg-surface p-6 md:p-8" aria-labelledby="contact">
+  <h2 id="contact" class="text-3xl md:text-4xl" i18n="Support page|Heading of the contact block">Didn't find an answer?</h2>
+  <p class="mt-3 text-text-secondary" i18n="Support page|Text of the contact block">Write to us — we reply by email.</p>
+  <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+    <a mkButton [routerLink]="paths.contact" i18n="Support page|Button to the contact form">Write to us</a>
+    <a mkButton variant="secondary" [href]="'mailto:' + site.email">{{ site.email }}</a>
+  </div>
+</section>

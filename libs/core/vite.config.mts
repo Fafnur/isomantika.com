@@ -6,7 +6,6 @@ export default defineConfig(() => ({
   root: import.meta.dirname,
   cacheDir: '../../node_modules/.vite/libs/core',
   resolve: { tsconfigPaths: true },
-  resolve: { tsconfigPaths: true },
   plugins: [angular()],
   test: {
     name: 'core',

@@ -111,3 +111,21 @@
   Устаревшие `nxViteTsPaths`/`nxCopyAssetsPlugin`, которые пишет генератор, заменены на `resolve.tsconfigPaths` Vite 8.
 - **Имя проекта = путь без `libs/`** (`home/page`, `ui/buttons`), как в `ui`: `yarn nx g @nx/angular:library
 libs/home/page --name=home/page`.
+
+## 2026-10-15 — токены и типографика (2.1)
+
+- **Без `/_styleguide` (отступление от плана):** владельцу страница не нужна, вёрстку агент проверяет скриншотами
+  Playwright. Убраны и dev-роуты, и `fileReplacements`.
+- **Шрифты — свои `@font-face`, не CSS пакетов `@fontsource`:** CSS пакета тянет все подмножества с хешами в именах,
+  preload невозможен. Копируются только latin и cyrillic (`assets` → `/fonts/`), preload — латинский Manrope (цифры и
+  пунктуация есть на всех языках). `format('woff2')`, не `woff2-variations` — его понимают и старые браузеры.
+- **Manrope variable** (один файл на подмножество, 200–800): 24,8 КБ latin против ~56 КБ четырёх статических.
+- **`@tailwindcss/typography` с `target: 'legacy'`:** обычные селекторы вместо `:where()` (Chrome 88+). Заголовки
+  `prose` увеличены под Cormorant, цитаты без курсива (у Manrope его нет).
+- **Сброс кнопок продублирован в `@layer base`:** preflight Tailwind 3.4 сбрасывает `button` в одном правиле с
+  `input:where(...)`, браузер без `:where()` отбрасывает правило целиком — кнопки остаются серыми.
+- **Кнопка — директива `button[mkButton], a[mkButton]`** (`@mantikai/ui/buttons`) с вариантами `primary`, `secondary`,
+  `ghost`; классы варианта — `computed` в `host` `[class]`, статические — в `host.class`.
+- **Фавикон:** во вкладке — знак «M» из звёзд без карты (`favicon.svg` + `favicon.ico` 16/32 вместо PNG 32 — его
+  браузеры запрашивают и без `<link>`); иконки iOS и манифеста (180/192/512) — карта на тёмном фоне (`icon_ios.svg`
+  приложения). При смене бренда — заменить.

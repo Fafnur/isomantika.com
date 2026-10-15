@@ -19,6 +19,16 @@
           {
             "glob": "**/*",
             "input": "apps/site/public"
+          },
+          {
+            "glob": "manrope-{latin,cyrillic}-wght-normal.woff2",
+            "input": "node_modules/@fontsource-variable/manrope/files",
+            "output": "fonts"
+          },
+          {
+            "glob": "cormorant-garamond-{latin,cyrillic}-{500-normal,600-normal,700-normal,500-italic}.woff2",
+            "input": "node_modules/@fontsource/cormorant-garamond/files",
+            "output": "fonts"
           }
         ],
         "styles": ["apps/site/src/styles.scss"],

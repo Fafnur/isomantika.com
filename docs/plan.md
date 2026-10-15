@@ -135,7 +135,7 @@ Node — LTS, Yarn через Corepack (`corepack enable`), кэш Yarn и Nx. �
 
 ## Этап 2. Дизайн и оболочка
 
-**2.1. Токены и типографика.** В `apps/site/tailwind.config.js` (`theme.extend`) — цвета, радиусы и шрифты из
+**2.1. Токены и типографика.** ✅ Выполнено (без `/_styleguide`, см. `docs/decisions.md`). В `apps/site/tailwind.config.js` (`theme.extend`) — цвета, радиусы и шрифты из
 таблицы выше (имена: `background`, `surface`, `gold`, … → классы `bg-surface`, `text-gold`; шрифты `display`,
 `text` → `font-display`, `font-text`).
 Шрифты — пакеты `@fontsource` (Cormorant Garamond: 500, 600, 700, 500-italic; Manrope variable или 400–700),

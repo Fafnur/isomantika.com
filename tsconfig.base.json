@@ -27,7 +27,8 @@
       "@mantikai/delete-account/page": ["./libs/delete-account/page/src/index.ts"],
       "@mantikai/contact/page": ["./libs/contact/page/src/index.ts"],
       "@mantikai/not-found/page": ["./libs/not-found/page/src/index.ts"],
-      "@mantikai/core": ["./libs/core/src/index.ts"]
+      "@mantikai/core": ["./libs/core/src/index.ts"],
+      "@mantikai/ui/buttons": ["./libs/ui/buttons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

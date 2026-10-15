@@ -21,8 +21,11 @@
 ## Переводы
 
 - Строки в шаблонах — `i18n="Meaning|Description"`, в коде — `$localize`, без `@@id`.
+- `i18n` — только на элементе, где один текст без вложенных тегов (иначе обернуть текст в `<span>`).
+- Плейсхолдеры в `$localize` — с именем: `` $localize`:Meaning|Description:Привет, ${name}:name:` ``.
 - После изменения строк: `yarn nx extract-i18n site` → в `apps/site/src/locale/messages.{ru,es}.xlf` добавить или
-  обновить `<target>` для новых и изменённых `trans-unit`. Без перевода сборка падает (`i18nMissingTranslation: error`).
+  обновить `<target>` для новых и изменённых `trans-unit`, удалить устаревшие (скилл `update-i18n`). Без перевода
+  сборка падает (`i18nMissingTranslation: error`).
 - Адреса — со слешем на конце (`/privacy/`, `/ru/support/`).
 
 ## Проекты
@@ -48,6 +51,8 @@ yarn nx run-many -t lint test build e2e
   зафиксирована в `skills-lock.json`. Файлы скилла руками не править.
 - `.claude/skills/update-vendors` — свой скилл обновления зависимостей («обнови вендоры»): `nx migrate`, `ncu` с
   исключениями (Tailwind 3, vitest по peer `@angular/build`), проверки старых браузеров, PR в `main`.
+- `.claude/skills/update-i18n` — обновление переводов («обнови переводы»): извлечь строки, добавить новые
+  `trans-unit` с переводом в `messages.{ru,es}.xlf`, удалить устаревшие, проверить.
 - Где скилл Angular расходится с правилами ниже — побеждают правила этого файла: вместо `ng generate`/`ng build` —
   генераторы и таргеты Nx (`yarn nx g …`, `yarn nx build site`), стили — Tailwind в шаблонах без файлов
   стилей у компонентов.
@@ -59,11 +64,20 @@ yarn nx run-many -t lint test build e2e
 - **Каждая задача — в отдельной ветке** от свежего `main`: `feature/<номер>-<кратко>` (`feature/1.2-ssg-i18n`),
   исправления — `fix/<кратко>`. В `main` — только через PR, напрямую не коммитим. История линейная: перед мёржем —
   `git rebase main` и `git push --force-with-lease`, мёрж — «Rebase and merge», без merge-коммитов.
+- Коммиты — `[тип] Кратко в повелительном наклонении` по-английски: `[feat] 2.1: Tokens and typography`,
+  `[fix] …`, `[refactor] …`, `[docs] …`, `[ci] …`, `[chore] …`.
 - **Nx — только через генераторы** (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`),
   сначала с `--dry-run`. Умолчания генераторов (префикс `mk`, `OnPush`, без файлов стилей) — в `nx.json`.
 - Библиотеки — в `libs/`, приложения — в `apps/`.
 - Сигналы везде: `signal`, `computed`, `input()`, `output()`, `viewChild()`; без `@Input`/`@Output`/RxJS там,
   где хватает сигналов. API сверять с актуальной документацией angular.dev и nx.dev.
+- Свои сигналы — с префиксом `$`: `readonly $open = signal(false)`, `$items = computed(…)`. Входы — с `$` и alias
+  без него: `readonly $mode = input('text', { alias: 'mode' })`, в шаблоне `[mode]`. Без `$` — `output()` и поля,
+  имена которых задаёт контракт (`FormValueControl`: `value`, `touched`, `disabled`…).
+- Слушатели и привязки хоста — только в `host: {}`, без `@HostListener`/`@HostBinding`. Обработчики — `onX` по
+  действию, без типа события: `onClose`, не `onCloseClick`. Состояния — классы `is-*` (`'[class.is-open]': '$open()'`).
+- Кнопки и ссылки — атрибутные компоненты на нативных элементах (`button[mkButton]`, `a[mkButton]`), без обёрток.
+- Пустые `imports: []` и `host: {}` не пишем. Зависимости — `inject()` в `private readonly` поля.
 - Классы Tailwind — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов стилей.
 - Формы — Angular Signal Forms.
 - Задача готова, когда `lint`, `test`, `build`, `e2e` зелёные; статус — в `docs/progress.md`.

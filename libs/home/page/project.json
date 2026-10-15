@@ -1,5 +1,5 @@
 {
-  "name": "home-page",
+  "name": "home/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/home/page/src",
   "prefix": "mk",

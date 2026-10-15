@@ -1,5 +1,5 @@
 {
-  "name": "contact-page",
+  "name": "contact/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/contact/page/src",
   "prefix": "mk",

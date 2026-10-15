@@ -1,5 +1,5 @@
 {
-  "name": "consent-page",
+  "name": "consent/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/consent/page/src",
   "prefix": "mk",

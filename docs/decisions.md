@@ -108,4 +108,5 @@
 - **Тесты библиотек — `@nx/vitest` + AnalogJS (`vitest-analog`)** по выбору владельца: генератор Nx с
   `vitest-angular` требует собираемую (`buildable`) библиотеку с ng-packagr. Приложение остаётся на
   `@angular/build:unit-test`. Библиотеки без спеков создаются без тестового таргета — Vitest падает на пустом наборе.
-- Имена проектов — `<страница>-page` (`home-page`): последний сегмент пути у всех `page`.
+- **Имя проекта = путь без `libs/`** (`home/page`, `ui/buttons`), как в `ui`: `yarn nx g @nx/angular:library
+libs/home/page --name=home/page`.

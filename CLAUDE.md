@@ -40,8 +40,9 @@
 - Адреса — только через `PATHS` из `@mantikai/core`, строки путей в коде не пишем.
 - Имя проекта = путь без `libs/`, алиас — `@mantikai/` + имя: `yarn nx g @nx/angular:library libs/home/page --name=home/page
 --importPath=@mantikai/home/page`.
-- Импорт библиотек — только через алиас `@mantikai/…`. У библиотеки без спеков тестового таргета нет
-  (`--unitTestRunner=none`): Vitest падает на пустом наборе; добавить — `yarn nx g @nx/vitest:configuration`.
+- Импорт библиотек — только через алиас `@mantikai/…`. Тесты библиотек — `vitest-analog` у всех, с `passWithNoTests: true`. Генератор Nx пишет
+  в `vite.config.mts` устаревшие `nxViteTsPaths()`/`nxCopyAssetsPlugin()` — заменить на `resolve: { tsconfigPaths: true }`
+  и добавить `passWithNoTests: true` (образец — `libs/core/vite.config.mts`).
 
 ## Команды
 

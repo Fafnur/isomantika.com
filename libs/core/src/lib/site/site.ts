@@ -22,6 +22,14 @@ export const SITE = {
     appStore: null,
     googlePlay: null,
   } as Record<StoreId, string | null>,
+  /**
+   * Contact form → Edge Function `contact` of the app's Supabase project. Public by design: the publishable key only
+   * identifies the project; the function accepts requests from `CONTACT_ALLOWED_ORIGINS` only.
+   */
+  contact: {
+    url: 'https://tkqknhgvonetrnysqgzi.supabase.co/functions/v1/contact',
+    publishableKey: 'sb_publishable_0bd3mXNjLjeiJ6ox356K9A_XHlqUGLo',
+  },
   /** App screenshots for the home page gallery; empty — the gallery is hidden. */
   screenshots: [] as Screenshot[],
 } as const;

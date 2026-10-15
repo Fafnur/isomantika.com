@@ -11,8 +11,8 @@
   Принятые решения — в `docs/decisions.md`.
 - **Каждая задача — в отдельной ветке** от свежего `main`: `feature/<номер>-<кратко>` (например,
   `feature/1.2-ssg-i18n`), исправления — `fix/<кратко>`. В `main` — только через PR после зелёного CI;
-  в `main` напрямую не коммитим. История линейная: перед мёржем ветку ребейзим на свежий `main`
-  (`git rebase main`, `git push --force-with-lease`), мёржим через «Rebase and merge», без merge-коммитов.
+  в `main` напрямую не коммитим. Перед мёржем ветку ребейзим на свежий `main`
+  (`git rebase main`, `git push --force-with-lease`), мёржим через «Create a merge commit».
 - **Nx — только через генераторы.** Приложения, библиотеки, компоненты, сервисы и прочие сущности Nx
   создаются консольными командами Nx (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`
   и т. п.), а не руками: так корректно появляются `project.json`, пути в `tsconfig.base.json`, теги и таргеты.

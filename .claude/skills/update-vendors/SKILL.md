@@ -6,7 +6,7 @@ description: Update all project dependencies (Nx, Angular, Yarn, npm packages, a
 # Update Vendors — mantikai.com
 
 Goal: one branch `feature/vendors` with up to three commits, all checks green, a PR into `main`.
-Never merge the PR yourself — merging (Rebase and merge) is the owner's job.
+Never merge the PR yourself — merging (Create a merge commit) is the owner's job.
 
 **Stop rule:** if any check fails at any step — **stop and report** the failing command and its output. Do not try
 to "fix" failures by downgrading random packages or changing code without asking the owner first.

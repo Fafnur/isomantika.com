@@ -87,8 +87,9 @@ yarn format          # Prettier
 - **Перед выполнением любой задачи — grill me.** Сначала расспроси владельца о неочевидных решениях
   (поведение, UX, тексты, крайние случаи), предложи варианты с рекомендацией; код — только после ответов.
 - **Каждая задача — в отдельной ветке** от свежего `main`: `feature/<номер>-<кратко>` (`feature/1.2-ssg-i18n`),
-  исправления — `fix/<кратко>`. В `main` — только через PR, напрямую не коммитим. История линейная: перед мёржем —
-  `git rebase main` и `git push --force-with-lease`, мёрж — «Rebase and merge», без merge-коммитов.
+  исправления — `fix/<кратко>`. В `main` — только через PR, напрямую не коммитим. Перед мёржем ветку ребейзим на
+  свежий `main` (`git rebase main`, `git push --force-with-lease`), мёрж — «Create a merge commit»: в `main` по коммиту
+  «Merge pull request #N …» на каждый PR, внутри — коммиты ветки.
 - Коммиты — `[тип] Кратко в повелительном наклонении` по-английски: `[feat] 2.1: Tokens and typography`,
   `[fix] …`, `[refactor] …`, `[docs] …`, `[ci] …`, `[chore] …`.
 - **Nx — только через генераторы** (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`),

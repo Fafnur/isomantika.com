@@ -48,6 +48,7 @@
 - `libs/<страница>/page` (`@mantikai/<страница>/page`) — по библиотеке на страницу; `index.ts` — `export default`
   компонента для `loadComponent`. В приложении — только конфиг и роуты.
 - Адреса — только через `PATHS` из `@mantikai/core`, строки путей в коде не пишем.
+- Библиотеке с `i18n`/`$localize` в шаблонах нужен `import '@angular/localize/init';` первой строкой `src/test-setup.ts`.
 - Имя проекта = путь без `libs/`, алиас — `@mantikai/` + имя: `yarn nx g @nx/angular:library libs/home/page --name=home/page
 --importPath=@mantikai/home/page`.
 - Импорт библиотек — только через алиас `@mantikai/…`. Тесты библиотек — `vitest-analog` у всех, с `passWithNoTests: true`. Генератор Nx пишет

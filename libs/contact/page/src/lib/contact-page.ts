@@ -3,6 +3,7 @@ import { afterNextRender, Component, computed, inject, LOCALE_ID, signal } from 
 import { email, form, FormField, FormRoot, maxLength, pattern, required, validate } from '@angular/forms/signals';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
+import { AnalyticsService } from '@mantikai/analytics';
 import { getLocale, PATHS, SITE } from '@mantikai/core';
 import { Button } from '@mantikai/ui/buttons';
 
@@ -37,6 +38,7 @@ function emptyModel(topic: ContactTopic = 'question'): ContactModel {
 export class ContactPage {
   private readonly locale = getLocale(inject(LOCALE_ID));
   private readonly document = inject(DOCUMENT);
+  private readonly analytics = inject(AnalyticsService);
   private openedAt = 0;
 
   protected readonly site = SITE;
@@ -107,6 +109,9 @@ export class ContactPage {
             website: model.website,
             elapsedMs: Date.now() - this.openedAt,
           });
+          if (result === 'sent') {
+            this.analytics.event('contact_submit', { topic: model.topic });
+          }
           this.$sentTo.set(model.email.trim());
           this.$result.set(result);
           return undefined;

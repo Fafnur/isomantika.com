@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { ConsentService } from '@mantikai/analytics';
 import { PATHS, SITE } from '@mantikai/core';
 
 @Component({
@@ -13,8 +14,9 @@ export class Footer {
   protected readonly site = SITE;
   protected readonly paths = PATHS;
   protected readonly year = new Date().getFullYear();
+  protected readonly consent = inject(ConsentService);
 
   onCookieSettings(): void {
-    // Opens the consent banner (task 4.2).
+    this.consent.open();
   }
 }

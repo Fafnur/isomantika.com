@@ -32,7 +32,9 @@
       "@mantikai/ui/language-hint": ["./libs/ui/language-hint/src/index.ts"],
       "@mantikai/legal/page": ["./libs/legal/page/src/index.ts"],
       "@mantikai/legal/content": ["./libs/legal/content/src/index.ts"],
-      "@mantikai/ui/store-buttons": ["./libs/ui/store-buttons/src/index.ts"]
+      "@mantikai/ui/store-buttons": ["./libs/ui/store-buttons/src/index.ts"],
+      "@mantikai/analytics": ["./libs/analytics/src/index.ts"],
+      "@mantikai/ui/consent-banner": ["./libs/ui/consent-banner/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

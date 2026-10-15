@@ -2,6 +2,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideClientHydration, withEventReplay, withI18nSupport, withIncrementalHydration } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
+import { provideAnalytics } from '@mantikai/analytics';
 import { provideSiteNavigation } from '@mantikai/core';
 
 import { appRoutes } from './app.routes';
@@ -16,5 +17,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
     provideSiteNavigation(),
+    provideAnalytics(),
   ],
 };

@@ -30,6 +30,14 @@ export const SITE = {
     url: 'https://tkqknhgvonetrnysqgzi.supabase.co/functions/v1/contact',
     publishableKey: 'sb_publishable_0bd3mXNjLjeiJ6ox356K9A_XHlqUGLo',
   },
+  /**
+   * Counters, loaded only after consent. Empty — the counter is off; both empty — no cookie banner at all
+   * (nothing to ask consent for). Web Visor is never enabled.
+   */
+  analytics: {
+    googleAnalyticsId: '',
+    yandexMetrikaId: 0,
+  } as { readonly googleAnalyticsId: string; readonly yandexMetrikaId: number },
   /** App screenshots for the home page gallery; empty — the gallery is hidden. */
   screenshots: [] as Screenshot[],
 } as const;

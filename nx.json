@@ -32,6 +32,10 @@
     "@angular/build:unit-test": {
       "cache": true,
       "inputs": ["default", "^production"]
+    },
+    "@nx/vitest:test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
     }
   },
   "plugins": [
@@ -58,10 +62,11 @@
     },
     "@nx/angular:library": {
       "linter": "eslint",
+      "unitTestRunner": "vitest-analog",
       "style": "none",
-      "unitTestRunner": "vitest-angular",
       "prefix": "mk",
-      "changeDetection": "OnPush"
+      "changeDetection": "OnPush",
+      "skipModule": true
     },
     "@nx/angular:component": {
       "style": "none",

@@ -18,7 +18,17 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "paths": {}
+    "paths": {
+      "@mantikai/home/page": ["./libs/home/page/src/index.ts"],
+      "@mantikai/privacy/page": ["./libs/privacy/page/src/index.ts"],
+      "@mantikai/terms/page": ["./libs/terms/page/src/index.ts"],
+      "@mantikai/consent/page": ["./libs/consent/page/src/index.ts"],
+      "@mantikai/support/page": ["./libs/support/page/src/index.ts"],
+      "@mantikai/delete-account/page": ["./libs/delete-account/page/src/index.ts"],
+      "@mantikai/contact/page": ["./libs/contact/page/src/index.ts"],
+      "@mantikai/not-found/page": ["./libs/not-found/page/src/index.ts"],
+      "@mantikai/core": ["./libs/core/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

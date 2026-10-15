@@ -6,7 +6,7 @@
         <source>Consent to Personal Data Processing</source>
         <target>Согласие на обработку персональных данных</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/consent/consent-page.html</context>
+          <context context-type="sourcefile">libs/consent/page/src/lib/consent-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading: consent to personal data processing from the contact form</note>
@@ -16,27 +16,27 @@
         <source>This page is coming soon.</source>
         <target>Эта страница скоро появится.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/consent/consent-page.html</context>
+          <context context-type="sourcefile">libs/consent/page/src/lib/consent-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/contact/contact-page.html</context>
+          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/delete-account/delete-account-page.html</context>
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/privacy/privacy-page.html</context>
+          <context context-type="sourcefile">libs/privacy/page/src/lib/privacy-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/support/support-page.html</context>
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/terms/terms-page.html</context>
+          <context context-type="sourcefile">libs/terms/page/src/lib/terms-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <note priority="1" from="description">Placeholder text shown until the page content is ready</note>
@@ -46,7 +46,7 @@
         <source>Contact Us</source>
         <target>Обратная связь</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/contact/contact-page.html</context>
+          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading: contact form</note>
@@ -56,7 +56,7 @@
         <source>Delete Your Account</source>
         <target>Удаление аккаунта</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/delete-account/delete-account-page.html</context>
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading: how to delete a Mantikai account</note>
@@ -66,7 +66,7 @@
         <source>Mantikai</source>
         <target>Mantikai</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/home/home-page.html</context>
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading: app name</note>
@@ -76,7 +76,7 @@
         <source>AI tarot readings for your question.</source>
         <target>ИИ-толкование таро под ваш вопрос.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/home/home-page.html</context>
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <note priority="1" from="description">Subheading under the app name</note>
@@ -86,7 +86,7 @@
         <source>Page not found</source>
         <target>Страница не найдена</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/not-found/not-found-page.html</context>
+          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading: requested page does not exist</note>
@@ -96,7 +96,7 @@
         <source>The page you are looking for does not exist or has been moved.</source>
         <target>Такой страницы нет или она была перемещена.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/not-found/not-found-page.html</context>
+          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
         <note priority="1" from="description">Explanation under the heading</note>
@@ -106,7 +106,7 @@
         <source>Privacy Policy</source>
         <target>Политика конфиденциальности</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/privacy/privacy-page.html</context>
+          <context context-type="sourcefile">libs/privacy/page/src/lib/privacy-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading</note>
@@ -116,7 +116,7 @@
         <source>Support</source>
         <target>Поддержка</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/support/support-page.html</context>
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading</note>
@@ -126,7 +126,7 @@
         <source>Terms of Use</source>
         <target>Условия использования</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">apps/site/src/app/pages/terms/terms-page.html</context>
+          <context context-type="sourcefile">libs/terms/page/src/lib/terms-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
         <note priority="1" from="description">Page heading</note>

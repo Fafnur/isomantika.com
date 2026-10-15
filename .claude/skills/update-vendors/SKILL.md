@@ -107,12 +107,13 @@ Use `npm-check-updates` to update version strings in `package.json`, excluding p
 
 ```bash
 npx npm-check-updates@latest -u -p yarn \
-  --reject 'nx,@nx/*,@angular/*,@angular-devkit/*,@schematics/angular,angular-eslint,typescript,tailwindcss,@types/node,vitest,@vitest/*'
+  --reject 'nx,@nx/*,@angular/*,@angular-devkit/*,@schematics/angular,angular-eslint,typescript,tailwindcss,@types/node,vitest,@vitest/*,@analogjs/*'
 ```
 
 Why these are excluded:
 
-- **`nx`, `@nx/*`, `@angular/*`, `@angular-devkit/*`, `@schematics/angular`, `angular-eslint`, `typescript`** — versions
+- **`nx`, `@nx/*`, `@angular/*`, `@angular-devkit/*`, `@schematics/angular`, `angular-eslint`, `typescript`, `@analogjs/*`**
+  (library tests) — versions
   are chosen by `nx migrate` (Step 4) to be compatible with each other. `ncu` would jump to versions Nx does not
   support yet.
 - **`tailwindcss`** — stays on `^3` (Tailwind v4 breaks the old browsers from `.browserslistrc`, see

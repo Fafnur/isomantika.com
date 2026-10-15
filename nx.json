@@ -3,6 +3,9 @@
   "cli": {
     "packageManager": "yarn"
   },
+  "tui": {
+    "enabled": false
+  },
   "analytics": false,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],

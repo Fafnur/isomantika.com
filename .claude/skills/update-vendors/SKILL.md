@@ -11,10 +11,10 @@ Never merge the PR yourself — merging (Rebase and merge) is the owner's job.
 **Stop rule:** if any check fails at any step — **stop and report** the failing command and its output. Do not try
 to "fix" failures by downgrading random packages or changing code without asking the owner first.
 
-Run Nx with `--no-tui`. The full check used below:
+The full check used below (the Nx TUI is off in `nx.json`):
 
 ```bash
-yarn nx run-many -t lint test build e2e --no-tui
+yarn nx run-many -t lint test build e2e
 ```
 
 ## Step 1: Check for uncommitted changes
@@ -63,7 +63,7 @@ git status --porcelain migrations.json
 If it is present — run the migrations, then delete the file (it is not kept in the repo):
 
 ```bash
-yarn nx migrate --run-migrations=migrations.json --no-tui
+yarn nx migrate --run-migrations=migrations.json
 rm migrations.json
 ```
 
@@ -83,7 +83,7 @@ The Playwright version may have changed — install the matching Chromium first:
 
 ```bash
 yarn playwright install chromium
-yarn nx run-many -t lint test build e2e --no-tui
+yarn nx run-many -t lint test build e2e
 ```
 
 ## Step 8: Commit Nx migration result
@@ -155,7 +155,7 @@ Updates `.claude/skills/angular-developer` and `skills-lock.json`. Do not edit s
 
 ```bash
 yarn playwright install chromium
-yarn nx run-many -t lint test build e2e --no-tui
+yarn nx run-many -t lint test build e2e
 yarn prettier --check .
 ```
 

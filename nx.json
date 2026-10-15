@@ -32,10 +32,6 @@
     "@angular/build:unit-test": {
       "cache": true,
       "inputs": ["default", "^production"]
-    },
-    "@nx/vitest:test": {
-      "cache": true,
-      "inputs": ["default", "^production"]
     }
   },
   "plugins": [
@@ -49,6 +45,13 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/vitest",
+      "options": {
+        "testMode": "watch",
+        "testTargetName": "test"
       }
     }
   ],

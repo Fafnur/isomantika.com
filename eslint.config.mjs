@@ -94,6 +94,8 @@ export default [
       '@angular-eslint/prefer-signals': 'error',
       '@angular-eslint/prefer-output-emitter-ref': 'error',
       '@angular-eslint/prefer-host-metadata-property': 'error',
+      // Signal inputs are `$name` with `alias: 'name'` (see CLAUDE.md), so aliasing is the norm.
+      '@angular-eslint/no-input-rename': 'off',
     },
   },
   {

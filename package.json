@@ -3,6 +3,19 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "nx serve site",
+    "build": "nx build site",
+    "serve": "nx serve-static site",
+    "extract-i18n": "nx extract-i18n site",
+    "test": "nx run-many -t test",
+    "lint": "nx run-many -t lint --fix",
+    "e2e": "nx e2e site-e2e",
+    "check": "nx run-many -t lint test build e2e",
+    "affected": "nx affected -t lint test build e2e",
+    "format": "nx format:write",
+    "graph": "nx graph"
+  },
   "dependencies": {
     "@angular/common": "~22.1.0",
     "@angular/compiler": "~22.1.0",

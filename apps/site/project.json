@@ -76,7 +76,8 @@
           "sourceMap": true,
           "localize": ["en"]
         }
-      }
+      },
+      "dependsOn": ["^content"]
     },
     "build": {
       "executor": "nx:run-commands",
@@ -99,14 +100,16 @@
         "development": {
           "buildTarget": "site:build-angular:development"
         }
-      }
+      },
+      "dependsOn": ["^content"]
     },
     "test": {
       "executor": "@angular/build:unit-test",
       "options": {
         "watch": false,
         "buildTarget": "site:build-angular:development"
-      }
+      },
+      "dependsOn": ["^content"]
     },
     "serve-static": {
       "continuous": true,
@@ -122,7 +125,11 @@
         "buildTarget": "site:build-angular",
         "format": "xlf",
         "outputPath": "apps/site/src/locale"
-      }
+      },
+      "dependsOn": ["^content"]
+    },
+    "lint": {
+      "dependsOn": ["^content"]
     }
   },
   "i18n": {

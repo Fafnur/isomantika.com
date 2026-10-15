@@ -25,3 +25,6 @@ docs/app-tasks.md
 # Vendored agent skills (managed by `npx skills`)
 /.claude/skills
 skills-lock.json
+
+# Legal texts from the owner: never reformatted
+/content

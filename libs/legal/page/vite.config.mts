@@ -4,11 +4,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../../node_modules/.vite/libs/terms/page',
+  cacheDir: '../../../node_modules/.vite/libs/legal/page',
   resolve: { tsconfigPaths: true },
   plugins: [angular()],
   test: {
-    name: 'terms/page',
+    name: 'legal/page',
     watch: false,
     globals: true,
     environment: 'jsdom',
@@ -17,7 +17,7 @@ export default defineConfig(() => ({
     setupFiles: ['src/test-setup.ts'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../../coverage/libs/terms/page',
+      reportsDirectory: '../../../coverage/libs/legal/page',
       provider: 'v8' as const,
     },
   },

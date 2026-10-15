@@ -20,9 +20,6 @@
     "skipDefaultLibCheck": true,
     "paths": {
       "@mantikai/home/page": ["./libs/home/page/src/index.ts"],
-      "@mantikai/privacy/page": ["./libs/privacy/page/src/index.ts"],
-      "@mantikai/terms/page": ["./libs/terms/page/src/index.ts"],
-      "@mantikai/consent/page": ["./libs/consent/page/src/index.ts"],
       "@mantikai/support/page": ["./libs/support/page/src/index.ts"],
       "@mantikai/delete-account/page": ["./libs/delete-account/page/src/index.ts"],
       "@mantikai/contact/page": ["./libs/contact/page/src/index.ts"],
@@ -32,7 +29,9 @@
       "@mantikai/ui/header": ["./libs/ui/header/src/index.ts"],
       "@mantikai/ui/language-menu": ["./libs/ui/language-menu/src/index.ts"],
       "@mantikai/ui/footer": ["./libs/ui/footer/src/index.ts"],
-      "@mantikai/ui/language-hint": ["./libs/ui/language-hint/src/index.ts"]
+      "@mantikai/ui/language-hint": ["./libs/ui/language-hint/src/index.ts"],
+      "@mantikai/legal/page": ["./libs/legal/page/src/index.ts"],
+      "@mantikai/legal/content": ["./libs/legal/content/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

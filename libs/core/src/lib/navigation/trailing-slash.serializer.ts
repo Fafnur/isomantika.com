@@ -7,9 +7,18 @@ import { DefaultUrlSerializer, UrlTree } from '@angular/router';
  */
 @Injectable()
 export class TrailingSlashUrlSerializer extends DefaultUrlSerializer {
+  // `/privacy/` would otherwise end with an empty segment that matches no route.
+  override parse(url: string): UrlTree {
+    return super.parse(removeTrailingSlash(url));
+  }
+
   override serialize(tree: UrlTree): string {
     return addTrailingSlash(super.serialize(tree));
   }
+}
+
+export function removeTrailingSlash(url: string): string {
+  return url.replace(/^(.+?)\/+(?=[?#]|$)/, '$1');
 }
 
 export function addTrailingSlash(url: string): string {

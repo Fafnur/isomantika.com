@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 
 import { PATHS, SeoRouteData, toRoutes } from '@mantikai/core';
+import { legalDocument, legalTitle } from '@mantikai/legal/content';
 
 const notFound: SeoRouteData = { noindex: true };
 
@@ -15,24 +16,27 @@ export const appRoutes: Route[] = toRoutes([
   },
   {
     path: PATHS.privacy,
-    loadComponent: () => import('@mantikai/privacy/page'),
-    title: $localize`:Privacy page|Page title in the browser tab:Privacy Policy`,
+    loadComponent: () => import('@mantikai/legal/page'),
+    title: legalTitle('privacy'),
+    resolve: { document: legalDocument('privacy') },
     data: {
       description: $localize`:Privacy page|Meta description:How the Mantikai app and website collect, use and protect personal data.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.terms,
-    loadComponent: () => import('@mantikai/terms/page'),
-    title: $localize`:Terms page|Page title in the browser tab:Terms of Use`,
+    loadComponent: () => import('@mantikai/legal/page'),
+    title: legalTitle('terms'),
+    resolve: { document: legalDocument('terms') },
     data: {
       description: $localize`:Terms page|Meta description:Terms of use of the Mantikai app and website.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.consent,
-    loadComponent: () => import('@mantikai/consent/page'),
-    title: $localize`:Consent page|Page title in the browser tab:Consent to Personal Data Processing`,
+    loadComponent: () => import('@mantikai/legal/page'),
+    title: legalTitle('consent'),
+    resolve: { document: legalDocument('consent') },
     data: {
       description: $localize`:Consent page|Meta description:Consent to the processing of personal data sent through the Mantikai contact form.`,
     } satisfies SeoRouteData,

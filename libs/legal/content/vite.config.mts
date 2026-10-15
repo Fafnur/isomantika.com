@@ -4,11 +4,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../../node_modules/.vite/libs/privacy/page',
+  cacheDir: '../../../node_modules/.vite/libs/legal/content',
   resolve: { tsconfigPaths: true },
   plugins: [angular()],
   test: {
-    name: 'privacy/page',
+    name: 'legal/content',
     watch: false,
     globals: true,
     environment: 'jsdom',
@@ -17,7 +17,7 @@ export default defineConfig(() => ({
     setupFiles: ['src/test-setup.ts'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../../coverage/libs/privacy/page',
+      reportsDirectory: '../../../coverage/libs/legal/content',
       provider: 'v8' as const,
     },
   },

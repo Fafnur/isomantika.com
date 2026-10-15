@@ -274,7 +274,7 @@
         <source>Question</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">50</context>
         </context-group>
         <note priority="1" from="description">Topic option</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -283,7 +283,7 @@
         <source>Problem in the app</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">51</context>
         </context-group>
         <note priority="1" from="description">Topic option</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -292,7 +292,7 @@
         <source>Account deletion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">52</context>
         </context-group>
         <note priority="1" from="description">Topic option</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -301,7 +301,7 @@
         <source>Other</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">53</context>
         </context-group>
         <note priority="1" from="description">Topic option</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -310,7 +310,7 @@
         <source>Enter your name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">64</context>
         </context-group>
         <note priority="1" from="description">Error under the name field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -319,7 +319,7 @@
         <source>Up to 100 characters</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">67</context>
         </context-group>
         <note priority="1" from="description">Error under the name field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -328,7 +328,7 @@
         <source>Enter your email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">70</context>
         </context-group>
         <note priority="1" from="description">Error under the email field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -337,11 +337,11 @@
         <source>Check the email address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <note priority="1" from="description">Error under the email field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -350,7 +350,7 @@
         <source>5–32 Latin letters, digits or underscores</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">74</context>
         </context-group>
         <note priority="1" from="description">Error under the Telegram field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -359,7 +359,7 @@
         <source>Write your message</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">76</context>
         </context-group>
         <note priority="1" from="description">Error under the message field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -368,7 +368,7 @@
         <source>At least <x id="min" equiv-text="MESSAGE_MIN"/> characters</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">82</context>
         </context-group>
         <note priority="1" from="description">Error under the message field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -377,7 +377,7 @@
         <source>Up to <x id="max" equiv-text="MESSAGE_MAX"/> characters</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">86</context>
         </context-group>
         <note priority="1" from="description">Error under the message field</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -386,7 +386,7 @@
         <source>Your consent is needed to send the message</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.ts</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">94</context>
         </context-group>
         <note priority="1" from="description">Error under the consent checkbox</note>
         <note priority="1" from="meaning">Contact form</note>
@@ -1185,6 +1185,51 @@
         <note priority="1" from="description">Answer; «Settings → About → Contact support» must match the app menu</note>
         <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
+      <trans-unit id="3974586533387120080" datatype="html">
+        <source>Cookies and analytics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Heading</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="5174773323003219084" datatype="html">
+        <source> With your consent we use Google Analytics and Yandex Metrica to understand how the site is used. Nothing is loaded until you decide. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+        <note priority="1" from="description">Text</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3000854258670054196" datatype="html">
+        <source>More about cookies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">15,19</context>
+        </context-group>
+        <note priority="1" from="description">Link to the cookies section of the privacy policy</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3752501329506051288" datatype="html">
+        <source>Accept</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <note priority="1" from="description">Accept button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="2172859727207965634" datatype="html">
+        <source>Decline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">20,24</context>
+        </context-group>
+        <note priority="1" from="description">Decline button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
       <trans-unit id="7416693212987066571" datatype="html">
         <source>Documents and support</source>
         <context-group purpose="location">
@@ -1225,7 +1270,7 @@
         <source>Delete account</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
-          <context context-type="linenumber">24,29</context>
+          <context context-type="linenumber">24,28</context>
         </context-group>
         <note priority="1" from="description">Link to the account deletion instructions</note>
         <note priority="1" from="meaning">Footer</note>
@@ -1234,7 +1279,7 @@
         <source> Cookie settings </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
-          <context context-type="linenumber">34,39</context>
+          <context context-type="linenumber">35,39</context>
         </context-group>
         <note priority="1" from="description">Button that opens cookie consent settings</note>
         <note priority="1" from="meaning">Footer</note>
@@ -1301,7 +1346,7 @@
         <source>Coming soon to the App Store</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <note priority="1" from="description">Placeholder until the app is in the App Store</note>
         <note priority="1" from="meaning">Store buttons</note>
@@ -1310,7 +1355,7 @@
         <source>Coming soon to Google Play</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">Placeholder until the app is in Google Play</note>
         <note priority="1" from="meaning">Store buttons</note>

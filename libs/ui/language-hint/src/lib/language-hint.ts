@@ -3,6 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
+import { ConsentService } from '@mantikai/analytics';
 import { findPreferredLocale, getLocale, Locale, localeUrl } from '@mantikai/core';
 
 const STORAGE_KEY = 'mk-language-hint-closed';
@@ -26,6 +27,8 @@ export class LanguageHint {
     { initialValue: this.router.url },
   );
 
+  // Waits while the cookie banner is open: both live at the bottom of the screen.
+  protected readonly $bannerOpen = inject(ConsentService).$bannerOpen;
   protected readonly $locale = signal<Locale | null>(null);
   protected readonly $href = computed(() => {
     const locale = this.$locale();

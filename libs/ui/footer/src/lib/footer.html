@@ -24,16 +24,18 @@
           >Delete account</a
         >
       </li>
-      <li>
-        <button
-          type="button"
-          class="text-text-secondary hover:text-text-primary hover:underline"
-          (click)="onCookieSettings()"
-          i18n="Footer|Button that opens cookie consent settings"
-        >
-          Cookie settings
-        </button>
-      </li>
+      @if (consent.enabled) {
+        <li>
+          <button
+            type="button"
+            class="text-text-secondary hover:text-text-primary hover:underline"
+            (click)="onCookieSettings()"
+            i18n="Footer|Button that opens cookie consent settings"
+          >
+            Cookie settings
+          </button>
+        </li>
+      }
     </ul>
   </nav>
   <div class="flex flex-col gap-2 text-text-muted md:items-end">

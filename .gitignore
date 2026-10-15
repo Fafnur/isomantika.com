@@ -69,3 +69,4 @@ junit.xml
 
 # Apps generated files
 /apps/**/source.xlf
+/libs/legal/content/src/generated

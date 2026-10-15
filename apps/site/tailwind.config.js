@@ -56,8 +56,9 @@ module.exports = {
             // Cormorant has a small x-height: headings are larger than the prose defaults.
             'h1, h2, h3, h4': { fontFamily: theme('fontFamily.display').join(', '), fontWeight: '700' },
             h1: { fontSize: '2.5em' },
-            h2: { fontSize: '1.875em' },
             h3: { fontSize: '1.5em' },
+            // Direct links to `#section` (before hydration) stop below the sticky header.
+            h2: { fontSize: '1.875em', scrollMarginTop: '5.5rem' },
             // Manrope has no italics: no synthesized slant for quotes.
             blockquote: { fontStyle: 'normal' },
           },

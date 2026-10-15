@@ -42,3 +42,14 @@ for (const { url, file } of locales) {
     expect(await page.locator('h1').evaluate((h1) => getComputedStyle(h1).fontFamily)).toContain('Cormorant Garamond');
   });
 }
+
+test('prerendered pages are hydrated, not rendered again', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('console', (message) => message.type() === 'error' && errors.push(message.text()));
+
+  await page.goto('/ru/privacy/');
+  const state = await page.locator('script#ng-state').textContent();
+
+  expect(JSON.parse(state ?? '{}').__nghData__?.length).toBeGreaterThan(0);
+  expect(errors).toEqual([]);
+});

@@ -1,7 +1,7 @@
 {
-  "name": "terms/page",
+  "name": "legal/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/terms/page/src",
+  "sourceRoot": "libs/legal/page/src",
   "prefix": "mk",
   "projectType": "library",
   "tags": []

@@ -47,11 +47,16 @@
 ## Команды
 
 ```sh
-yarn nx serve site
-yarn nx build site            # все локали + 404.html
-yarn nx extract-i18n site
-yarn nx serve-static site
-yarn nx run-many -t lint test build e2e
+yarn start           # nx serve site — dev-сервер, только en
+yarn build           # nx build site — все локали + 404.html
+yarn serve           # nx serve-static site — собранная статика, как на GitHub Pages
+yarn extract-i18n    # nx extract-i18n site
+yarn test            # unit-тесты всех проектов
+yarn lint            # линт всех проектов с --fix
+yarn e2e             # Playwright по статике
+yarn check           # lint test build e2e — задача готова, когда зелёный
+yarn affected        # то же для затронутых проектов
+yarn format          # Prettier
 ```
 
 ## Скиллы

@@ -50,10 +50,10 @@ Requirements: Node.js 24 (`.nvmrc`), Yarn 4 via Corepack (`corepack enable`).
 
 ```sh
 yarn install
-yarn nx serve site          # dev server, http://localhost:4200
-yarn nx build site          # static site in dist/apps/site/browser
-yarn nx serve-static site   # build and serve the static site (like GitHub Pages)
-yarn nx run-many -t lint test build e2e
+yarn start    # dev server, http://localhost:4200
+yarn build    # static site in dist/apps/site/browser
+yarn serve    # build and serve the static site (like GitHub Pages)
+yarn check    # lint, test, build, e2e
 ```
 
 Plan, progress and decisions (in Russian): [`docs/plan.md`](docs/plan.md), [`docs/progress.md`](docs/progress.md),

@@ -13,7 +13,7 @@ export default [
         'error',
         {
           type: 'attribute',
-          prefix: 'mk',
+          prefix: 'imk',
           style: 'camelCase',
         },
       ],
@@ -21,7 +21,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'mk',
+          prefix: 'imk',
           style: 'kebab-case',
         },
       ],

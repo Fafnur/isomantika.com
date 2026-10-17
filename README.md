@@ -1,8 +1,8 @@
-# Mantikai — ask a question, draw the cards
+# Isomantika — ask a question, draw the cards
 
-**[mantikai.com](https://mantikai.com)** · tarot app for iOS and Android · English, Русский, Español
+**[isomantika.com](https://isomantika.com)** · tarot app for iOS and Android · English, Русский, Español
 
-Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in
+Isomantika reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in
 English, Russian or Spanish.
 
 ## How it works
@@ -35,9 +35,9 @@ Coming soon to the App Store and Google Play.
 
 ## Support
 
-- [Questions and answers](https://mantikai.com/support/) · [Delete your account](https://mantikai.com/delete-account/)
-- Write to **[support@mantikai.com](mailto:support@mantikai.com)**
-- [Privacy Policy](https://mantikai.com/privacy/) · [Terms of Use](https://mantikai.com/terms/)
+- [Questions and answers](https://isomantika.com/support/) · [Delete your account](https://isomantika.com/delete-account/)
+- Write to **[support@isomantika.com](mailto:support@isomantika.com)**
+- [Privacy Policy](https://isomantika.com/privacy/) · [Terms of Use](https://isomantika.com/terms/)
 
 This app is made for entertainment. The app is intended for users aged 18 and over.
 
@@ -45,7 +45,7 @@ This app is made for entertainment. The app is intended for users aged 18 and ov
 
 ## About this repository
 
-This is the source of the [mantikai.com](https://mantikai.com) website: a static site built with Angular (prerendered,
+This is the source of the [isomantika.com](https://isomantika.com) website: a static site built with Angular (prerendered,
 SSG) in an Nx monorepo and deployed to GitHub Pages.
 
 Requirements: Node.js 24 (`.nvmrc`), Yarn 4 via Corepack (`corepack enable`).

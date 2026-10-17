@@ -3,14 +3,14 @@ import { Component, computed, inject, input, LOCALE_ID } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 
-import { getLocale, removeTrailingSlash } from '@mantikai/core';
-import { LegalDocument } from '@mantikai/legal/content';
+import { getLocale, removeTrailingSlash } from '@isomantika/core';
+import { LegalDocument } from '@isomantika/legal/content';
 
 /**
  * Privacy policy, terms and consent: the document comes from the route resolver (`legalDocument()`).
  */
 @Component({
-  selector: 'mk-legal-page',
+  selector: 'imk-legal-page',
   imports: [DatePipe, NgTemplateOutlet, RouterLink],
   templateUrl: './legal-page.html',
   host: { class: 'block' },

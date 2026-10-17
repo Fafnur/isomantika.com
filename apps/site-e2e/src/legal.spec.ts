@@ -12,7 +12,7 @@ for (const locale of locales) {
 
       const heading = (await page.locator('h1').textContent())?.trim();
       expect(heading).toBeTruthy();
-      await expect(page).toHaveTitle(`${heading} — Mantikai`);
+      await expect(page).toHaveTitle(`${heading} — Isomantika`);
       await expect(page.locator('time[datetime]')).toHaveAttribute('datetime', /^\d{4}-\d{2}-\d{2}$/);
 
       const sections = page.locator('.prose h2[id]');

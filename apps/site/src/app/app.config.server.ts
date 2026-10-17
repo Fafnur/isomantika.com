@@ -1,7 +1,7 @@
 import { ApplicationConfig, mergeApplicationConfig } from '@angular/core';
 import { provideServerRendering, withRoutes } from '@angular/ssr';
 
-import { provideFontPreload } from '@mantikai/core';
+import { provideFontPreload } from '@isomantika/core';
 
 import { appConfig } from './app.config';
 import { serverRoutes } from './app.routes.server';

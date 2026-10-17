@@ -5,7 +5,7 @@
     <div class="mt-8 space-y-6 rounded-3xl border border-outline bg-surface p-6 md:p-8" role="status">
       <h2 class="text-3xl" i18n="Contact form|Heading after a successful send">Thank you!</h2>
       <p class="text-text-secondary" i18n="Contact form|Text after a successful send">We'll reply to {{ $sentTo() }}.</p>
-      <button mkButton variant="secondary" type="button" (click)="onReset()" i18n="Contact form|Button to write one more message">
+      <button imkButton variant="secondary" type="button" (click)="onReset()" i18n="Contact form|Button to write one more message">
         Send another message
       </button>
     </div>
@@ -165,7 +165,7 @@
         </p>
       }
 
-      <button mkButton type="submit" [disabled]="contactForm().submitting()">
+      <button imkButton type="submit" [disabled]="contactForm().submitting()">
         @if (contactForm().submitting()) {
           <ng-container i18n="Contact form|Submit button while sending">Sending…</ng-container>
         } @else {

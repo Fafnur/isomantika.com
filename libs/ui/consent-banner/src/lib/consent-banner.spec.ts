@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
-import { ANALYTICS_CONFIG, ConsentService } from '@mantikai/analytics';
+import { ANALYTICS_CONFIG, ConsentService } from '@isomantika/analytics';
 
 import { ConsentBanner } from './consent-banner';
 

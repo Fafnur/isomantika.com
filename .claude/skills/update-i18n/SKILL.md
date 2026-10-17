@@ -3,7 +3,7 @@ name: update-i18n
 description: Update site translations — extract strings, add new trans-units with ru/es translations, remove stale ones. Activate when user asks to "update translations", "update i18n", "add translations", "обновить переводы", "добавить переводы", "удалить неиспользуемые переводы", or after changing any i18n/$localize string.
 ---
 
-# Update i18n — mantikai.com
+# Update i18n — isomantika.com
 
 Angular XLF i18n, `sourceLocale: en`. All files live in `apps/site/src/locale/` and are committed:
 

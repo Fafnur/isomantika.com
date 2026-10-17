@@ -1,16 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { AnalyticsService, ConsentService } from '@mantikai/analytics';
-import { PATHS } from '@mantikai/core';
-import { Button } from '@mantikai/ui/buttons';
+import { AnalyticsService, ConsentService } from '@isomantika/analytics';
+import { PATHS } from '@isomantika/core';
+import { Button } from '@isomantika/ui/buttons';
 
 /**
  * Cookie consent at the bottom of the screen: «Accept» and «Decline» are equally prominent.
  * Rendered only in the browser, while there is no choice or when reopened from the footer.
  */
 @Component({
-  selector: 'mk-consent-banner',
+  selector: 'imk-consent-banner',
   imports: [RouterLink, Button],
   templateUrl: './consent-banner.html',
 })

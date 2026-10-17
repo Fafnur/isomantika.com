@@ -2,7 +2,7 @@
   "name": "ui/language-hint",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/language-hint/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": [],
   "targets": {

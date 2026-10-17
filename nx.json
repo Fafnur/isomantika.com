@@ -56,23 +56,23 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "vitest-angular",
-      "prefix": "mk"
+      "prefix": "imk"
     },
     "@nx/angular:library": {
       "linter": "eslint",
       "unitTestRunner": "vitest-analog",
       "style": "none",
-      "prefix": "mk",
+      "prefix": "imk",
       "changeDetection": "OnPush",
       "skipModule": true
     },
     "@nx/angular:component": {
       "style": "none",
-      "prefix": "mk",
+      "prefix": "imk",
       "changeDetection": "OnPush"
     },
     "@nx/angular:directive": {
-      "prefix": "mk"
+      "prefix": "imk"
     }
   },
   "migrate": {

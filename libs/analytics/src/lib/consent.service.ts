@@ -4,7 +4,7 @@ import { ANALYTICS_CONFIG } from './analytics.config';
 
 /** Bump to ask everyone again (e.g. a new counter or a new purpose). */
 export const CONSENT_VERSION = 1;
-export const CONSENT_STORAGE_KEY = 'mantikai.consent';
+export const CONSENT_STORAGE_KEY = 'isomantika.consent';
 
 interface StoredConsent {
   readonly v: number;

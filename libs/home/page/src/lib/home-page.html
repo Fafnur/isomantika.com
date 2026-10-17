@@ -4,14 +4,14 @@
 >
   <div class="space-y-6">
     <p class="text-sm font-semibold uppercase tracking-widest text-gold" i18n="Home page|Eyebrow above the main heading">
-      Mantikai · tarot app for iOS and Android
+      Isomantika · tarot app for iOS and Android
     </p>
     <h1 class="text-5xl sm:text-6xl lg:text-7xl" i18n="Home page|Main heading">Ask a question. Draw the cards.</h1>
     <p class="max-w-xl text-lg text-text-secondary md:text-xl" i18n="Home page|Subheading under the main heading">
-      Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English,
+      Isomantika reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English,
       Russian or Spanish.
     </p>
-    <mk-store-buttons />
+    <imk-store-buttons />
   </div>
 
   <!-- Phone with a Three Cards reading: cards instead of screenshots until they exist. -->
@@ -64,7 +64,7 @@
   <div class="mt-12 grid gap-6 lg:grid-cols-3">
     @for (spread of spreads; track spread.type) {
       <article class="flex flex-col rounded-3xl border border-outline bg-surface p-6">
-        <mk-spread-diagram [type]="spread.type" />
+        <imk-spread-diagram [type]="spread.type" />
         <h3 class="mt-6 text-2xl">{{ spread.title }}</h3>
         <p class="mt-2 text-text-secondary">{{ spread.description }}</p>
         <ol class="mt-4 space-y-1 text-sm text-text-muted">
@@ -144,8 +144,8 @@
 <!-- Final call -->
 <section class="bg-stars rounded-3xl border border-outline px-6 py-12 text-center md:px-12 md:py-16" aria-labelledby="cta-heading">
   <h2 id="cta-heading" i18n="Home page|Final call heading">Your question is waiting for its cards</h2>
-  <p class="mx-auto mt-4 max-w-xl text-text-secondary" i18n="Home page|Final call text">Mantikai is coming to iPhone and Android.</p>
-  <mk-store-buttons class="mt-8 justify-center" />
+  <p class="mx-auto mt-4 max-w-xl text-text-secondary" i18n="Home page|Final call text">Isomantika is coming to iPhone and Android.</p>
+  <imk-store-buttons class="mt-8 justify-center" />
 </section>
 
 <p class="mt-12 text-center text-sm text-text-muted" i18n="Home page|Disclaimer at the bottom of the home page, as in the app">

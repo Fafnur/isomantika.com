@@ -80,7 +80,7 @@ export default [
       'simple-import-sort/imports': [
         'error',
         {
-          groups: [['^\\u0000'], ['^node:'], ['^@?(?!mantikai)\\w'], ['^@mantikai'], ['^[^.]'], ['^\\.']],
+          groups: [['^\\u0000'], ['^node:'], ['^@?(?!isomantika)\\w'], ['^@isomantika'], ['^[^.]'], ['^\\.']],
         },
       ],
       'import/first': 'error',

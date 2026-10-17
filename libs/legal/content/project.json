@@ -2,7 +2,7 @@
   "name": "legal/content",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/legal/content/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": [],
   "targets": {

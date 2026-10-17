@@ -1,7 +1,7 @@
 import { Component, inject, LOCALE_ID } from '@angular/core';
 
-import { AnalyticsService } from '@mantikai/analytics';
-import { getLocale, SITE, StoreId } from '@mantikai/core';
+import { AnalyticsService } from '@isomantika/analytics';
+import { getLocale, SITE, StoreId } from '@isomantika/core';
 
 interface Store {
   readonly id: StoreId;
@@ -15,7 +15,7 @@ interface Store {
  * «Coming soon» pills until then. No Apple/Google logos outside official badges.
  */
 @Component({
-  selector: 'mk-store-buttons',
+  selector: 'imk-store-buttons',
   templateUrl: './store-buttons.html',
   host: { class: 'flex flex-col gap-3 sm:flex-row' },
 })

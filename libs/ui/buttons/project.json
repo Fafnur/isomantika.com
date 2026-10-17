@@ -2,7 +2,7 @@
   "name": "ui/buttons",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/buttons/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": [],
   "targets": {

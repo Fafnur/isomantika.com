@@ -3,7 +3,7 @@ name: update-vendors
 description: Update all project dependencies (Nx, Angular, Yarn, npm packages, agent skills) to latest versions following a safe migration workflow, ending with a PR. Activate when user asks to "update vendors", "update dependencies", "обновить зависимости", "обновить вендоры".
 ---
 
-# Update Vendors — mantikai.com
+# Update Vendors — isomantika.com
 
 Goal: one branch `feature/vendors` with up to three commits, all checks green, a PR into `main`.
 Never merge the PR yourself — merging (Create a merge commit) is the owner's job.
@@ -135,7 +135,7 @@ yarn install
 Check peer dependencies of the build tooling — a major bump from `ncu` must not fall outside them:
 
 ```bash
-yarn explain peer-requirements | grep '✘ @mantikai/source@workspace:. provides'
+yarn explain peer-requirements | grep '✘ @isomantika/source@workspace:. provides'
 ```
 
 Must print nothing (other `✘ … doesn't provide …` lines are pre-existing noise inside packages, ignore them). A line

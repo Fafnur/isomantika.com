@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { PATHS, SITE } from '@mantikai/core';
-import { Button } from '@mantikai/ui/buttons';
+import { PATHS, SITE } from '@isomantika/core';
+import { Button } from '@isomantika/ui/buttons';
 
 /**
  * Account deletion instructions: the page Google Play links to.
  */
 @Component({
-  selector: 'mk-delete-account-page',
+  selector: 'imk-delete-account-page',
   imports: [RouterLink, Button],
   templateUrl: './delete-account-page.html',
   host: { class: 'block max-w-3xl' },

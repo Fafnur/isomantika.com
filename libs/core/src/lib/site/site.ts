@@ -13,9 +13,9 @@ export interface Screenshot {
  * Brand, contacts, stores and screenshots in one place: the brand is going to change.
  */
 export const SITE = {
-  name: 'Mantikai',
-  origin: 'https://mantikai.com',
-  email: 'support@mantikai.com',
+  name: 'Isomantika',
+  origin: 'https://isomantika.com',
+  email: 'support@isomantika.com',
   ogImage: '/og.png',
   /** Store pages; `null` until the app is published — the site shows «Coming soon» instead of a badge. */
   stores: {

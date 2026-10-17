@@ -5,7 +5,7 @@ import { Button, ButtonVariant } from './button';
 
 @Component({
   imports: [Button],
-  template: `<a mkButton href="/support/" [variant]="$variant()">Support</a>`,
+  template: `<a imkButton href="/support/" [variant]="$variant()">Support</a>`,
 })
 class TestHost {
   readonly $variant = signal<ButtonVariant>('primary');

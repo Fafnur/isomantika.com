@@ -3,7 +3,7 @@ title: Terms of Use
 updated: 2026-10-15
 ---
 
-These Terms of Use ("Terms") govern your use of the Mantikai mobile app and the website mantikai.com (together,
+These Terms of Use ("Terms") govern your use of the Isomantika mobile app and the website isomantika.com (together,
 the "Service"). The Service is provided by **Aleksandr Serenko**, a private individual based in Russia ("we", "us").
 
 By signing in to the app or using the Service, you agree to these Terms and to our [Privacy Policy](/privacy/).
@@ -11,7 +11,7 @@ If you do not agree, do not use the Service.
 
 ## The Service
 
-Mantikai offers tarot readings: you choose a spread, optionally ask a question, draw cards, and receive an
+Isomantika offers tarot readings: you choose a spread, optionally ask a question, draw cards, and receive an
 interpretation written by an artificial intelligence language model. Your readings are saved in your history.
 
 The Service is free. To keep it available to everyone, the number of readings is limited per day (UTC). The current
@@ -19,7 +19,7 @@ limits are shown in the app; we may change them.
 
 ## For entertainment only
 
-**Mantikai is created for entertainment.** Readings are not predictions of the future and are not facts. They are
+**Isomantika is created for entertainment.** Readings are not predictions of the future and are not facts. They are
 not medical, psychological, legal, financial or any other professional advice and do not replace it. Do not make
 important decisions based only on a reading.
 
@@ -30,7 +30,7 @@ services.
 
 Interpretations are generated automatically and are not reviewed by a person before you see them. They may be
 inaccurate, incomplete, repetitive or unexpected. If an interpretation seems inappropriate, please tell us at
-support@mantikai.com.
+support@isomantika.com.
 
 ## Who can use the Service
 
@@ -64,7 +64,7 @@ in the Privacy Policy. You may use the interpretations generated for you for any
 
 ## Our rights
 
-The app, the website, their design, texts, the Mantikai name and logo belong to us. The card images are based on the
+The app, the website, their design, texts, the Isomantika name and logo belong to us. The card images are based on the
 Rider–Waite tarot deck published in 1909, which is in the public domain; our processed versions of these images are
 part of the app. You may not copy or distribute the app or its parts except as allowed by law.
 
@@ -97,7 +97,7 @@ These Terms are governed by the laws of the Russian Federation. If you are a con
 the mandatory laws of the country where you live, and you may bring a claim in the courts of that country if the law
 allows it.
 
-Before going to court, please write to us at support@mantikai.com — we will try to resolve the issue.
+Before going to court, please write to us at support@isomantika.com — we will try to resolve the issue.
 
 ## Additional terms for Apple devices
 
@@ -123,7 +123,7 @@ If you downloaded the app from the Apple App Store, the following also applies:
 9. Apple and its subsidiaries are third-party beneficiaries of these Terms, and once you accept them, Apple has the
    right to enforce them against you as a third-party beneficiary.
 
-Questions, complaints and claims regarding the app should be sent to us: Aleksandr Serenko, support@mantikai.com.
+Questions, complaints and claims regarding the app should be sent to us: Aleksandr Serenko, support@isomantika.com.
 
 ## Google Play
 
@@ -137,6 +137,6 @@ effect, you accept the updated Terms.
 
 ## Contact
 
-Aleksandr Serenko — support@mantikai.com
+Aleksandr Serenko — support@isomantika.com
 
 These Terms are available in English, Russian and Spanish. If the versions differ, the English version prevails.

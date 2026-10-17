@@ -2,7 +2,7 @@
   "name": "legal/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/legal/page/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": []
 }

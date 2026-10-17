@@ -1,6 +1,6 @@
-# mantikai.com
+# isomantika.com
 
-Сайт мобильного приложения Mantikai (AI-таро): маркетинговая страница, юридические документы, поддержка,
+Сайт мобильного приложения Isomantika (AI-таро): маркетинговая страница, юридические документы, поддержка,
 форма обратной связи. Чистая статика: Angular SSG → GitHub Pages. Полный план — `docs/plan.md`.
 
 ## Стек
@@ -41,17 +41,17 @@
 
 ## Проекты
 
-- `apps/site` — сайт (префикс селекторов `mk`).
+- `apps/site` — сайт (префикс селекторов `imk`).
 - `apps/site-e2e` — e2e.
-- `libs/core` (`@mantikai/core`) — общее без UI: адреса `PATHS` и `toRoutes`, позже — метаданные, хранилище.
-- `libs/ui/<имя>` (`@mantikai/ui/<имя>`) — по библиотеке на UI-элемент (кнопки, шапка, футер…).
-- `libs/<страница>/page` (`@mantikai/<страница>/page`) — по библиотеке на страницу; `index.ts` — `export default`
+- `libs/core` (`@isomantika/core`) — общее без UI: адреса `PATHS` и `toRoutes`, позже — метаданные, хранилище.
+- `libs/ui/<имя>` (`@isomantika/ui/<имя>`) — по библиотеке на UI-элемент (кнопки, шапка, футер…).
+- `libs/<страница>/page` (`@isomantika/<страница>/page`) — по библиотеке на страницу; `index.ts` — `export default`
   компонента для `loadComponent`. В приложении — только конфиг и роуты.
-- Адреса — только через `PATHS` из `@mantikai/core`, строки путей в коде не пишем.
+- Адреса — только через `PATHS` из `@isomantika/core`, строки путей в коде не пишем.
 - Библиотеке с `i18n`/`$localize` в шаблонах нужен `import '@angular/localize/init';` первой строкой `src/test-setup.ts`.
-- Имя проекта = путь без `libs/`, алиас — `@mantikai/` + имя: `yarn nx g @nx/angular:library libs/home/page --name=home/page
---importPath=@mantikai/home/page`.
-- Импорт библиотек — только через алиас `@mantikai/…`. Тесты библиотек — `vitest-analog` у всех, с `passWithNoTests: true`. Генератор Nx пишет
+- Имя проекта = путь без `libs/`, алиас — `@isomantika/` + имя: `yarn nx g @nx/angular:library libs/home/page --name=home/page
+--importPath=@isomantika/home/page`.
+- Импорт библиотек — только через алиас `@isomantika/…`. Тесты библиотек — `vitest-analog` у всех, с `passWithNoTests: true`. Генератор Nx пишет
   в `vite.config.mts` устаревшие `nxViteTsPaths()`/`nxCopyAssetsPlugin()` — заменить на `resolve: { tsconfigPaths: true }`
   и добавить `passWithNoTests: true` (образец — `libs/core/vite.config.mts`).
 
@@ -94,7 +94,7 @@ yarn format          # Prettier
 - Коммиты — `[тип] Кратко в повелительном наклонении` по-английски: `[feat] 2.1: Tokens and typography`,
   `[fix] …`, `[refactor] …`, `[docs] …`, `[ci] …`, `[chore] …`.
 - **Nx — только через генераторы** (`yarn nx g @nx/angular:library …`, `yarn nx g @nx/angular:component …`),
-  сначала с `--dry-run`. Умолчания генераторов (префикс `mk`, `OnPush`, без файлов стилей) — в `nx.json`.
+  сначала с `--dry-run`. Умолчания генераторов (префикс `imk`, `OnPush`, без файлов стилей) — в `nx.json`.
 - Библиотеки — в `libs/`, приложения — в `apps/`.
 - Сигналы везде: `signal`, `computed`, `input()`, `output()`, `viewChild()`; без `@Input`/`@Output`/RxJS там,
   где хватает сигналов. API сверять с актуальной документацией angular.dev и nx.dev.
@@ -103,7 +103,7 @@ yarn format          # Prettier
   имена которых задаёт контракт (`FormValueControl`: `value`, `touched`, `disabled`…).
 - Слушатели и привязки хоста — только в `host: {}`, без `@HostListener`/`@HostBinding`. Обработчики — `onX` по
   действию, без типа события: `onClose`, не `onCloseClick`. Состояния — классы `is-*` (`'[class.is-open]': '$open()'`).
-- Кнопки и ссылки — атрибутные директивы на нативных элементах (`button[mkButton]`, `a[mkButton]`) с классами в
+- Кнопки и ссылки — атрибутные директивы на нативных элементах (`button[imkButton]`, `a[imkButton]`) с классами в
   `host`, без компонентов-обёрток.
 - Пустые `imports: []` и `host: {}` не пишем. Зависимости — `inject()` в `private readonly` поля.
 - Классы Tailwind — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов стилей.

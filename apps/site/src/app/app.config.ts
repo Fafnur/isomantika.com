@@ -2,8 +2,8 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideClientHydration, withEventReplay, withI18nSupport, withIncrementalHydration } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
-import { provideAnalytics } from '@mantikai/analytics';
-import { provideSiteNavigation } from '@mantikai/core';
+import { provideAnalytics } from '@isomantika/analytics';
+import { provideSiteNavigation } from '@isomantika/core';
 
 import { appRoutes } from './app.routes';
 

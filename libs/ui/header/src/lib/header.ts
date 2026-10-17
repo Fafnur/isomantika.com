@@ -4,14 +4,14 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
-import { FRAGMENTS, PATHS, SITE } from '@mantikai/core';
-import { LanguageMenu } from '@mantikai/ui/language-menu';
+import { FRAGMENTS, PATHS, SITE } from '@isomantika/core';
+import { LanguageMenu } from '@isomantika/ui/language-menu';
 
 /**
  * Site header: mark and wordmark, navigation (a disclosure menu on mobile), language menu.
  */
 @Component({
-  selector: 'mk-header',
+  selector: 'imk-header',
   imports: [NgTemplateOutlet, RouterLink, LanguageMenu],
   templateUrl: './header.html',
   host: {

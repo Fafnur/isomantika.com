@@ -2,7 +2,7 @@
   "name": "support/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/support/page/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": []
 }

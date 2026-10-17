@@ -1,7 +1,7 @@
 import { inject, LOCALE_ID } from '@angular/core';
 import { ResolveFn } from '@angular/router';
 
-import { getLocale, LocaleId } from '@mantikai/core';
+import { getLocale, LocaleId } from '@isomantika/core';
 
 import { LegalDocument, LegalDocumentId } from './legal-document';
 

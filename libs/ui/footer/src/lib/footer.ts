@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { ConsentService } from '@mantikai/analytics';
-import { PATHS, SITE } from '@mantikai/core';
+import { ConsentService } from '@isomantika/analytics';
+import { PATHS, SITE } from '@isomantika/core';
 
 @Component({
-  selector: 'mk-footer',
+  selector: 'imk-footer',
   imports: [RouterLink],
   templateUrl: './footer.html',
   host: { role: 'contentinfo', class: 'block border-t border-outline/60' },

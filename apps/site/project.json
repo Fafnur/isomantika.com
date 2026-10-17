@@ -2,7 +2,7 @@
   "name": "site",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "mk",
+  "prefix": "imk",
   "sourceRoot": "apps/site/src",
   "tags": [],
   "targets": {

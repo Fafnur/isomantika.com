@@ -88,7 +88,7 @@ test('offers the email when sending fails', async ({ page }) => {
   await page.getByRole('button', { name: 'Отправить' }).click();
 
   await expect(page.getByRole('alert')).toContainText('Сообщение не отправилось');
-  await expect(page.getByRole('alert').locator('a[href="mailto:support@mantikai.com"]')).toBeVisible();
+  await expect(page.getByRole('alert').locator('a[href="mailto:support@isomantika.com"]')).toBeVisible();
 });
 
 test('keeps the honeypot away from people and screen readers', async ({ page }) => {

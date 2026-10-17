@@ -3,9 +3,9 @@ title: Consent to the Processing of Personal Data
 updated: 2026-10-15
 ---
 
-This consent applies to messages sent through the contact form at mantikai.com. By ticking the consent box and
+This consent applies to messages sent through the contact form at isomantika.com. By ticking the consent box and
 sending the form, I freely, for a specific purpose and in an informed manner give my consent to **Aleksandr Serenko**
-(the operator, support@mantikai.com) to process my personal data on the terms below.
+(the operator, support@isomantika.com) to process my personal data on the terms below.
 
 ## What data
 
@@ -41,9 +41,9 @@ whichever comes first.
 
 ## Withdrawing consent
 
-I can withdraw this consent at any time by writing to support@mantikai.com. My data will then be deleted within
+I can withdraw this consent at any time by writing to support@isomantika.com. My data will then be deleted within
 30 days. Withdrawal does not affect processing that took place before it.
 
-Giving consent is voluntary. Instead of using the form, I can write directly to support@mantikai.com.
+Giving consent is voluntary. Instead of using the form, I can write directly to support@isomantika.com.
 
 Everything not covered here is described in the [Privacy Policy](/privacy/).

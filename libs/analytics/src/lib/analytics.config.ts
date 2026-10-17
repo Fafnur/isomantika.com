@@ -1,6 +1,6 @@
 import { InjectionToken } from '@angular/core';
 
-import { SITE } from '@mantikai/core';
+import { SITE } from '@isomantika/core';
 
 export interface AnalyticsConfig {
   /** GA4 measurement ID (`G-…`); empty — off. */

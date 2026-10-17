@@ -5,7 +5,7 @@
 - **Пакетный менеджер — Yarn 4** (`packageManager: yarn@4.18.1`, Corepack), `nodeLinker: node-modules`,
   `npmMinimalAgeGate: 0`. В `engines` запрещён npm. В плане для CI был кэш npm — в 1.3 кэшируем Yarn.
 - **Стили — SCSS** для глобального `styles.scss`. Компоненты генерируются без файлов стилей (`style: none`).
-- **Префикс селекторов — `mk`**, `changeDetection: OnPush` явно в умолчаниях генераторов `nx.json`.
+- **Префикс селекторов — `imk`**, `changeDetection: OnPush` явно в умолчаниях генераторов `nx.json`.
 - **Юнит-тесты — `@angular/build:unit-test` (Vitest)** вместо AnalogJS (для библиотек пересмотрено 2026-10-15): официальный раннер Angular,
   меньше зависимостей.
 - **Без Express:** `outputMode: "static"`, `server.ts` удалён; `main.server.ts` нужен для пререндера.
@@ -28,7 +28,7 @@
 - **ESLint** — общий конфиг в корне (пресеты Nx для Angular и шаблонов, `eslint-config-prettier`), в проектах —
   только префикс селекторов. Сверх пресетов: `naming-convention`, `complexity`, `explicit-member-accessibility`
   (без `public`), `array-type: array-simple`, `consistent-type-definitions`, `no-shadow`, сортировка импортов
-  `simple-import-sort` (группы: побочные, `node:`, пакеты, `@mantikai/*`, относительные), `import-x`
+  `simple-import-sort` (группы: побочные, `node:`, пакеты, `@isomantika/*`, относительные), `import-x`
   (`first`, `newline-after-import`, `no-duplicates`). Angular: `prefer-signals`, `prefer-output-emitter-ref`,
   `prefer-host-metadata-property`, в шаблонах `prefer-self-closing-tags`. Без `eslint-plugin-rxjs-x` и
   типизированного линта: RxJS почти не используется, а типизированный линт заметно медленнее.
@@ -50,7 +50,7 @@
 
 - **Деплой заглушки до 1.2:** Pages успели включиться в режиме «Deploy from branch» и опубликовали README через
   Jekyll; чтобы его не проиндексировали, деплой из Actions сделан сразу. `noindex` на заглушку не ставим.
-- **Pages — источник «GitHub Actions»** (`build_type: workflow`), домен `mantikai.com` — в настройках Pages.
+- **Pages — источник «GitHub Actions»** (`build_type: workflow`), домен `isomantika.com` — в настройках Pages.
   Файлы `CNAME` и `.nojekyll` не кладём: при деплое артефакта через Actions они не нужны. В режиме «Deploy from
   branch» GitHub коммитил бы `CNAME` в `main`, что запрещено ruleset.
 - **DNS** — у reg.ru (NS не меняли): A/AAAA на адреса GitHub Pages, `www` → CNAME `fafnur.github.io`.
@@ -60,7 +60,7 @@
 - **README — на английском, как маркетинговая страница** (индексируется, ссылка на сайт), ниже — раздел для
   разработчиков. Только факты из плана; «бесплатно» не пишем — монетизация в плане не описана. Ссылки на
   `/privacy`, `/terms`, `/support` добавить, когда страницы появятся (3.1, 3.2).
-- **About репозитория:** описание, сайт `https://mantikai.com`, темы (`tarot`, `tarot-reading`, `ai`, `angular`, …).
+- **About репозитория:** описание, сайт `https://isomantika.com`, темы (`tarot`, `tarot-reading`, `ai`, `angular`, …).
 
 ## 2026-10-14 — SSG и языки (1.2)
 
@@ -68,7 +68,7 @@
   без `@@id` (отступление от «осмысленных ID» в плане). Так советует angular.dev: при правке исходного текста
   меняется ID, и вместе с `i18nMissingTranslation: "error"` сборка падает, пока ru/es не переведены заново —
   переводы не отстают от английского молча.
-- **Канонические адреса — со слешем** (`https://mantikai.com/privacy/`): пререндер даёт `privacy/index.html`,
+- **Канонические адреса — со слешем** (`https://isomantika.com/privacy/`): пререндер даёт `privacy/index.html`,
   GitHub Pages на `/privacy` отвечает 301 на `/privacy/`. В `canonical`, `hreflang`, sitemap и внутренних ссылках —
   со слешем; ссылки из приложения (`/privacy`) работают через этот 301.
 - **404 — одна, английская, со ссылками на главные трёх языков** (GitHub Pages отдаёт только корневой
@@ -102,7 +102,7 @@
 
 - **Структура:** `libs/core` (общее без UI), `libs/ui/<имя>` (по библиотеке на UI-элемент), `libs/<страница>/page`
   (по библиотеке на страницу, `export default` для `loadComponent`). Приложение — только конфиг и роуты.
-- **`PATHS` и `toRoutes` в `@mantikai/core`:** все адреса — в одной константе с ведущим `/` (для ссылок),
+- **`PATHS` и `toRoutes` в `@isomantika/core`:** все адреса — в одной константе с ведущим `/` (для ссылок),
   `toRoutes` превращает их в пути роутера. Хвостовой слеш в ссылках (GitHub Pages отвечает 301 на `/privacy`)
   решаем в 2.2, когда появятся ссылки между страницами.
 - **Тесты библиотек — `@nx/vitest` + AnalogJS (`vitest-analog`)** по выбору владельца: генератор Nx с
@@ -124,7 +124,7 @@ libs/home/page --name=home/page`.
   `prose` увеличены под Cormorant, цитаты без курсива (у Manrope его нет).
 - **Сброс кнопок продублирован в `@layer base`:** preflight Tailwind 3.4 сбрасывает `button` в одном правиле с
   `input:where(...)`, браузер без `:where()` отбрасывает правило целиком — кнопки остаются серыми.
-- **Кнопка — директива `button[mkButton], a[mkButton]`** (`@mantikai/ui/buttons`) с вариантами `primary`, `secondary`,
+- **Кнопка — директива `button[imkButton], a[imkButton]`** (`@isomantika/ui/buttons`) с вариантами `primary`, `secondary`,
   `ghost`; классы варианта — `computed` в `host` `[class]`, статические — в `host.class`.
 - **Фавикон:** во вкладке — знак «M» из звёзд без карты (`favicon.svg` + `favicon.ico` 16/32 вместо PNG 32 — его
   браузеры запрашивают и без `<link>`); иконки iOS и манифеста (180/192/512) — карта на тёмном фоне (`icon_ios.svg`
@@ -132,13 +132,13 @@ libs/home/page --name=home/page`.
 
 ## 2026-10-15 — оболочка страниц (2.2)
 
-- **Адреса со слешем на конце** (пересмотрено в 3.1 — встроенная стратегия вместо своего сериализатора): `TrailingSlashUrlSerializer` (`@mantikai/core`) — `routerLink` и адресная строка
+- **Адреса со слешем на конце** (пересмотрено в 3.1 — встроенная стратегия вместо своего сериализатора): `TrailingSlashUrlSerializer` (`@isomantika/core`) — `routerLink` и адресная строка
   дают `/privacy/`, как раздаёт GitHub Pages (на `/privacy` — 301). Переходы внутри языка — SPA, смена языка — обычная
   ссылка на другую сборку.
 - **Метаданные — `SeoStrategy` (свой `TitleStrategy`):** `title` и `data` роута (`SeoRouteData`: `description`,
-  `noindex`) → `<title>«Страница — Mantikai»`, description, canonical, `hreflang` трёх локалей + `x-default`, Open Graph,
+  `noindex`) → `<title>«Страница — Isomantika»`, description, canonical, `hreflang` трёх локалей + `x-default`, Open Graph,
   Twitter Card. Строки — `$localize` в `app.routes.ts`. 404 — `noindex`, без canonical.
-- **`SITE` и `LOCALES` в `@mantikai/core`:** имя бренда, домен, почта, `og.png` и параметры языков — в одном месте
+- **`SITE` и `LOCALES` в `@isomantika/core`:** имя бренда, домен, почта, `og.png` и параметры языков — в одном месте
   (бренд будет меняться).
 - **Флаги:** США и России — из `flag-icons` (копируются в `/flags/`), Испании — свой SVG из трёх полос: файл пакета с
   гербом весит 80 КБ, а при 16 px герб не виден.
@@ -150,7 +150,7 @@ libs/home/page --name=home/page`.
   «Эта страница есть на русском». Плашка снизу по центру; закрытие помнится в `localStorage`.
 - **Шапка — sticky** с `backdrop-blur` (через `supports-[backdrop-filter]`, без поддержки — сплошной фон).
   Навигация «Возможности» и «Расклады» — якоря `/#features`, `/#spreads` (секции появятся на этапе 3).
-- **`og.png` 1200×630** — карта из `mark.svg`, «Mantikai» Cormorant и «AI tarot readings»; одна для всех языков,
+- **`og.png` 1200×630** — карта из `mark.svg`, «Isomantika» Cormorant и «AI tarot readings»; одна для всех языков,
   сгенерирована скриншотом Playwright. При смене бренда — перегенерировать.
 - **Три разрешения:** handset (< 768), tablet (`md:`), web (`lg:`); в e2e добавлен проект `tablet-chrome` (820×1180).
 - `h1`/`h2` на мобильных меньше и с переносом: длинные русские слова («конфиденциальности») не вылезают за экран.
@@ -204,7 +204,7 @@ libs/home/page --name=home/page`.
   приложения, общественное достояние; 120 и 240 px, ~8 и ~27 КБ). Галерея скрыта, пока `SITE.screenshots` пуст.
 - **Сторы:** `SITE.stores` (`appStore`, `googlePlay`) — `null`, пока приложения нет: вместо бейджей — «Скоро в …» без
   логотипов Apple/Google (их можно использовать только в официальных бейджах). С адресом —
-  `public/badges/{store}-{locale}.svg`. Конфиг сторов и скриншотов — в `SITE` (`@mantikai/core`), не отдельный
+  `public/badges/{store}-{locale}.svg`. Конфиг сторов и скриншотов — в `SITE` (`@isomantika/core`), не отдельный
   `site.config.ts`.
 - **Производительность первого экрана** (Lighthouse, мобильный, локально с gzip — как отдаёт Pages):
   - CSS — обычной ссылкой, без `inlineCritical`: при асинхронной подгрузке полного CSS заголовок перерисовывался
@@ -249,7 +249,7 @@ libs/home/page --name=home/page`.
 
 - **Без ID счётчиков нет и баннера:** пока `SITE.analytics` пуст, ничего не собирается — спрашивать согласие не о чем;
   «Настройки cookies» в футере тоже скрыты. Весь код на месте и включается, как только появятся ID (после ребрендинга).
-- **`@mantikai/analytics`:** `ConsentService` (выбор в `localStorage` `mantikai.consent` = `{ v, analytics, at }`, новая
+- **`@isomantika/analytics`:** `ConsentService` (выбор в `localStorage` `isomantika.consent` = `{ v, analytics, at }`, новая
   версия `v` — спросить заново), `AnalyticsService` (`start`, `pageView`, `event`, `clearCookies`; до `start` — ничего),
   `provideAnalytics()` (только браузер: восстанавливает выбор, запускает счётчики после согласия, шлёт просмотры по
   `NavigationEnd`). ID — через токен `ANALYTICS_CONFIG` (по умолчанию из `SITE`), поэтому загрузку проверяют юнит-тесты
@@ -273,3 +273,14 @@ libs/home/page --name=home/page`.
   страницы всех локалей, включая 404, на трёх разрешениях.
 - **Проверка ссылок** — e2e обходит все страницы собранного сайта и запрашивает каждую внутреннюю ссылку.
 - **OG-картинки по локалям отложены** до ребрендинга: их всё равно перерисовывать. Пока одна `og.png` на все языки.
+
+## 2026-10-17 — ребрендинг Mantikai → Isomantika
+
+- **Имя `Isomantika`, домен `isomantika.com`** — из-за проблем с регистрацией торговой марки `Mantikai`. Имя латиницей
+  во всех локалях, почта `support@isomantika.com`. Старые домены `mantikai.*`, `mantika.ru` не используются, редиректов
+  нет.
+- **Технические имена — тоже:** алиас `@isomantika/*`, префикс селекторов `imk`, ключи `localStorage`
+  `isomantika.consent` и `imk-language-hint-closed` (сохранённые согласие и закрытая подсказка у посетителей
+  сбрасываются — счётчиков ещё нет, терять нечего).
+- **Юридические тексты** в `content/` заменены механически (имя, домен, почта) с разрешения владельца, без других правок.
+- **Знак «M», фавикон и `og.png`** пока старые — новый знак выбирается из концептов, отдельной задачей.

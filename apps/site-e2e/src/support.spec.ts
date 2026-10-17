@@ -18,7 +18,7 @@ test.describe('support', () => {
     await page.goto('/ru/support/');
 
     await expect(page.getByRole('link', { name: 'Написать нам' })).toHaveAttribute('href', '/ru/contact/');
-    await expect(page.locator('main a[href="mailto:support@mantikai.com"]')).toBeVisible();
+    await expect(page.locator('main a[href="mailto:support@isomantika.com"]')).toBeVisible();
     await expect(page.locator('main a[href="/ru/delete-account/"]')).toBeAttached();
   });
 });
@@ -32,7 +32,7 @@ test.describe('delete account', () => {
       'href',
       '/es/contact/?topic=account_deletion',
     );
-    await expect(page.locator('main a[href^="mailto:support@mantikai.com?subject="]')).toBeVisible();
+    await expect(page.locator('main a[href^="mailto:support@isomantika.com?subject="]')).toBeVisible();
 
     await page.locator('main a[href="/es/privacy/#how-long-we-keep-data"]').click();
     await expect(page).toHaveURL('/es/privacy/#how-long-we-keep-data');

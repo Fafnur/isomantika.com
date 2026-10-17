@@ -12,7 +12,7 @@ interface Slot {
  * Card positions of a spread, drawn with card backs: the layout, not the cards.
  */
 @Component({
-  selector: 'mk-spread-diagram',
+  selector: 'imk-spread-diagram',
   templateUrl: './spread-diagram.html',
   host: { class: 'block' },
 })

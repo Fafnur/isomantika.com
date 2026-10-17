@@ -1,4 +1,4 @@
-import { SITE } from '@mantikai/core';
+import { SITE } from '@isomantika/core';
 
 export type ContactTopic = 'question' | 'bug' | 'account_deletion' | 'other';
 

@@ -23,7 +23,7 @@
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
           <context context-type="linenumber">1,2</context>
         </context-group>
-        <note priority="1" from="description">Page heading: how to delete a Mantikai account</note>
+        <note priority="1" from="description">Page heading: how to delete a Isomantika account</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
       <trans-unit id="3223372976039553190" datatype="html">
@@ -78,9 +78,9 @@
         <note priority="1" from="description">Skip link for keyboard users, jumps over the header to the page content</note>
         <note priority="1" from="meaning">Layout</note>
       </trans-unit>
-      <trans-unit id="2553559873688680949" datatype="html">
-        <source>Mantikai is an AI tarot app: ask a question, draw the cards and get a reading in your language.</source>
-        <target>Mantikai — ИИ-таро: задайте вопрос, вытяните карты и получите толкование на своём языке.</target>
+      <trans-unit id="6010368523111023240" datatype="html">
+        <source>Isomantika is an AI tarot app: ask a question, draw the cards and get a reading in your language.</source>
+        <target>Isomantika — ИИ-таро: задайте вопрос, вытяните карты и получите толкование на своём языке.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">14</context>
@@ -88,9 +88,9 @@
         <note priority="1" from="description">Meta description of the home page</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
-      <trans-unit id="1222485317741226142" datatype="html">
-        <source>How the Mantikai app and website collect, use and protect personal data.</source>
-        <target>Как приложение и сайт Mantikai собирают, используют и защищают персональные данные.</target>
+      <trans-unit id="6649416164073606473" datatype="html">
+        <source>How the Isomantika app and website collect, use and protect personal data.</source>
+        <target>Как приложение и сайт Isomantika собирают, используют и защищают персональные данные.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">23</context>
@@ -98,9 +98,9 @@
         <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Privacy page</note>
       </trans-unit>
-      <trans-unit id="7849496536010589894" datatype="html">
-        <source>Terms of use of the Mantikai app and website.</source>
-        <target>Условия использования приложения и сайта Mantikai.</target>
+      <trans-unit id="3452789907959182571" datatype="html">
+        <source>Terms of use of the Isomantika app and website.</source>
+        <target>Условия использования приложения и сайта Isomantika.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">32</context>
@@ -108,9 +108,9 @@
         <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Terms page</note>
       </trans-unit>
-      <trans-unit id="1177136775932893459" datatype="html">
-        <source>Consent to the processing of personal data sent through the Mantikai contact form.</source>
-        <target>Согласие на обработку персональных данных, отправленных через форму обратной связи Mantikai.</target>
+      <trans-unit id="7293155886528170540" datatype="html">
+        <source>Consent to the processing of personal data sent through the Isomantika contact form.</source>
+        <target>Согласие на обработку персональных данных, отправленных через форму обратной связи Isomantika.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">41</context>
@@ -118,9 +118,9 @@
         <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Consent page</note>
       </trans-unit>
-      <trans-unit id="7925113565498619271" datatype="html">
-        <source>Answers to common questions about Mantikai and how to contact support.</source>
-        <target>Ответы на частые вопросы о Mantikai и как связаться с поддержкой.</target>
+      <trans-unit id="4940024318885325881" datatype="html">
+        <source>Answers to common questions about Isomantika and how to contact support.</source>
+        <target>Ответы на частые вопросы о Isomantika и как связаться с поддержкой.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">49</context>
@@ -138,9 +138,9 @@
         <note priority="1" from="description">Page title in the browser tab</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="1578336360994886306" datatype="html">
-        <source>How to delete your Mantikai account and what happens to your data.</source>
-        <target>Как удалить аккаунт Mantikai и что происходит с вашими данными.</target>
+      <trans-unit id="3192869536018220336" datatype="html">
+        <source>How to delete your Isomantika account and what happens to your data.</source>
+        <target>Как удалить аккаунт Isomantika и что происходит с вашими данными.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">57</context>
@@ -148,9 +148,9 @@
         <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="5807943079214262124" datatype="html">
-        <source>Send a message to the Mantikai team.</source>
-        <target>Напишите команде Mantikai.</target>
+      <trans-unit id="5061241584070358839" datatype="html">
+        <source>Send a message to the Isomantika team.</source>
+        <target>Напишите команде Isomantika.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
           <context context-type="linenumber">65</context>
@@ -320,10 +320,10 @@
         <note priority="1" from="description">Accessible label of the table of contents</note>
         <note priority="1" from="meaning">Legal page</note>
       </trans-unit>
-      <trans-unit id="753911897731909564" datatype="html">
-        <source> How to delete your Mantikai account and all your data in it.
+      <trans-unit id="1441547459243705402" datatype="html">
+        <source> How to delete your Isomantika account and all your data in it.
 </source>
-        <target> Как удалить аккаунт Mantikai и все данные в нём.
+        <target> Как удалить аккаунт Isomantika и все данные в нём.
 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
@@ -342,9 +342,9 @@
         <note priority="1" from="description">Section heading: deleting from the app</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="7019883240666992135" datatype="html">
-        <source>Open Mantikai and go to Settings.</source>
-        <target>Откройте Mantikai и перейдите в Настройки.</target>
+      <trans-unit id="5746599782891037277" datatype="html">
+        <source>Open Isomantika and go to Settings.</source>
+        <target>Откройте Isomantika и перейдите в Настройки.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
           <context context-type="linenumber">9,10</context>
@@ -502,9 +502,9 @@
         <note priority="1" from="description">Button to the contact form</note>
         <note priority="1" from="meaning">Support page</note>
       </trans-unit>
-      <trans-unit id="3862681005272261979" datatype="html">
-        <source>What is Mantikai?</source>
-        <target>Что такое Mantikai?</target>
+      <trans-unit id="7426984382696673058" datatype="html">
+        <source>What is Isomantika?</source>
+        <target>Что такое Isomantika?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">25</context>
@@ -512,14 +512,14 @@
         <note priority="1" from="description">Question</note>
         <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
-      <trans-unit id="5952009488058293477" datatype="html">
-        <source>Mantikai is a tarot app for iOS and Android. You ask a question, draw cards from the classic Rider–Waite deck, and AI writes an interpretation of the spread for your question — in English, Russian or Spanish.</source>
-        <target>Mantikai — приложение таро для iOS и Android. Вы задаёте вопрос, вытягиваете карты классической колоды Райдера — Уэйта, а ИИ пишет толкование расклада под ваш вопрос — на русском, английском или испанском.</target>
+      <trans-unit id="1950121270951393013" datatype="html">
+        <source>Isomantika is a tarot app for iOS and Android. You ask a question, draw cards from the classic Rider–Waite deck, and AI writes an interpretation of the spread for your question — in English, Russian or Spanish.</source>
+        <target>Isomantika — приложение таро для iOS и Android. Вы задаёте вопрос, вытягиваете карты классической колоды Райдера — Уэйта, а ИИ пишет толкование расклада под ваш вопрос — на русском, английском или испанском.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
-        <note priority="1" from="description">Answer to «What is Mantikai?»</note>
+        <note priority="1" from="description">Answer to «What is Isomantika?»</note>
         <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
       <trans-unit id="6861962368859058983" datatype="html">
@@ -682,8 +682,8 @@
         <note priority="1" from="description">Question</note>
         <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
-      <trans-unit id="922004847715467550" datatype="html">
-        <source>No. Mantikai is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.</source>
+      <trans-unit id="7544292524983955808" datatype="html">
+        <source>No. Isomantika is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.</source>
         <target>Нет. Приложение создано для развлечения. Толкования пишет ИИ: относитесь к ним как к поводу поразмышлять, а не как к предсказанию или профессиональному совету.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
@@ -716,9 +716,9 @@
         <note priority="1" from="description">Answer; «Settings → About → Contact support» must match the app menu</note>
         <note priority="1" from="meaning">Support FAQ</note>
       </trans-unit>
-      <trans-unit id="6192024017145416583" datatype="html">
-        <source> Mantikai · tarot app for iOS and Android </source>
-        <target> Mantikai · таро для iOS и Android </target>
+      <trans-unit id="4295763897256477792" datatype="html">
+        <source> Isomantika · tarot app for iOS and Android </source>
+        <target> Isomantika · таро для iOS и Android </target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
           <context context-type="linenumber">7,9</context>
@@ -736,9 +736,9 @@
         <note priority="1" from="description">Main heading</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
-      <trans-unit id="4975739543943596028" datatype="html">
-        <source> Mantikai reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English, Russian or Spanish. </source>
-        <target> Mantikai толкует классическое таро Райдера — Уэйта под ваш вопрос: каждая карта на своём месте, спокойным понятным языком — на русском, английском или испанском. </target>
+      <trans-unit id="48988762071906297" datatype="html">
+        <source> Isomantika reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English, Russian or Spanish. </source>
+        <target> Isomantika толкует классическое таро Райдера — Уэйта под ваш вопрос: каждая карта на своём месте, спокойным понятным языком — на русском, английском или испанском. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
           <context context-type="linenumber">11,17</context>
@@ -830,9 +830,9 @@
         <note priority="1" from="description">Final call heading</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
-      <trans-unit id="2925372017173813141" datatype="html">
-        <source>Mantikai is coming to iPhone and Android.</source>
-        <target>Mantikai скоро появится на iPhone и Android.</target>
+      <trans-unit id="6904945123919125570" datatype="html">
+        <source>Isomantika is coming to iPhone and Android.</source>
+        <target>Isomantika скоро появится на iPhone и Android.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
           <context context-type="linenumber">147,148</context>

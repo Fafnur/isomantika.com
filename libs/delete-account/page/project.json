@@ -2,7 +2,7 @@
   "name": "delete-account/page",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/delete-account/page/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": []
 }

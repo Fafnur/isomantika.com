@@ -1,7 +1,7 @@
 import { Route } from '@angular/router';
 
-import { PATHS, SeoRouteData, toRoutes } from '@mantikai/core';
-import { legalDocument, legalTitle } from '@mantikai/legal/content';
+import { PATHS, SeoRouteData, toRoutes } from '@isomantika/core';
+import { legalDocument, legalTitle } from '@isomantika/legal/content';
 
 const notFound: SeoRouteData = { noindex: true };
 
@@ -9,72 +9,72 @@ export const appRoutes: Route[] = toRoutes([
   {
     path: PATHS.home,
     pathMatch: 'full',
-    loadComponent: () => import('@mantikai/home/page'),
+    loadComponent: () => import('@isomantika/home/page'),
     data: {
-      description: $localize`:Home page|Meta description of the home page:Mantikai is an AI tarot app: ask a question, draw the cards and get a reading in your language.`,
+      description: $localize`:Home page|Meta description of the home page:Isomantika is an AI tarot app: ask a question, draw the cards and get a reading in your language.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.privacy,
-    loadComponent: () => import('@mantikai/legal/page'),
+    loadComponent: () => import('@isomantika/legal/page'),
     title: legalTitle('privacy'),
     resolve: { document: legalDocument('privacy') },
     data: {
-      description: $localize`:Privacy page|Meta description:How the Mantikai app and website collect, use and protect personal data.`,
+      description: $localize`:Privacy page|Meta description:How the Isomantika app and website collect, use and protect personal data.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.terms,
-    loadComponent: () => import('@mantikai/legal/page'),
+    loadComponent: () => import('@isomantika/legal/page'),
     title: legalTitle('terms'),
     resolve: { document: legalDocument('terms') },
     data: {
-      description: $localize`:Terms page|Meta description:Terms of use of the Mantikai app and website.`,
+      description: $localize`:Terms page|Meta description:Terms of use of the Isomantika app and website.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.consent,
-    loadComponent: () => import('@mantikai/legal/page'),
+    loadComponent: () => import('@isomantika/legal/page'),
     title: legalTitle('consent'),
     resolve: { document: legalDocument('consent') },
     data: {
-      description: $localize`:Consent page|Meta description:Consent to the processing of personal data sent through the Mantikai contact form.`,
+      description: $localize`:Consent page|Meta description:Consent to the processing of personal data sent through the Isomantika contact form.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.support,
-    loadComponent: () => import('@mantikai/support/page'),
+    loadComponent: () => import('@isomantika/support/page'),
     title: $localize`:Support page|Page title in the browser tab:Support`,
     data: {
-      description: $localize`:Support page|Meta description:Answers to common questions about Mantikai and how to contact support.`,
+      description: $localize`:Support page|Meta description:Answers to common questions about Isomantika and how to contact support.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.deleteAccount,
-    loadComponent: () => import('@mantikai/delete-account/page'),
+    loadComponent: () => import('@isomantika/delete-account/page'),
     title: $localize`:Delete account page|Page title in the browser tab:Delete Account`,
     data: {
-      description: $localize`:Delete account page|Meta description:How to delete your Mantikai account and what happens to your data.`,
+      description: $localize`:Delete account page|Meta description:How to delete your Isomantika account and what happens to your data.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.contact,
-    loadComponent: () => import('@mantikai/contact/page'),
+    loadComponent: () => import('@isomantika/contact/page'),
     title: $localize`:Contact page|Page title in the browser tab:Contact Us`,
     data: {
-      description: $localize`:Contact page|Meta description:Send a message to the Mantikai team.`,
+      description: $localize`:Contact page|Meta description:Send a message to the Isomantika team.`,
     } satisfies SeoRouteData,
   },
   {
     path: PATHS.notFound,
-    loadComponent: () => import('@mantikai/not-found/page'),
+    loadComponent: () => import('@isomantika/not-found/page'),
     title: $localize`:Not found page|Page title in the browser tab:Page not found`,
     data: notFound,
   },
   // Must be the last one.
   {
     path: PATHS.any,
-    loadComponent: () => import('@mantikai/not-found/page'),
+    loadComponent: () => import('@isomantika/not-found/page'),
     title: $localize`:Not found page|Page title in the browser tab:Page not found`,
     data: notFound,
   },

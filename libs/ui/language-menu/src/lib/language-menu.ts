@@ -4,13 +4,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
-import { getLocale, LOCALES, localeUrl } from '@mantikai/core';
+import { getLocale, LOCALES, localeUrl } from '@isomantika/core';
 
 /**
  * Language switcher: links to the same page in another locale build (full page load).
  */
 @Component({
-  selector: 'mk-language-menu',
+  selector: 'imk-language-menu',
   imports: [CdkMenuTrigger, CdkMenu, CdkMenuItem],
   templateUrl: './language-menu.html',
 })

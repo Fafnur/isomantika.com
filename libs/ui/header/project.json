@@ -2,7 +2,7 @@
   "name": "ui/header",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/header/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": [],
   "targets": {

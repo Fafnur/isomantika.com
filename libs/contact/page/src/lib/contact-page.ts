@@ -3,9 +3,9 @@ import { afterNextRender, Component, computed, inject, LOCALE_ID, signal } from 
 import { email, form, FormField, FormRoot, maxLength, pattern, required, validate } from '@angular/forms/signals';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
-import { AnalyticsService } from '@mantikai/analytics';
-import { getLocale, PATHS, SITE } from '@mantikai/core';
-import { Button } from '@mantikai/ui/buttons';
+import { AnalyticsService } from '@isomantika/analytics';
+import { getLocale, PATHS, SITE } from '@isomantika/core';
+import { Button } from '@isomantika/ui/buttons';
 
 import { CONTACT_TOPICS, ContactResult, ContactTopic, sendContactMessage } from './contact-api';
 
@@ -30,7 +30,7 @@ function emptyModel(topic: ContactTopic = 'question'): ContactModel {
  * Contact form: Signal Forms, validation mirrors the `contact` function (lengths after trimming).
  */
 @Component({
-  selector: 'mk-contact-page',
+  selector: 'imk-contact-page',
   imports: [FormField, FormRoot, RouterLink, Button],
   templateUrl: './contact-page.html',
   host: { class: 'block max-w-2xl' },

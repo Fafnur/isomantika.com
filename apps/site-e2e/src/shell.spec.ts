@@ -75,20 +75,20 @@ test.describe('metadata', () => {
   test('page has title, description, canonical and hreflang', async ({ page }) => {
     await page.goto('/es/terms/');
 
-    await expect(page).toHaveTitle('Términos de uso — Mantikai');
-    await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Mantikai/);
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://mantikai.com/es/terms/');
-    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://mantikai.com/es/terms/');
-    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://mantikai.com/og.png');
+    await expect(page).toHaveTitle('Términos de uso — Isomantika');
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Isomantika/);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://isomantika.com/es/terms/');
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://isomantika.com/es/terms/');
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://isomantika.com/og.png');
 
     const alternates = await page
       .locator('link[rel="alternate"][hreflang]')
       .evaluateAll((links) => links.map((link) => `${link.getAttribute('hreflang')} ${link.getAttribute('href')}`));
     expect(alternates).toEqual([
-      'en https://mantikai.com/terms/',
-      'ru https://mantikai.com/ru/terms/',
-      'es https://mantikai.com/es/terms/',
-      'x-default https://mantikai.com/terms/',
+      'en https://isomantika.com/terms/',
+      'ru https://isomantika.com/ru/terms/',
+      'es https://isomantika.com/es/terms/',
+      'x-default https://isomantika.com/terms/',
     ]);
   });
 

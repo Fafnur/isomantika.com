@@ -3,9 +3,9 @@ title: Consentimiento para el tratamiento de datos personales
 updated: 2026-10-15
 ---
 
-Este consentimiento se aplica a los mensajes enviados a través del formulario de contacto de mantikai.com. Al marcar
+Este consentimiento se aplica a los mensajes enviados a través del formulario de contacto de isomantika.com. Al marcar
 la casilla de consentimiento y enviar el formulario, doy mi consentimiento libre, específico, informado e inequívoco a
-**Aleksandr Serenko** (el responsable, support@mantikai.com) para tratar mis datos personales en las condiciones
+**Aleksandr Serenko** (el responsable, support@isomantika.com) para tratar mis datos personales en las condiciones
 siguientes.
 
 ## Qué datos
@@ -44,10 +44,10 @@ consentimiento, lo que ocurra primero.
 
 ## Retirada del consentimiento
 
-Puedo retirar este consentimiento en cualquier momento escribiendo a support@mantikai.com. Mis datos se eliminarán en
+Puedo retirar este consentimiento en cualquier momento escribiendo a support@isomantika.com. Mis datos se eliminarán en
 un plazo de 30 días. La retirada no afecta al tratamiento realizado antes de ella.
 
 Dar el consentimiento es voluntario. En lugar de usar el formulario, puedo escribir directamente a
-support@mantikai.com.
+support@isomantika.com.
 
 Todo lo que no se describe aquí figura en la [Política de privacidad](/es/privacy/).

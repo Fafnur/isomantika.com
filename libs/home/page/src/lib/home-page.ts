@@ -2,8 +2,8 @@ import { IMAGE_LOADER, ImageLoaderConfig, NgOptimizedImage } from '@angular/comm
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { FRAGMENTS, PATHS, SITE } from '@mantikai/core';
-import { StoreButtons } from '@mantikai/ui/store-buttons';
+import { FRAGMENTS, PATHS, SITE } from '@isomantika/core';
+import { StoreButtons } from '@isomantika/ui/store-buttons';
 
 import { SpreadDiagram, SpreadType } from './spread-diagram/spread-diagram';
 
@@ -27,7 +27,7 @@ function cardLoader(config: ImageLoaderConfig): string {
 }
 
 @Component({
-  selector: 'mk-home-page',
+  selector: 'imk-home-page',
   imports: [NgOptimizedImage, RouterLink, StoreButtons, SpreadDiagram],
   templateUrl: './home-page.html',
   providers: [{ provide: IMAGE_LOADER, useValue: cardLoader }],
@@ -121,7 +121,7 @@ export class HomePage {
     },
     {
       title: $localize`:Support FAQ|Question:Are the readings predictions?`,
-      text: $localize`:Support FAQ|Answer about entertainment purpose:No. Mantikai is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.`,
+      text: $localize`:Support FAQ|Answer about entertainment purpose:No. Isomantika is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.`,
     },
   ];
 }

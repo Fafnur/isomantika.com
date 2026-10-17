@@ -3,17 +3,17 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
-import { ConsentService } from '@mantikai/analytics';
-import { findPreferredLocale, getLocale, Locale, localeUrl } from '@mantikai/core';
+import { ConsentService } from '@isomantika/analytics';
+import { findPreferredLocale, getLocale, Locale, localeUrl } from '@isomantika/core';
 
-const STORAGE_KEY = 'mk-language-hint-closed';
+const STORAGE_KEY = 'imk-language-hint-closed';
 
 /**
  * «This page is available in Russian»: shown when the browser language matches another locale of the site.
  * Browser only (not prerendered); closing is remembered.
  */
 @Component({
-  selector: 'mk-language-hint',
+  selector: 'imk-language-hint',
   templateUrl: './language-hint.html',
 })
 export class LanguageHint {

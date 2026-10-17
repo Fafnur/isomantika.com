@@ -1,4 +1,4 @@
-# Задачи для репозитория приложения (mantikai), связанные с сайтом
+# Задачи для репозитория приложения (isomantika), связанные с сайтом
 
 Добавить в `docs/plan.md` приложения (этап 5) и выполнить там. A.2 нужна до задачи 4.1 сайта.
 A.3 нужна до выпуска: политика конфиденциальности обещает удаление убранных из истории раскладов в течение 48 часов.
@@ -9,7 +9,7 @@ A.3 нужна до выпуска: политика конфиденциаль�
 `TELEGRAM_*`, `supabase functions deploy contact`.
 
 **A.1. ✅ Ссылки на документы без префикса для английского.** Сайт отдаёт английскую версию из корня
-(`mantikai.com/privacy`), русскую и испанскую — с префиксом (`/ru/privacy`, `/es/privacy`). В `AppLinks`
+(`isomantika.com/privacy`), русскую и испанскую — с префиксом (`/ru/privacy`, `/es/privacy`). В `AppLinks`
 (`lib/core/config/app_links.dart`) `privacyPolicy` и `terms` для `en` строят адрес без префикса, для остальных
 языков — с префиксом. Добавить `support(languageCode)` по тому же правилу (`/support`, `/ru/support`). Юнит-тест
 на все три языка. Записать в `docs/decisions.md`.
@@ -19,7 +19,7 @@ name text, email text, telegram text null, topic text check in ('question','bug'
 message text, locale text, ip_hash text); RLS включён, политик нет — доступ только у service role. Функция
 `supabase/functions/contact` (в `config.toml` — `verify_jwt = false`: запросы идут с сайта без входа):
 - только POST и OPTIONS; CORS — только источники из секрета `CONTACT_ALLOWED_ORIGINS`
-  (`https://mantikai.com`, для разработки `http://localhost:4200`);
+  (`https://isomantika.com`, для разработки `http://localhost:4200`);
 - валидация как на сайте (имя до 100, email, ник `^@?[A-Za-z0-9_]{5,32}$` или пусто, тема из списка,
   сообщение 10–2000, `locale` из `en|ru|es`) → 400 `invalid_request`;
 - заполнено поле-ловушка `website` или `elapsedMs < 3000` → 200 без сохранения (бот не должен понять, что его

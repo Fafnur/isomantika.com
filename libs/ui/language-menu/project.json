@@ -2,7 +2,7 @@
   "name": "ui/language-menu",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/language-menu/src",
-  "prefix": "mk",
+  "prefix": "imk",
   "projectType": "library",
   "tags": [],
   "targets": {

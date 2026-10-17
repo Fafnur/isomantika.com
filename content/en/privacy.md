@@ -3,18 +3,18 @@ title: Privacy Policy
 updated: 2026-10-15
 ---
 
-This Privacy Policy explains what personal data we collect when you use the Mantikai mobile app (iOS and Android)
-and the website mantikai.com, why we collect it, who we share it with, how long we keep it and what rights you have.
+This Privacy Policy explains what personal data we collect when you use the Isomantika mobile app (iOS and Android)
+and the website isomantika.com, why we collect it, who we share it with, how long we keep it and what rights you have.
 
 We collect as little as we need to run the service. We do not show ads, do not sell your data and do not track you
 across other apps or websites.
 
 ## Who we are
 
-Mantikai is operated by **Aleksandr Serenko**, a private individual based in Russia ("we", "us"). We are the
+Isomantika is operated by **Aleksandr Serenko**, a private individual based in Russia ("we", "us"). We are the
 controller of your personal data.
 
-Contact for any privacy question or request: **support@mantikai.com**.
+Contact for any privacy question or request: **support@isomantika.com**.
 
 ## Data we collect
 
@@ -48,7 +48,7 @@ reproduce problems. We also receive your email address and whatever you write.
 
 ### Contact form on the website
 
-If you send a message through the form at mantikai.com/contact, we receive: your name, email address, Telegram username
+If you send a message through the form at isomantika.com/contact, we receive: your name, email address, Telegram username
 (optional), the topic, your message and the website language. For spam protection we also process a one-way hash of
 your IP address and the time it took to fill in the form. This processing is based on your consent — see the
 [Consent to the Processing of Personal Data](/consent/).
@@ -61,7 +61,7 @@ server logs for a short period.
 
 ### Website analytics (only with your consent)
 
-If you click "Accept" in the cookie banner on mantikai.com, we use Google Analytics and Yandex Metrica to understand
+If you click "Accept" in the cookie banner on isomantika.com, we use Google Analytics and Yandex Metrica to understand
 how the website is used: pages visited, referring site, approximate location (city or country), device and browser
 type, and clicks on app store links. If you click "Reject" or do nothing, these services are not loaded at all.
 Session recording (Yandex Metrica Webvisor) is turned off.
@@ -102,7 +102,7 @@ for a limited time under their own policies to prevent abuse.
 
 ## Who we share data with
 
-We share data only with service providers that help us run Mantikai, and only to the extent they need:
+We share data only with service providers that help us run Isomantika, and only to the extent they need:
 
 | Provider | What it does | Where data is processed |
 |---|---|---|
@@ -154,7 +154,7 @@ Depending on where you live, you have the right to:
 **Deleting your account:** in the app, go to Settings → Account → Delete account. If you cannot access the app, see
 [how to delete your account](/delete-account/).
 
-For any other request, write to support@mantikai.com from the email address you used to sign in, or include your
+For any other request, write to support@isomantika.com from the email address you used to sign in, or include your
 account identifier (you can find it in any email sent to support from the app). We will reply within 30 days.
 
 ## Cookies and similar technologies
@@ -168,7 +168,7 @@ settings" link at the bottom of every page.
 
 ## Age restriction
 
-Mantikai is intended only for people **18 years of age or older**. We do not knowingly collect data from anyone under
+Isomantika is intended only for people **18 years of age or older**. We do not knowingly collect data from anyone under
 18. If you believe a minor has created an account, write to us and we will delete it.
 
 ## Security
@@ -184,6 +184,6 @@ We will notify you in the app or on the website about significant changes in adv
 
 ## Contact
 
-Aleksandr Serenko — support@mantikai.com
+Aleksandr Serenko — support@isomantika.com
 
 This policy is available in English, Russian and Spanish. If the versions differ, the English version prevails.

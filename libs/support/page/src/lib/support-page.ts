@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { PATHS, SITE } from '@mantikai/core';
-import { Button } from '@mantikai/ui/buttons';
+import { PATHS, SITE } from '@isomantika/core';
+import { Button } from '@isomantika/ui/buttons';
 
 interface Question {
   readonly question: string;
@@ -11,7 +11,7 @@ interface Question {
 }
 
 @Component({
-  selector: 'mk-support-page',
+  selector: 'imk-support-page',
   imports: [RouterLink, Button],
   templateUrl: './support-page.html',
   host: { class: 'block max-w-3xl' },
@@ -22,8 +22,8 @@ export class SupportPage {
 
   protected readonly questions: Question[] = [
     {
-      question: $localize`:Support FAQ|Question:What is Mantikai?`,
-      answer: $localize`:Support FAQ|Answer to «What is Mantikai?»:Mantikai is a tarot app for iOS and Android. You ask a question, draw cards from the classic Rider–Waite deck, and AI writes an interpretation of the spread for your question — in English, Russian or Spanish.`,
+      question: $localize`:Support FAQ|Question:What is Isomantika?`,
+      answer: $localize`:Support FAQ|Answer to «What is Isomantika?»:Isomantika is a tarot app for iOS and Android. You ask a question, draw cards from the classic Rider–Waite deck, and AI writes an interpretation of the spread for your question — in English, Russian or Spanish.`,
     },
     {
       question: $localize`:Support FAQ|Question:How many readings can I do per day?`,
@@ -55,7 +55,7 @@ export class SupportPage {
     },
     {
       question: $localize`:Support FAQ|Question:Are the readings predictions?`,
-      answer: $localize`:Support FAQ|Answer about entertainment purpose:No. Mantikai is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.`,
+      answer: $localize`:Support FAQ|Answer about entertainment purpose:No. Isomantika is made for entertainment. Interpretations are written by AI: treat them as a prompt for reflection, not as a prediction or professional advice.`,
     },
     {
       question: $localize`:Support FAQ|Question:How do I contact support from the app?`,

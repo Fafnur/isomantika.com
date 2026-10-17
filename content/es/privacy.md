@@ -3,8 +3,8 @@ title: Política de privacidad
 updated: 2026-10-15
 ---
 
-Esta política explica qué datos personales recopilamos cuando usas la aplicación móvil Mantikai (iOS y Android) y el
-sitio web mantikai.com, para qué los recopilamos, con quién los compartimos, cuánto tiempo los conservamos y qué
+Esta política explica qué datos personales recopilamos cuando usas la aplicación móvil Isomantika (iOS y Android) y el
+sitio web isomantika.com, para qué los recopilamos, con quién los compartimos, cuánto tiempo los conservamos y qué
 derechos tienes.
 
 Solo recopilamos lo que necesitamos para que el servicio funcione. No mostramos publicidad, no vendemos tus datos y no
@@ -12,10 +12,10 @@ te rastreamos en otras aplicaciones ni sitios web.
 
 ## Quiénes somos
 
-Mantikai está gestionado por **Aleksandr Serenko**, persona física con residencia en Rusia («nosotros»). Somos el
+Isomantika está gestionado por **Aleksandr Serenko**, persona física con residencia en Rusia («nosotros»). Somos el
 responsable del tratamiento de tus datos personales.
 
-Para cualquier pregunta o solicitud sobre privacidad: **support@mantikai.com**.
+Para cualquier pregunta o solicitud sobre privacidad: **support@isomantika.com**.
 
 ## Datos que recopilamos
 
@@ -49,7 +49,7 @@ ayuda a encontrar tu cuenta y reproducir problemas. También recibimos tu direcc
 
 ### Formulario de contacto del sitio web
 
-Si envías un mensaje a través del formulario en mantikai.com/es/contact, recibimos: tu nombre, dirección de correo,
+Si envías un mensaje a través del formulario en isomantika.com/es/contact, recibimos: tu nombre, dirección de correo,
 usuario de Telegram (opcional), el tema, tu mensaje y el idioma del sitio. Para proteger el formulario del spam también
 tratamos un hash irreversible de tu dirección IP y el tiempo que tardaste en rellenarlo. Este tratamiento se basa en tu
 consentimiento: consulta el [Consentimiento para el tratamiento de datos personales](/es/consent/).
@@ -62,7 +62,7 @@ errores. Estos datos se guardan en los registros del servidor durante un periodo
 
 ### Analítica del sitio web (solo con tu consentimiento)
 
-Si haces clic en «Aceptar» en el aviso de cookies de mantikai.com, usamos Google Analytics y Yandex Metrica para
+Si haces clic en «Aceptar» en el aviso de cookies de isomantika.com, usamos Google Analytics y Yandex Metrica para
 entender cómo se usa el sitio: páginas visitadas, sitio de procedencia, ubicación aproximada (ciudad o país), tipo de
 dispositivo y navegador, y clics en los enlaces a las tiendas de aplicaciones. Si haces clic en «Rechazar» o no eliges
 nada, estos servicios no se cargan en absoluto. La grabación de sesiones (Webvisor de Yandex Metrica) está desactivada.
@@ -105,7 +105,7 @@ abusos.
 
 ## Con quién compartimos los datos
 
-Solo compartimos datos con proveedores de servicios que nos ayudan a hacer funcionar Mantikai, y solo en la medida en
+Solo compartimos datos con proveedores de servicios que nos ayudan a hacer funcionar Isomantika, y solo en la medida en
 que lo necesitan:
 
 | Proveedor | Para qué | Dónde se tratan los datos |
@@ -160,7 +160,7 @@ Según dónde vivas, tienes derecho a:
 **Eliminar tu cuenta:** en la aplicación, ve a Ajustes → Cuenta → Eliminar cuenta. Si no puedes acceder a la
 aplicación, consulta [cómo eliminar tu cuenta](/es/delete-account/).
 
-Para cualquier otra solicitud, escribe a support@mantikai.com desde la dirección con la que iniciaste sesión, o incluye
+Para cualquier otra solicitud, escribe a support@isomantika.com desde la dirección con la que iniciaste sesión, o incluye
 tu identificador de cuenta (aparece en cualquier correo enviado al soporte desde la aplicación). Responderemos en un
 plazo de 30 días.
 
@@ -175,7 +175,7 @@ cualquier momento con el enlace «Configuración de cookies» al pie de cada pá
 
 ## Restricción de edad
 
-Mantikai está destinado solo a personas **de 18 años o más**. No recopilamos a sabiendas datos de menores de 18
+Isomantika está destinado solo a personas **de 18 años o más**. No recopilamos a sabiendas datos de menores de 18
 años. Si crees que un menor ha creado una cuenta, escríbenos y la eliminaremos.
 
 ## Seguridad
@@ -191,7 +191,7 @@ página. Te avisaremos con antelación en la aplicación o en el sitio web de lo
 
 ## Contacto
 
-Aleksandr Serenko — support@mantikai.com
+Aleksandr Serenko — support@isomantika.com
 
 Esta política está disponible en inglés, ruso y español. Si las versiones no coinciden, prevalece la versión en
 inglés.

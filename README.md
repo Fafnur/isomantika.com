@@ -58,5 +58,7 @@ yarn serve    # build and serve the static site (like GitHub Pages)
 yarn check    # lint, test, build, e2e
 ```
 
+Brand: logo, colours, fonts and files — [`brandbook/`](brandbook/README.md).
+
 Plan, progress and decisions (in Russian): [`docs/plan.md`](docs/plan.md), [`docs/progress.md`](docs/progress.md),
 [`docs/decisions.md`](docs/decisions.md).

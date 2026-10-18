@@ -49,4 +49,3 @@ export class LanguageHint {
     this.storage.setItem(STORAGE_KEY, '1');
   }
 }
-

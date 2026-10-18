@@ -1,4 +1,4 @@
-import { DOCUMENT, inject, Injectable, LOCALE_ID } from '@angular/core';
+import { DOCUMENT, inject, LOCALE_ID, Service } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 
@@ -16,7 +16,7 @@ export interface SeoRouteData {
  * Page metadata from the route: `title` and `data` (`SeoRouteData`) → `<title>`, description, canonical,
  * `hreflang` for every locale + `x-default`, Open Graph and Twitter Card. Runs on prerender, so crawlers get it in the HTML.
  */
-@Injectable()
+@Service({ autoProvided: false })
 export class SeoStrategy extends TitleStrategy {
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);

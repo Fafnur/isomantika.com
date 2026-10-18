@@ -4,7 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
 import { ConsentService } from '@isomantika/analytics';
-import { findPreferredLocale, getLocale, Locale, localeUrl } from '@isomantika/core';
+import { findPreferredLocale, getLocale, Locale, localeUrl, LocalStorage } from '@isomantika/core';
 
 const STORAGE_KEY = 'imk-language-hint-closed';
 
@@ -18,6 +18,7 @@ const STORAGE_KEY = 'imk-language-hint-closed';
 })
 export class LanguageHint {
   private readonly router = inject(Router);
+  private readonly storage = inject(LocalStorage);
   private readonly current = getLocale(inject(LOCALE_ID));
   private readonly $url = toSignal(
     this.router.events.pipe(
@@ -37,7 +38,7 @@ export class LanguageHint {
 
   constructor() {
     afterNextRender(() => {
-      if (!isClosed()) {
+      if (this.storage.getItem(STORAGE_KEY) !== '1') {
         this.$locale.set(findPreferredLocale(navigator.languages ?? [navigator.language], this.current.id));
       }
     });
@@ -45,18 +46,6 @@ export class LanguageHint {
 
   onClose(): void {
     this.$locale.set(null);
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch {
-      // Storage is unavailable (private mode, blocked cookies): the hint just comes back next time.
-    }
-  }
-}
-
-function isClosed(): boolean {
-  try {
-    return localStorage.getItem(STORAGE_KEY) === '1';
-  } catch {
-    return false;
+    this.storage.setItem(STORAGE_KEY, '1');
   }
 }

@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test.describe('support', () => {
   test('FAQ items open independently', async ({ page }) => {

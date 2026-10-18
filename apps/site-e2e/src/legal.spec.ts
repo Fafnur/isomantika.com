@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 const documents = ['privacy', 'terms', 'consent'];
 const locales = ['', 'ru/', 'es/'];

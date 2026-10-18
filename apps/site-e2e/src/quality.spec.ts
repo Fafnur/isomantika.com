@@ -1,5 +1,6 @@
 import { AxeBuilder } from '@axe-core/playwright';
-import { expect, test } from '@playwright/test';
+
+import { expect, test } from './fixtures';
 
 const PAGES = ['', 'privacy/', 'terms/', 'consent/', 'support/', 'delete-account/', 'contact/', 'missing-page/'];
 const LOCALES = ['', 'ru/', 'es/'];

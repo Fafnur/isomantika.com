@@ -1,4 +1,4 @@
-import { expect, Page, Route, test } from '@playwright/test';
+import { expect, Page, Route, test } from './fixtures';
 
 const FUNCTION = '**/functions/v1/contact';
 

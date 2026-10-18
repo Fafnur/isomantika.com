@@ -108,6 +108,8 @@ yarn format          # Prettier
 - Кнопки и ссылки — атрибутные директивы на нативных элементах (`button[imkButton]`, `a[imkButton]`) с классами в
   `host`, без компонентов-обёрток.
 - Пустые `imports: []` и `host: {}` не пишем. Зависимости — `inject()` в `private readonly` поля.
+- Сервисы — `@Service()` (Angular 22), не `@Injectable({ providedIn: 'root' })`; подключаемые явно (`useClass`, `providers`)
+  — `@Service({ autoProvided: false })`.
 - Классы Tailwind — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов стилей.
 - Формы — Angular Signal Forms.
 - `localStorage` напрямую не трогаем — только `inject(LocalStorage)` из `@isomantika/core`: не бросает, на сервере и без

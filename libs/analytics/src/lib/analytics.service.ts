@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 
 import { ANALYTICS_CONFIG } from './analytics.config';
 
@@ -15,7 +15,7 @@ interface AnalyticsWindow extends Window {
  * The only analytics entry point: components call `pageView` and `event` and never know which counters exist.
  * Counters are loaded by `start()` after consent; before that every call is a no-op.
  */
-@Injectable({ providedIn: 'root' })
+@Service()
 export class AnalyticsService {
   private readonly config = inject(ANALYTICS_CONFIG);
   private readonly document = inject(DOCUMENT);

@@ -1,4 +1,4 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Service, signal } from '@angular/core';
 
 import { LocalStorage } from '@isomantika/core';
 
@@ -18,7 +18,7 @@ interface StoredConsent {
  * The visitor's choice about analytics cookies, kept in `LocalStorage` (in memory, until the page is closed, where the
  * browser storage is unavailable). Browser only: on the server nothing is read and the banner is never rendered.
  */
-@Injectable({ providedIn: 'root' })
+@Service()
 export class ConsentService {
   private readonly config = inject(ANALYTICS_CONFIG);
   private readonly storage = inject(LocalStorage);

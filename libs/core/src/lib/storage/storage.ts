@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Service } from '@angular/core';
 
 /**
  * The browser storage if it works: absent on the server, may be disabled or throw on access (private mode, blocked
@@ -62,7 +62,7 @@ export class MemoryStorage implements Storage {
  * `localStorage` that never throws: in memory on the server and where the browser storage is unavailable.
  * A failed write (quota) is dropped: the value just is not remembered.
  */
-@Injectable({ providedIn: 'root' })
+@Service()
 export class LocalStorage implements Storage {
   private readonly storage = getStorage('localStorage') ?? new MemoryStorage();
 

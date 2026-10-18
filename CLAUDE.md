@@ -44,7 +44,8 @@
 - `apps/site` — сайт (префикс селекторов `imk`).
 - `apps/site-e2e` — e2e.
 - `brandbook/` — брендбук (англ.): знак, цвета, шрифты, файлы логотипа; правила использования — в его `README.md`.
-- `libs/core` (`@isomantika/core`) — общее без UI: адреса `PATHS` и `toRoutes`, позже — метаданные, хранилище.
+- `libs/core` (`@isomantika/core`) — общее без UI: адреса `PATHS` и `toRoutes`, хранилище `LocalStorage`, позже —
+  метаданные.
 - `libs/ui/<имя>` (`@isomantika/ui/<имя>`) — по библиотеке на UI-элемент (кнопки, шапка, футер…).
 - `libs/<страница>/page` (`@isomantika/<страница>/page`) — по библиотеке на страницу; `index.ts` — `export default`
   компонента для `loadComponent`. В приложении — только конфиг и роуты.
@@ -109,6 +110,8 @@ yarn format          # Prettier
 - Пустые `imports: []` и `host: {}` не пишем. Зависимости — `inject()` в `private readonly` поля.
 - Классы Tailwind — в шаблонах и `host: { class: '…' }`. У компонентов нет своих файлов стилей.
 - Формы — Angular Signal Forms.
+- `localStorage` напрямую не трогаем — только `inject(LocalStorage)` из `@isomantika/core`: не бросает, на сервере и без
+  доступа к хранилищу работает в памяти.
 - Задача готова, когда `lint`, `test`, `build`, `e2e` зелёные; статус — в `docs/progress.md`.
 - Принятые решения и отступления от плана — в `docs/decisions.md`.
 - `README.md` — витрина на GitHub: сверху на английском дублирует тексты главной, ниже — раздел для разработчиков.

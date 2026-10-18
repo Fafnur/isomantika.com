@@ -1,5 +1,7 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 
+import { LocalStorage } from '@isomantika/core';
+
 import { ANALYTICS_CONFIG } from './analytics.config';
 
 /** Bump to ask everyone again (e.g. a new counter or a new purpose). */
@@ -13,12 +15,13 @@ interface StoredConsent {
 }
 
 /**
- * The visitor's choice about analytics cookies, kept in `localStorage`. Browser only: on the server nothing is read and
- * the banner is never rendered.
+ * The visitor's choice about analytics cookies, kept in `LocalStorage` (in memory, until the page is closed, where the
+ * browser storage is unavailable). Browser only: on the server nothing is read and the banner is never rendered.
  */
 @Injectable({ providedIn: 'root' })
 export class ConsentService {
   private readonly config = inject(ANALYTICS_CONFIG);
+  private readonly storage = inject(LocalStorage);
 
   /** At least one counter is configured: otherwise there is nothing to ask consent for. */
   readonly enabled = !!this.config.googleAnalyticsId || !!this.config.yandexMetrikaId;
@@ -33,7 +36,7 @@ export class ConsentService {
 
   /** Reads the stored choice. Called once in the browser. */
   restore(): void {
-    this.$analytics.set(readConsent()?.analytics ?? null);
+    this.$analytics.set(this.read()?.analytics ?? null);
     this.$restored.set(true);
   }
 
@@ -42,25 +45,18 @@ export class ConsentService {
   }
 
   choose(analytics: boolean): void {
-    writeConsent({ v: CONSENT_VERSION, analytics, at: new Date().toISOString() });
+    this.storage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({ v: CONSENT_VERSION, analytics, at: new Date().toISOString() }));
     this.$analytics.set(analytics);
     this.$reopened.set(false);
   }
-}
 
-function readConsent(): StoredConsent | null {
-  try {
-    const value = JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) ?? 'null') as StoredConsent | null;
-    return value?.v === CONSENT_VERSION && typeof value.analytics === 'boolean' ? value : null;
-  } catch {
-    return null;
-  }
-}
-
-function writeConsent(value: StoredConsent): void {
-  try {
-    localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(value));
-  } catch {
-    // Storage is unavailable (private mode, blocked cookies): the choice lasts until the page is closed.
+  private read(): StoredConsent | null {
+    try {
+      const value = JSON.parse(this.storage.getItem(CONSENT_STORAGE_KEY) ?? 'null') as StoredConsent | null;
+      return value?.v === CONSENT_VERSION && typeof value.analytics === 'boolean' ? value : null;
+    } catch {
+      // Not JSON: written by someone else or corrupted.
+      return null;
+    }
   }
 }

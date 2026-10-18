@@ -5,6 +5,7 @@ import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from 
 import { provideAnalytics } from '@isomantika/analytics';
 import { provideSiteNavigation } from '@isomantika/core';
 
+import { environment } from '../environments/environment';
 import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -17,6 +18,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
     provideSiteNavigation(),
-    provideAnalytics(),
+    provideAnalytics(environment.analytics),
   ],
 };

@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 test('icons and the manifest from <head> are served', async ({ page, request }) => {
   await page.goto('/');

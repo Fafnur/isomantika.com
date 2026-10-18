@@ -1,16 +1,4 @@
-import { expect, Page, test } from '@playwright/test';
-
-/**
- * The language menu opens only after hydration: browser-only parts (like the language hint) have rendered by then.
- */
-async function waitForHydration(page: Page): Promise<void> {
-  await page
-    .getByRole('banner')
-    .getByRole('button', { name: /language|язык|idioma/i })
-    .click();
-  await expect(page.getByRole('menu')).toBeVisible();
-  await page.keyboard.press('Escape');
-}
+import { expect, test, waitForHydration } from './fixtures';
 
 test.describe('links', () => {
   test('internal links keep the trailing slash after navigation and reload', async ({ page }) => {

@@ -301,3 +301,16 @@ libs/home/page --name=home/page`.
   исходник знака владельца и пакет логотипа (`logo/`: знак, вертикальная и горизонтальная связки, ч/б и цвет; SVG, PDF,
   PNG, JPG). Подпись — Cormorant Garamond 500, +0.04 em, в кривых.
 - **Без скриптов генерации:** файлы готовые, в `README.md` описано, чем и как сделаны; при смене знака — перегенерировать.
+
+## 2026-10-18 — ID счётчиков
+
+- **ID — только в production-сборке:** `apps/site/src/environments/environment.ts` (пустые ID) заменяется на
+  `environment.production.ts` через `fileReplacements`; `provideAnalytics(environment.analytics)` кладёт их в
+  `ANALYTICS_CONFIG`. На dev-сервере и в юнит-тестах баннера и счётчиков нет. `SITE.analytics` удалён.
+- **e2e идут по production-сборке**, поэтому баннер есть: фикстура `apps/site-e2e/src/fixtures.ts` обрывает запросы
+  к счётчикам и по умолчанию кладёт в `localStorage` «Отклонить»; `analytics.spec` (`consent: null`) проверяет баннер,
+  «Принять», «Отклонить» и отзыв согласия в футере.
+- **Настройки в кабинетах (рекомендованные):** Метрика — вебвизор, карта скроллинга и аналитика форм выключены, своё уведомление GDPR
+  выключено (есть наш баннер), приём данных только с `isomantika.com`, цели `store_click` и `contact_submit`
+  (JavaScript-событие). GA4 — просмотры по событиям истории браузера выключены (шлёт роутер), хранение 14 месяцев (как
+  в политике), Google Signals выключены, ключевые события `store_click` и `contact_submit`.

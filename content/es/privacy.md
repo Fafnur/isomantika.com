@@ -1,6 +1,6 @@
 ---
 title: Política de privacidad
-updated: 2026-10-15
+updated: 2026-10-21
 ---
 
 Esta política explica qué datos personales recopilamos cuando usas la aplicación móvil Isomantika (iOS y Android) y el
@@ -136,8 +136,9 @@ de la Comisión Europea o el Marco de Privacidad de Datos UE–EE. UU.
 
 - **Cuenta y lecturas**: mientras exista tu cuenta.
 - **Lecturas que eliminas de tu historial**: se borran de nuestra base de datos en un plazo de 48 horas.
-- **Cuando eliminas tu cuenta**: tu cuenta y todas tus lecturas se borran de inmediato. Si iniciaste sesión con Apple,
-  también revocamos el acceso de la aplicación a tu Apple ID.
+- **Cuando eliminas tu cuenta**: tu cuenta y todas tus lecturas se borran de inmediato. Si iniciaste sesión con Apple
+  en un iPhone o iPad, también revocamos el acceso de la aplicación a tu Apple ID. Si lo hiciste en Android, puedes
+  revocar ese acceso tú mismo en los ajustes de tu Apple ID, en «Iniciar sesión con Apple».
 - **Correos de soporte y mensajes del formulario**: un año después de nuestra última respuesta.
 - **Registros del servidor**: un periodo breve fijado por nuestros proveedores, normalmente no más de unas semanas.
 - **Copias de seguridad**: los datos borrados pueden permanecer poco tiempo en las copias de seguridad de la base de

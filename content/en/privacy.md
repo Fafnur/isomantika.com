@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-updated: 2026-10-15
+updated: 2026-10-21
 ---
 
 This Privacy Policy explains what personal data we collect when you use the Isomantika mobile app (iOS and Android)
@@ -132,7 +132,8 @@ Standard Contractual Clauses or the EU–U.S. Data Privacy Framework.
 - **Account and readings** — while your account exists.
 - **Readings you remove from your history** — deleted from our database within 48 hours.
 - **When you delete your account** — your account and all your readings are deleted immediately. If you signed in
-  with Apple, we also revoke the app's access to your Apple ID.
+  with Apple on an iPhone or iPad, we also revoke the app's access to your Apple ID. If you signed in with Apple on
+  Android, you can revoke this access yourself in your Apple ID settings, under Sign in with Apple.
 - **Support emails and contact form messages** — one year after our last reply.
 - **Server logs** — a short period set by our providers, usually no more than a few weeks.
 - **Backups** — deleted data may remain in database backups for a short time until they are overwritten.

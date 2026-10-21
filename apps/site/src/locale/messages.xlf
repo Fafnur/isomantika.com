@@ -446,11 +446,11 @@
         <note priority="1" from="description">Step 3</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="4011954482954457110" datatype="html">
-        <source> If you signed in with Apple, the app will ask you to confirm with Apple first. </source>
+      <trans-unit id="3076845460361603940" datatype="html">
+        <source> On iPhone and iPad, if you signed in with Apple, the app will then ask you to confirm with Apple: this disconnects the app from your Apple ID. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">16,20</context>
+          <context context-type="linenumber">16,21</context>
         </context-group>
         <note priority="1" from="description">Note for users who signed in with Apple</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -459,7 +459,7 @@
         <source>What is deleted</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
         <note priority="1" from="description">Section heading: what is deleted</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -468,7 +468,7 @@
         <source> Your account and all your readings are deleted immediately and permanently. This can&apos;t be undone. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">23,27</context>
+          <context context-type="linenumber">24,28</context>
         </context-group>
         <note priority="1" from="description">What deletion removes</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -477,7 +477,7 @@
         <source>What else we keep and for how long — see the Privacy Policy</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">30,35</context>
+          <context context-type="linenumber">31,36</context>
         </context-group>
         <note priority="1" from="description">Link to the data retention section of the privacy policy</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -486,7 +486,7 @@
         <source> No access to the app? </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
         <note priority="1" from="description">Section heading: no access to the app</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -495,7 +495,7 @@
         <source> Send us a deletion request through the form, or write to <x id="INTERPOLATION" equiv-text="{{ site.email }}"/> from the email address you used to sign in. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">40,42</context>
+          <context context-type="linenumber">41,43</context>
         </context-group>
         <note priority="1" from="description">How to request deletion without the app</note>
         <note priority="1" from="meaning">Delete account page</note>
@@ -504,7 +504,7 @@
         <source>Request deletion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
-          <context context-type="linenumber">48,50</context>
+          <context context-type="linenumber">49,51</context>
         </context-group>
         <note priority="1" from="description">Button to the contact form with the deletion topic</note>
         <note priority="1" from="meaning">Delete account page</note>

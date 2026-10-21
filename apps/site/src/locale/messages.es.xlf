@@ -372,9 +372,9 @@
         <note priority="1" from="description">Step 3</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
-      <trans-unit id="4011954482954457110" datatype="html">
-        <source> If you signed in with Apple, the app will ask you to confirm with Apple first. </source>
-        <target> Si iniciaste sesión con Apple, la aplicación te pedirá confirmarlo primero con Apple. </target>
+      <trans-unit id="3076845460361603940" datatype="html">
+        <source> On iPhone and iPad, if you signed in with Apple, the app will then ask you to confirm with Apple: this disconnects the app from your Apple ID. </source>
+        <target> En iPhone y iPad, si iniciaste sesión con Apple, la app te pedirá después que confirmes con Apple: así se desvinculará de tu Apple ID. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
           <context context-type="linenumber">16,20</context>

@@ -94,9 +94,9 @@
 
 - [x] Создать публичный репозиторий `isomantika.com` (переименован из `isomantika.com`); Settings → Pages → Source:
       GitHub Actions.
-- [ ] Свой сервер вместо GitHub Pages (`docs/hosting.md`): секреты `DEPLOY_*`, папки и nginx, DNS
+- [x] Свой сервер вместо GitHub Pages (`docs/hosting.md`): секреты `DEPLOY_*`, папки и nginx, DNS
       `A → 130.49.174.192` без `AAAA`, `www` → CNAME `isomantika.com`, сертификат Let's Encrypt, Pages — Unpublish.
-- [ ] MX для `isomantika.com`: переадресация `support@` на личную почту.
+- [x] MX для `isomantika.com`: переадресация `support@` на личную почту — ImprovMX (2026-10-23).
 - [x] Создать ресурс GA4 и счётчик Яндекс Метрики (вебвизор выключен) — ID понадобятся в 4.2.
 - [ ] Telegram-бот для уведомлений о сообщениях (токен и chat id — в секреты Supabase, задача A.2).
 

@@ -333,3 +333,22 @@ libs/home/page --name=home/page`.
   (аналитика 14 месяцев, краши 90 дней), Google в таблице получателей, идентификатор установки.
 - Исправлено устаревшее: Supabase — Германия (Франкфурт), не Ирландия (и в согласии); модель — DeepSeek V4.1 Flash
   через OpenRouter, страны обработки — США, Китай и другие (OpenRouter может направить запрос разным провайдерам).
+
+## 2026-10-23 — сайт на своём сервере вместо GitHub Pages
+
+- **GitHub Pages не выпустил сертификат для `isomantika.com`:** DNS верный (A/AAAA, `www`, TXT подтверждения видны
+  всем резолверам, CAA и DNSSEC нет), но проверка домена в профиле не проходит, Pages пишет `InvalidDNSError`,
+  на https отдаётся сертификат `*.github.io`. Без https не работают Production экрана согласия Google и
+  `CONTACT_ALLOWED_ORIGINS` приложения. Cloudflare из России недоступен.
+- **Сайт — на своём сервере владельца** (`130.49.174.192`, nginx 1.28), как fafn.ru: CI собирает и проверяет сайт,
+  job `deploy` отправляет **ту же сборку** (артефакт `site`, а не пересборку) rsync с `--delete` в
+  `/var/www/isomantika.com`. Секреты `DEPLOY_*` — как в репозитории `fafnur`. Деплой на `main` не отменяется новым
+  push (`cancel-in-progress` только для PR), чтобы rsync не обрывался на середине.
+- **Конфиг nginx — в репозитории** (`deploy/nginx/isomantika.com.conf`), на сервер копируется руками; шаги —
+  `docs/hosting.md`. В нём: http и `www` → `https://isomantika.com` (301), `/privacy` → `/privacy/` относительным
+  редиректом, своя 404 у каждой локали (`/ru/…` → `ru/404/`), `index.csr.html` закрыт, HSTS без preload, gzip.
+  Кэш: HTML и адреса со слешем — `no-cache`, бандлы с хешем — навсегда, sitemap/robots/манифест — час, остальное —
+  неделя. Проверено на `nginx:1.28` в Docker с собранным сайтом.
+- Сертификат — `certbot certonly --nginx`, как у fafn.ru: плагин сам проходит проверку через nginx, продлевает
+  `certbot.timer`. Деплоит пользователь `developer` своим ключом `isomantika-deploy` (не общим с fafnur).
+- `404.html` в корне остаётся для `yarn serve` и e2e; e2e по-прежнему гоняются по `http-server`, не по nginx.

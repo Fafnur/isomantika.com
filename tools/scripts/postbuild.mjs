@@ -1,7 +1,8 @@
 /**
- * After `build-angular`: files GitHub Pages needs next to the prerendered pages.
+ * After `build-angular`: files served next to the prerendered pages.
  *
- * - `404.html` — the English 404 page; Pages serves only this file for unknown URLs.
+ * - `404.html` — the English 404 page for static servers with a single 404 file (`yarn serve`);
+ *   nginx serves each locale's own `404/index.html`.
  * - `sitemap.xml` — every indexable page of every locale with `xhtml:link` hreflang alternates. Built from the
  *   prerendered HTML itself (canonical, `hreflang`, `robots: noindex`), so pages, locales and the domain are never
  *   listed twice.

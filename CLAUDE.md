@@ -1,7 +1,7 @@
 # isomantika.com
 
 Сайт мобильного приложения Isomantika (AI-таро): маркетинговая страница, юридические документы, поддержка,
-форма обратной связи. Чистая статика: Angular SSG → GitHub Pages. Полный план — `docs/plan.md`.
+форма обратной связи. Чистая статика: Angular SSG → свой сервер (nginx, `docs/hosting.md`). Полный план — `docs/plan.md`.
 
 ## Стек
 
@@ -62,7 +62,7 @@
 ```sh
 yarn start           # nx serve site — dev-сервер, только en
 yarn build           # nx build site — все локали + 404.html
-yarn serve           # nx serve-static site — собранная статика, как на GitHub Pages
+yarn serve           # nx serve-static site — собранная статика (404 — общий `404.html`)
 yarn extract-i18n    # nx extract-i18n site
 yarn test            # unit-тесты всех проектов
 yarn lint            # линт всех проектов с --fix

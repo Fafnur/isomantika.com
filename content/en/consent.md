@@ -1,6 +1,6 @@
 ---
 title: Consent to the Processing of Personal Data
-updated: 2026-10-15
+updated: 2026-10-23
 ---
 
 This consent applies to messages sent through the contact form at isomantika.com. By ticking the consent box and
@@ -27,7 +27,7 @@ delete and destroy it — with or without automated means.
 
 ## Who processes the data on the operator's behalf
 
-- Supabase, Inc. — stores messages (servers in the EU, Ireland);
+- Supabase, Inc. — stores messages (servers in the EU, Germany);
 - Telegram — delivers a notification with the message to the operator's private chat;
 - the operator's email service provider — to send the reply.
 

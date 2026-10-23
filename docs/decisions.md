@@ -349,5 +349,6 @@ libs/home/page --name=home/page`.
   редиректом, своя 404 у каждой локали (`/ru/…` → `ru/404/`), `index.csr.html` закрыт, HSTS без preload, gzip.
   Кэш: HTML и адреса со слешем — `no-cache`, бандлы с хешем — навсегда, sitemap/robots/манифест — час, остальное —
   неделя. Проверено на `nginx:1.28` в Docker с собранным сайтом.
-- Сертификат — certbot `--webroot` в `/var/www/certbot` (вне папки сайта: rsync `--delete` его не трогает).
+- Сертификат — `certbot certonly --nginx`, как у fafn.ru: плагин сам проходит проверку через nginx, продлевает
+  `certbot.timer`. Деплоит пользователь `developer` своим ключом `isomantika-deploy` (не общим с fafnur).
 - `404.html` в корне остаётся для `yarn serve` и e2e; e2e по-прежнему гоняются по `http-server`, не по nginx.

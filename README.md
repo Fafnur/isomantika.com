@@ -46,7 +46,7 @@ This app is made for entertainment. The app is intended for users aged 18 and ov
 ## About this repository
 
 This is the source of the [isomantika.com](https://isomantika.com) website: a static site built with Angular (prerendered,
-SSG) in an Nx monorepo and deployed to GitHub Pages.
+SSG) in an Nx monorepo and served by nginx on our own server.
 
 Requirements: Node.js 24 (`.nvmrc`), Yarn 4 via Corepack (`corepack enable`).
 
@@ -54,7 +54,7 @@ Requirements: Node.js 24 (`.nvmrc`), Yarn 4 via Corepack (`corepack enable`).
 yarn install
 yarn start    # dev server, http://localhost:4200
 yarn build    # static site in dist/apps/site/browser
-yarn serve    # build and serve the static site (like GitHub Pages)
+yarn serve    # build and serve the static site (as in production)
 yarn check    # lint, test, build, e2e
 ```
 

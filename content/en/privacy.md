@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-updated: 2026-10-21
+updated: 2026-10-23
 ---
 
 This Privacy Policy explains what personal data we collect when you use the Isomantika mobile app (iOS and Android)
@@ -37,6 +37,9 @@ When you make a reading, we store: the spread type, your question (if you wrote 
 drawn, the interpretation, the app language, and the date and time. We use your readings to show your history and to
 count your daily limit.
 
+If you rate an interpretation (👍 or 👎, with optional reasons), we store the rating with the reading, together with
+which AI model wrote the interpretation. We use ratings to improve the quality of interpretations.
+
 **Please do not include sensitive information in your questions**, such as health details, information about other
 people that they would not want shared, or anything that identifies you. The service does not need it.
 
@@ -59,6 +62,21 @@ Our servers and service providers automatically process technical data needed to
 secure: IP address, request time, device and operating system type, and error information. This data is kept in
 server logs for a short period.
 
+### App analytics and crash reports
+
+The app uses Firebase Analytics and Firebase Crashlytics, provided by Google:
+
+- **Analytics** — which screens you open and what you do in the app: which spreads you choose and complete, errors,
+  ratings, which cards and spreads you open in the reference, changes to settings; the app version, device and
+  operating system type, language, approximate country, and how you found the app in the store. We do **not** send
+  your questions, the interpretations or your email address. Analytics uses an app instance identifier, not your
+  account. You can turn analytics off in the app: Settings → About → Share usage statistics.
+- **Crash reports** — when the app crashes or runs into an error: details of the error, the app version, device and
+  operating system type, and your account identifier, so that we can match a problem you report to support. Crash
+  reports are sent even if analytics is turned off, because they are needed to keep the app working.
+
+We do not use the advertising identifier, do not show ads and do not use this data for advertising.
+
 ### Website analytics (only with your consent)
 
 If you click "Accept" in the cookie banner on isomantika.com, we use Google Analytics and Yandex Metrica to understand
@@ -68,13 +86,13 @@ Session recording (Yandex Metrica Webvisor) is turned off.
 
 ### Data stored only on your device
 
-Your language and card back choices are stored only on your device and are never sent to us. The app also stores a
+Your language, card back and analytics choices are stored only on your device and are never sent to us. The app also stores a
 sign-in session token on your device so that you stay signed in.
 
 ### What we do not collect
 
 We do not collect your precise location, contacts, photos, files, payment information or advertising identifier.
-The app has no analytics, advertising or crash-reporting tools.
+The app has no advertising.
 
 ## How and why we use your data
 
@@ -85,7 +103,9 @@ The app has no analytics, advertising or crash-reporting tools.
 | Applying daily limits, preventing abuse, keeping the service secure | Account data, readings, technical data | Our legitimate interest in a stable and fair service |
 | Answering your support requests | Support messages, account identifier | Performance of a contract and our legitimate interest |
 | Answering messages from the contact form | Contact form data | Your consent |
-| Understanding how the website is used | Analytics data | Your consent |
+| Understanding how the app is used and improving it | App analytics, ratings | Our legitimate interest in improving the service; you can turn analytics off in the app |
+| Finding and fixing crashes and errors | Crash reports | Our legitimate interest in a working app |
+| Understanding how the website is used | Website analytics data | Your consent |
 | Complying with the law | Any data, as required | Legal obligation |
 
 We do not use your data for automated decisions that have legal or similarly significant effects on you.
@@ -96,7 +116,8 @@ Interpretations are written by an artificial intelligence language model. To cre
 question, the cards drawn, the spread type and the language. **We do not send your name, email address or account
 identifier.**
 
-The request goes through OpenRouter, a service that routes it to a model provider (currently Anthropic). In our
+The request goes through OpenRouter, a service that routes it to a model provider (currently the DeepSeek V4.1 Flash model, which OpenRouter may run on servers of different hosting
+providers). In our
 OpenRouter settings we have excluded providers that use requests to train their models. Providers may keep requests
 for a limited time under their own policies to prevent abuse.
 
@@ -106,9 +127,9 @@ We share data only with service providers that help us run Isomantika, and only 
 
 | Provider | What it does | Where data is processed |
 |---|---|---|
-| Supabase, Inc. | Sign-in, database, server functions | Servers in the EU (Ireland) |
-| OpenRouter, Inc. and the model provider it routes to (currently Anthropic, PBC) | Generating interpretations | USA |
-| Google LLC | Sign in with Google; Google Analytics on the website (with consent) | USA and other countries |
+| Supabase, Inc. | Sign-in, database, server functions | Servers in the EU (Germany) |
+| OpenRouter, Inc. and the provider it routes the request to (currently the DeepSeek V4.1 Flash model) | Generating interpretations | USA, China and other countries |
+| Google LLC | Sign in with Google; Firebase Analytics and Crashlytics in the app; Google Analytics on the website (with consent) | USA and other countries |
 | Apple Inc. | Sign in with Apple | USA and other countries |
 | YANDEX LLC | Yandex Metrica on the website (with consent) | Russia |
 | GitHub, Inc. | Website hosting | USA and other countries |
@@ -121,7 +142,8 @@ We do not sell or rent personal data and do not share it for advertising.
 
 ## International transfers
 
-We are based in Russia, and our service providers are located in the EU, the USA, Russia and other countries. Your
+We are based in Russia, and our service providers are located in the EU, the USA, China, Russia and other
+countries. Your
 data may therefore be processed outside your country, including in countries that do not provide the same level of
 data protection as yours. For users in the EU, EEA and UK, transfers are necessary to provide the service you asked
 for, and where available they rely on safeguards offered by our providers, such as the European Commission's
@@ -137,6 +159,8 @@ Standard Contractual Clauses or the EU–U.S. Data Privacy Framework.
 - **Support emails and contact form messages** — one year after our last reply.
 - **Server logs** — a short period set by our providers, usually no more than a few weeks.
 - **Backups** — deleted data may remain in database backups for a short time until they are overwritten.
+- **App analytics** — 14 months.
+- **Crash reports** — 90 days.
 - **Website analytics** — according to the retention settings of Google Analytics (no more than 14 months) and Yandex
   Metrica.
 
@@ -165,7 +189,8 @@ storage — this is needed for the site to work and is not used to track you. An
 `_ga_*`, `_ym_*`) are set only after you click "Accept". You can change your choice at any time with the "Cookie
 settings" link at the bottom of every page.
 
-**App.** The app does not use cookies. It stores a sign-in session token and your settings on your device.
+**App.** The app does not use cookies. It stores a sign-in session token and your settings on your device. Firebase
+stores an app instance identifier on your device for analytics and crash reports.
 
 ## Age restriction
 

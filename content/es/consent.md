@@ -1,6 +1,6 @@
 ---
 title: Consentimiento para el tratamiento de datos personales
-updated: 2026-10-15
+updated: 2026-10-23
 ---
 
 Este consentimiento se aplica a los mensajes enviados a través del formulario de contacto de isomantika.com. Al marcar
@@ -30,7 +30,7 @@ automatizados.
 
 ## Quién trata los datos por cuenta del responsable
 
-- Supabase, Inc.: almacena los mensajes (servidores en la UE, Irlanda);
+- Supabase, Inc.: almacena los mensajes (servidores en la UE, Alemania);
 - Telegram: entrega un aviso con el mensaje al chat privado del responsable;
 - el proveedor de correo del responsable: para enviar la respuesta.
 

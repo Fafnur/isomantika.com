@@ -352,3 +352,11 @@ libs/home/page --name=home/page`.
 - Сертификат — `certbot certonly --nginx`, как у fafn.ru: плагин сам проходит проверку через nginx, продлевает
   `certbot.timer`. Деплоит пользователь `developer` своим ключом `isomantika-deploy` (не общим с fafnur).
 - `404.html` в корне остаётся для `yarn serve` и e2e; e2e по-прежнему гоняются по `http-server`, не по nginx.
+
+## 2026-10-23 — переезд выполнен, почта `support@`
+
+- Сайт отдаётся с `130.49.174.192`, сертификат Let's Encrypt (до продления — 2027-01-21), GitHub Pages отключён.
+  Первый деплой из CI прошёл.
+- **Почта `support@isomantika.com` — ImprovMX:** MX `mx1`/`mx2.improvmx.com`, SPF `include:spf.improvmx.com`, DKIM
+  (`dkimprovmx1`/`2._domainkey` → CNAME), DMARC `p=reject`. Отправлять от адресов домена — только через SMTP ImprovMX
+  или после добавления нового отправителя в SPF/DKIM.

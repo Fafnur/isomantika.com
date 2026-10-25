@@ -1,8 +1,11 @@
-<div class="mx-auto grid w-40 grid-cols-3 grid-rows-3 gap-2" aria-hidden="true">
+<div class="relative" [style.width.px]="$width()" [style.height.px]="$rowsHeight()" aria-hidden="true">
   @for (slot of $slots(); track slot.label) {
     <div
-      class="flex aspect-[2/3] items-center justify-center rounded-lg border border-gold/60 bg-surface-high font-display text-lg font-bold text-gold shadow-md shadow-black/30"
-      [style.grid-area]="slot.area"
+      class="absolute flex items-center justify-center rounded-md border border-gold/70 bg-surface-high font-display text-base font-bold text-gold"
+      [style.left.px]="slot.left"
+      [style.top.px]="slot.top"
+      [style.width.px]="cardWidth"
+      [style.height.px]="cardHeight"
     >
       {{ slot.label }}
     </div>

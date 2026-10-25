@@ -1,12 +1,17 @@
 const { join } = require('node:path');
 const typography = require('@tailwindcss/typography');
 
+const displayFont = ['"Cormorant Garamond"', 'Georgia', 'serif'];
+
+/** A theme color outside of utilities, e.g. in the `prose` theme. */
+const color = (name) => `rgb(var(--color-${name}))`;
+
 /**
  * Tailwind CSS v3: v4 relies on `@layer`, `@property` and `color-mix()` and breaks in the older browsers from `.browserslistrc`.
  * Picked up by `@angular/build` automatically (no PostCSS config needed).
  *
- * Design tokens mirror the app (`lib/core/theme/`). Radii 8 / 16 / 24 / pill are Tailwind's `rounded-lg`, `-2xl`, `-3xl`, `-full`;
- * the 4 px spacing grid is Tailwind's default scale.
+ * Design tokens mirror the app (`lib/core/theme/`): colors are CSS variables of the dark and light themes (`styles.scss`).
+ * Radii 8 / 16 / 24 / pill are Tailwind's `rounded-lg`, `-2xl`, `-3xl`, `-full`; the 4 px spacing grid is Tailwind's default scale.
  *
  * @type {import('tailwindcss').Config}
  */
@@ -14,47 +19,51 @@ module.exports = {
   content: [join(__dirname, 'src/**/*.{html,ts}'), join(__dirname, '../../libs/**/*.{html,ts}')],
   theme: {
     extend: {
-      colors: {
-        background: '#17182B',
-        surface: '#212338',
-        'surface-high': '#2C2E48',
-        outline: '#3D3F5E',
-        'text-primary': '#F3E9D8',
-        'text-secondary': '#C9BFB0',
-        'text-muted': '#9A92A4',
-        gold: '#E3C07E',
-        'on-gold': '#2A2118',
-        sage: '#8DB5A2',
-        rose: '#E3A097',
-        wine: '#6B2E3A',
-        error: '#E5735F',
-      },
+      // Values are in `styles.scss` per theme; `rgba()` with a comma triplet works in old browsers, unlike `rgb(r g b / a)`.
+      colors: Object.fromEntries(
+        [
+          'background',
+          'surface',
+          'surface-high',
+          'outline',
+          'text-primary',
+          'text-secondary',
+          'text-muted',
+          'gold',
+          'on-gold',
+          'sage',
+          'rose',
+          'wine',
+          'error',
+          'mark',
+        ].map((name) => [name, `rgba(var(--color-${name}), <alpha-value>)`]),
+      ),
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        display: displayFont,
         text: ['Manrope', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
       },
-      typography: ({ theme }) => ({
+      typography: () => ({
         // `prose` for legal texts: palette of the site instead of Tailwind grays.
         DEFAULT: {
           css: {
-            '--tw-prose-body': theme('colors.text-secondary'),
-            '--tw-prose-headings': theme('colors.text-primary'),
-            '--tw-prose-lead': theme('colors.text-secondary'),
-            '--tw-prose-links': theme('colors.gold'),
-            '--tw-prose-bold': theme('colors.text-primary'),
-            '--tw-prose-counters': theme('colors.text-muted'),
-            '--tw-prose-bullets': theme('colors.outline'),
-            '--tw-prose-hr': theme('colors.outline'),
-            '--tw-prose-quotes': theme('colors.text-primary'),
-            '--tw-prose-quote-borders': theme('colors.gold'),
-            '--tw-prose-captions': theme('colors.text-muted'),
-            '--tw-prose-code': theme('colors.text-primary'),
-            '--tw-prose-pre-code': theme('colors.text-primary'),
-            '--tw-prose-pre-bg': theme('colors.surface'),
-            '--tw-prose-th-borders': theme('colors.outline'),
-            '--tw-prose-td-borders': theme('colors.outline'),
+            '--tw-prose-body': color('text-secondary'),
+            '--tw-prose-headings': color('text-primary'),
+            '--tw-prose-lead': color('text-secondary'),
+            '--tw-prose-links': color('gold'),
+            '--tw-prose-bold': color('text-primary'),
+            '--tw-prose-counters': color('text-muted'),
+            '--tw-prose-bullets': color('outline'),
+            '--tw-prose-hr': color('outline'),
+            '--tw-prose-quotes': color('text-primary'),
+            '--tw-prose-quote-borders': color('gold'),
+            '--tw-prose-captions': color('text-muted'),
+            '--tw-prose-code': color('text-primary'),
+            '--tw-prose-pre-code': color('text-primary'),
+            '--tw-prose-pre-bg': color('surface'),
+            '--tw-prose-th-borders': color('outline'),
+            '--tw-prose-td-borders': color('outline'),
             // Cormorant has a small x-height: headings are larger than the prose defaults.
-            'h1, h2, h3, h4': { fontFamily: theme('fontFamily.display').join(', '), fontWeight: '700' },
+            'h1, h2, h3, h4': { fontFamily: displayFont.join(', '), fontWeight: '700' },
             h1: { fontSize: '2.5em' },
             h3: { fontSize: '1.5em' },
             // Direct links to `#section` (before hydration) stop below the sticky header.

@@ -8,8 +8,11 @@
     </p>
     <h1 class="text-5xl sm:text-6xl lg:text-7xl" i18n="Home page|Main heading">Ask a question. Draw the cards.</h1>
     <p class="max-w-xl text-lg text-text-secondary md:text-xl" i18n="Home page|Subheading under the main heading">
-      Isomantika reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in English,
-      Russian or Spanish.
+      A tarot reading for your question, not a generic horoscope: every card is read in its place in the spread, then what it all means for
+      you.
+    </p>
+    <p class="text-sm font-semibold text-text-muted" i18n="Home page|Short facts under the subheading, separated by middle dots">
+      12 spreads · The original 1909 deck · Free, no ads
     </p>
     <imk-store-buttons />
   </div>
@@ -58,25 +61,31 @@
   </ol>
 </section>
 
-<!-- Spreads -->
+<!-- Spreads: sections and order as on the Home screen of the app -->
 <section class="py-16 lg:py-24" [id]="fragments.spreads" aria-labelledby="spreads-heading">
-  <h2 id="spreads-heading" class="text-center" i18n="Home page|Section heading">Three spreads</h2>
-  <div class="mt-12 grid gap-6 lg:grid-cols-3">
-    @for (spread of spreads; track spread.type) {
-      <article class="flex flex-col rounded-3xl border border-outline bg-surface p-6">
-        <imk-spread-diagram [type]="spread.type" />
-        <h3 class="mt-6 text-2xl">{{ spread.title }}</h3>
-        <p class="mt-2 text-text-secondary">{{ spread.description }}</p>
-        <ol class="mt-4 space-y-1 text-sm text-text-muted">
-          @for (position of spread.positions; track position; let i = $index) {
-            <li>
-              <span class="font-semibold text-gold">{{ i + 1 }}</span> · {{ position }}
-            </li>
-          }
-        </ol>
-      </article>
-    }
-  </div>
+  <h2 id="spreads-heading" class="text-center" i18n="Home page|Section heading">12 spreads</h2>
+  <p class="mx-auto mt-4 max-w-xl text-center text-text-secondary" i18n="Home page|Text under the spreads heading">
+    From one card to seven: for a quick answer, love, choices and work.
+  </p>
+  @for (section of sections; track section.title) {
+    <h3 class="mt-12 font-text text-sm font-semibold uppercase tracking-widest text-gold">{{ section.title }}</h3>
+    <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      @for (spread of section.spreads; track spread.type) {
+        <article class="flex flex-col rounded-3xl border border-outline bg-surface p-6">
+          <imk-spread-diagram [type]="spread.type" />
+          <h4 class="mt-6">{{ spread.title }}</h4>
+          <p class="mt-2 text-text-secondary">{{ spread.description }}</p>
+          <ol class="mt-4 space-y-1 text-sm text-text-muted">
+            @for (position of spread.positions; track $index) {
+              <li>
+                <span class="font-semibold text-gold">{{ $index + 1 }}</span> · {{ position }}
+              </li>
+            }
+          </ol>
+        </article>
+      }
+    </div>
+  }
 </section>
 
 <!-- Features -->
@@ -92,26 +101,49 @@
   </ul>
 </section>
 
-<!-- Screenshots: hidden until files are listed in SITE.screenshots -->
-@if (screenshots.length) {
-  <section class="py-16 lg:py-24" aria-labelledby="screens-heading">
-    <h2 id="screens-heading" class="text-center" i18n="Home page|Section heading">Inside the app</h2>
-    <ul class="-mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:-mx-8 md:px-8">
-      @for (shot of screenshots; track shot.name) {
-        <li class="w-60 shrink-0 snap-center">
+<!-- The store preview video and screenshots in the language of the page -->
+<section class="py-16 lg:py-24" aria-labelledby="screens-heading">
+  <h2 id="screens-heading" class="text-center" i18n="Home page|Section heading">Inside the app</h2>
+  <!-- Focusable: the strip scrolls sideways, keyboard users scroll it with arrows. -->
+  <ul
+    class="-mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:-mx-8 md:px-8"
+    tabindex="0"
+    aria-labelledby="screens-heading"
+  >
+    <li class="w-60 shrink-0 snap-center">
+      <figure>
+        <video
+          class="h-auto w-full rounded-3xl border border-outline bg-surface"
+          [src]="'/video/preview-' + locale + '.mp4'"
+          [poster]="'/video/preview-' + locale + '.webp'"
+          width="240"
+          height="520"
+          controls
+          playsinline
+          preload="none"
+        ></video>
+        <figcaption class="mt-3 text-center text-sm text-text-secondary" i18n="Home page|Caption of the app preview video">
+          The app in 30 seconds
+        </figcaption>
+      </figure>
+    </li>
+    @for (shot of screenshots; track shot.name) {
+      <li class="w-60 shrink-0 snap-center">
+        <figure>
           <img
-            class="rounded-3xl border border-outline"
-            [src]="'/screenshots/en/' + shot.name + '.webp'"
+            class="h-auto w-full rounded-3xl border border-outline"
+            [src]="'/screenshots/' + locale + '/' + shot.name + '.webp'"
             width="240"
-            height="520"
+            height="522"
             alt=""
             loading="lazy"
           />
-        </li>
-      }
-    </ul>
-  </section>
-}
+          <figcaption class="mt-3 text-center text-sm text-text-secondary">{{ shot.caption }}</figcaption>
+        </figure>
+      </li>
+    }
+  </ul>
+</section>
 
 <!-- Short FAQ -->
 <section class="mx-auto max-w-3xl py-16 lg:py-24" aria-labelledby="faq-heading">

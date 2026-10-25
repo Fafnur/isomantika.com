@@ -34,7 +34,8 @@
       "@isomantika/legal/content": ["./libs/legal/content/src/index.ts"],
       "@isomantika/ui/store-buttons": ["./libs/ui/store-buttons/src/index.ts"],
       "@isomantika/analytics": ["./libs/analytics/src/index.ts"],
-      "@isomantika/ui/consent-banner": ["./libs/ui/consent-banner/src/index.ts"]
+      "@isomantika/ui/consent-banner": ["./libs/ui/consent-banner/src/index.ts"],
+      "@isomantika/ui/theme-menu": ["./libs/ui/theme-menu/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

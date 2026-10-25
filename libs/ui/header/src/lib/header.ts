@@ -6,13 +6,14 @@ import { filter } from 'rxjs';
 
 import { FRAGMENTS, PATHS, SITE } from '@isomantika/core';
 import { LanguageMenu } from '@isomantika/ui/language-menu';
+import { ThemeMenu } from '@isomantika/ui/theme-menu';
 
 /**
- * Site header: mark and wordmark, navigation (a disclosure menu on mobile), language menu.
+ * Site header: mark and wordmark, navigation (a disclosure menu on mobile), theme and language menus.
  */
 @Component({
   selector: 'imk-header',
-  imports: [NgTemplateOutlet, RouterLink, LanguageMenu],
+  imports: [NgTemplateOutlet, RouterLink, LanguageMenu, ThemeMenu],
   templateUrl: './header.html',
   host: {
     role: 'banner',

@@ -2,32 +2,51 @@
 
 **[isomantika.com](https://isomantika.com)** · tarot app for iOS and Android · English, Русский, Español
 
-Isomantika reads the classic Rider–Waite tarot for your question: every card in its place, in a calm interpretation — in
-English, Russian or Spanish.
+A tarot reading for your question, not a generic horoscope: every card is read in its place in the spread, then what it
+all means for you.
+
+12 spreads · The original 1909 deck · Free, no ads
 
 ## How it works
 
 1. **Ask your question** — about love, work or a choice you are facing — in your own words.
-2. **Draw the cards** — pick a spread and draw from a shuffled deck of 78 cards.
-3. **Read the interpretation** — every card is read in its position and tied to your question.
+2. **Draw the cards** — pick one of 12 spreads, draw your cards from a fan of the shuffled deck and watch them turn over.
+3. **Read the interpretation** — every card is read in its place in the spread, then what it all means for you. The
+   reading is finished and saved even if you close the app.
 
-## Three spreads
+## 12 spreads
 
-- **Card of the Day** — a hint for the day ahead.
-- **Three Cards** — past, present and future of your question.
-- **The Cross** — the heart of the matter, what to avoid, what to do and the outcome.
+From one card to seven: for a quick answer, love, choices and work.
+
+- **Quick answer:** Card of the Day — a hint for the day ahead; Yes or No — a clear answer to your question.
+- **Love:** Their Feelings — what they think, feel and intend; Relationship — you, your partner, your bond, what stands
+  in the way and advice; Reconciliation — after a breakup or quarrel: is there a chance to get back together; New Love —
+  what holds you back, what draws love, where to look and advice.
+- **Situation and choice:** Three Cards — past, present and future of your question; The Cross — the heart of the
+  matter, what to avoid, what to do and the outcome; Two Paths — where each of two options leads; Horseshoe — past,
+  present and future, how to act, people around you, challenges and the outcome; Wish — will your wish come true, and
+  what will help.
+- **Work:** Career — where you are, the obstacle, your strength, advice and outlook.
 
 ## What makes it different
 
 - **An interpretation for your question.** Not a list of card meanings: each card is read in its place in the spread
   and tied to what you asked.
-- **The classic Rider–Waite deck.** All 78 cards of the 1909 Rider–Waite deck, the one most tarot books are written
-  about.
-- **Your card back.** Choose one of five card back designs.
+- **Yes or No, decided by the cards.** The answer comes from the cards you draw, not from AI guesswork: the same cards
+  always give the same answer, and the reading explains it.
+- **Two Paths, by name.** Name both options yourself, for example «Stay» and «Move», and the reading talks about each of
+  them by name.
+- **The original 1909 deck.** All 78 cards of the original 1909 Rider–Waite deck, the one most tarot readers learn from,
+  toned to the app colors. Choose one of five card backs.
+- **A guide to every card.** All 78 cards with keywords and meanings — in general, in love, at work — and advice, plus
+  every spread explained position by position. Tap a card in a reading to open it.
+- **History of readings.** Every reading is saved and grouped by day, so you can come back to it when things unfold.
 - **Three languages.** The app and the interpretations are in English, Russian and Spanish.
-- **History of readings.** Every reading is saved, so you can come back to it later.
+- **Dark or light.** A dark theme like the night sky, a light one like old parchment — or let your phone decide.
+- **Your questions stay private.** Sign in with Google or Apple. Your questions and readings never go to analytics, and
+  you can turn analytics off.
 
-Every day you get 1 Card of the Day and 3 readings with a question; the limits reset at midnight UTC.
+Every day you get 2 Cards of the Day and 6 readings in the other spreads; the limits reset at midnight UTC.
 
 ## Get the app
 

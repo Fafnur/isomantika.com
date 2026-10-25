@@ -65,7 +65,7 @@ cap height is 30 % of the mark height.
 | Dusk      | `#9A92A4` | 154, 146, 164 | Secondary text, captions                           |
 
 Contrast on midnight: gold 10.1 : 1, parchment 14.5 : 1, sand 9.6 : 1 (WCAG AA and AAA for normal text). The full
-UI palette is in [`apps/site/tailwind.config.js`](../apps/site/tailwind.config.js). There is no light theme. For print,
+UI palette, including the light theme of the site and the app, is in [`apps/site/src/styles.scss`](../apps/site/src/styles.scss). For print,
 ask the printer to match the HEX values — no official CMYK or Pantone values exist yet.
 
 ## Typography

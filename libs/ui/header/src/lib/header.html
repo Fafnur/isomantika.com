@@ -1,6 +1,6 @@
 <div class="mx-auto flex h-16 max-w-6xl items-center gap-8 px-4 md:px-8">
   <a class="flex items-center gap-3 text-text-primary no-underline hover:no-underline" [routerLink]="paths.home">
-    <img class="h-8 w-auto" src="/mark.svg" alt="" width="26" height="32" />
+    <span class="mark block h-8 w-[26px] bg-mark" aria-hidden="true"></span>
     <span class="font-display text-2xl font-bold">{{ site.name }}</span>
   </a>
 
@@ -12,6 +12,7 @@
     <!-- CDK Menu is ~22 KB gzip: hydrated when the browser is idle, after the first paint. Not «on interaction»: Enter
          fires keydown and click, both get replayed, and the menu opens and closes at once. -->
     @defer (hydrate on idle) {
+      <imk-theme-menu />
       <imk-language-menu />
     }
     <button

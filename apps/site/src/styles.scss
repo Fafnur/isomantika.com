@@ -1,8 +1,185 @@
 @use 'sass:list';
+@use 'sass:map';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Themes as in the app (`lib/core/theme/app_colors.dart`): «Night pastel» (dark, the default) and «Parchment» (light).
+// Channels without `rgb()`: Tailwind colors are `rgba(var(--color-*), alpha)` (see `tailwind.config.js`).
+// The theme is a class on `<html>` set before the first paint by the script in `index.html`: none — dark,
+// `theme-light`, `theme-system` — follows `prefers-color-scheme`.
+$themes: (
+  dark: (
+    background: (
+      23,
+      24,
+      43,
+    ),
+    surface: (
+      33,
+      35,
+      56,
+    ),
+    surface-high: (
+      44,
+      46,
+      72,
+    ),
+    outline: (
+      61,
+      63,
+      94,
+    ),
+    text-primary: (
+      243,
+      233,
+      216,
+    ),
+    text-secondary: (
+      201,
+      191,
+      176,
+    ),
+    text-muted: (
+      154,
+      146,
+      164,
+    ),
+    gold: (
+      227,
+      192,
+      126,
+    ),
+    on-gold: (
+      42,
+      33,
+      24,
+    ),
+    sage: (
+      141,
+      181,
+      162,
+    ),
+    rose: (
+      227,
+      160,
+      151,
+    ),
+    wine: (
+      107,
+      46,
+      58,
+    ),
+    error: (
+      229,
+      115,
+      95,
+    ),
+    // The brand gold, never on light surfaces (brandbook).
+    mark: (
+        227,
+        192,
+        126,
+      ),
+  ),
+  // Gold is darkened to bronze: the brand gold on light paper has a contrast of 1.7 : 1.
+  light: (
+      background: (
+        246,
+        239,
+        227,
+      ),
+      surface: (
+        252,
+        248,
+        241,
+      ),
+      surface-high: (
+        236,
+        226,
+        208,
+      ),
+      outline: (
+        211,
+        196,
+        170,
+      ),
+      text-primary: (
+        23,
+        24,
+        43,
+      ),
+      text-secondary: (
+        69,
+        64,
+        85,
+      ),
+      text-muted: (
+        102,
+        95,
+        114,
+      ),
+      gold: (
+        125,
+        91,
+        38,
+      ),
+      on-gold: (
+        255,
+        248,
+        236,
+      ),
+      sage: (
+        61,
+        104,
+        84,
+      ),
+      rose: (
+        153,
+        72,
+        64,
+      ),
+      wine: (
+        107,
+        46,
+        58,
+      ),
+      error: (
+        166,
+        58,
+        38,
+      ),
+      // Midnight ink: the mark on light surfaces (brandbook).
+      mark: (
+          23,
+          24,
+          43,
+        ),
+    ),
+);
+
+@mixin theme($name) {
+  color-scheme: $name;
+
+  @each $color, $channels in map.get($themes, $name) {
+    --color-#{$color}: #{list.nth($channels, 1)}, #{list.nth($channels, 2)}, #{list.nth($channels, 3)};
+  }
+}
+
+:root {
+  @include theme(dark);
+}
+
+:root.theme-light {
+  @include theme(light);
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-system {
+    @include theme(light);
+  }
+}
 
 // Fonts: `@fontsource` files copied to `/fonts/` with stable names (see `assets` in `project.json`) so that
 // `index.html` can preload Manrope. Subsets: latin (en, es) and cyrillic (ru). `woff2` without `-variations`:
@@ -101,13 +278,19 @@ $subsets: (
   // Night sky like in the mark: a few gold dots over a soft glow. Pure CSS, no images.
   .bg-stars {
     background-image:
-      radial-gradient(1.5px 1.5px at 12% 18%, rgba(227, 192, 126, 0.7), transparent),
-      radial-gradient(1px 1px at 28% 72%, rgba(227, 192, 126, 0.5), transparent),
-      radial-gradient(1.5px 1.5px at 47% 12%, rgba(227, 192, 126, 0.4), transparent),
-      radial-gradient(1px 1px at 63% 58%, rgba(227, 192, 126, 0.5), transparent),
-      radial-gradient(2px 2px at 81% 24%, rgba(227, 192, 126, 0.6), transparent),
-      radial-gradient(1px 1px at 92% 78%, rgba(227, 192, 126, 0.4), transparent),
-      radial-gradient(ellipse at 70% 40%, rgba(44, 46, 72, 0.9), transparent 60%);
+      radial-gradient(1.5px 1.5px at 12% 18%, rgba(var(--color-gold), 0.7), transparent),
+      radial-gradient(1px 1px at 28% 72%, rgba(var(--color-gold), 0.5), transparent),
+      radial-gradient(1.5px 1.5px at 47% 12%, rgba(var(--color-gold), 0.4), transparent),
+      radial-gradient(1px 1px at 63% 58%, rgba(var(--color-gold), 0.5), transparent),
+      radial-gradient(2px 2px at 81% 24%, rgba(var(--color-gold), 0.6), transparent),
+      radial-gradient(1px 1px at 92% 78%, rgba(var(--color-gold), 0.4), transparent),
+      radial-gradient(ellipse at 70% 40%, rgba(var(--color-surface-high), 0.9), transparent 60%);
+  }
+
+  // The mark in the theme's color (`bg-mark`): the SVG is a mask, its own fill does not matter.
+  .mark {
+    -webkit-mask: url('/mark.svg') center / contain no-repeat;
+    mask: url('/mark.svg') center / contain no-repeat;
   }
 }
 

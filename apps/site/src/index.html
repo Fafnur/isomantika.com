@@ -7,6 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#17182B" />
     <meta name="color-scheme" content="dark" />
+    <!-- The theme before the first paint, without Angular: the same key, classes and colors as `Theme` in
+         `@isomantika/ui/theme-menu`. No theme or no storage — the dark theme. -->
+    <script>
+      (function () {
+        var mode;
+        try {
+          mode = localStorage.getItem('isomantika.theme');
+        } catch (e) {}
+        if (mode !== 'light' && mode !== 'system') {
+          return;
+        }
+        var light = mode === 'light' || !!(window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches);
+        document.documentElement.className += ' theme-' + mode;
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', light ? '#F6EFE3' : '#17182B');
+        document.querySelector('meta[name="color-scheme"]').setAttribute('content', light ? 'light' : 'dark');
+      })();
+    </script>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

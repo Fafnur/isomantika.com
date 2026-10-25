@@ -7,7 +7,7 @@ test.describe('home page', () => {
     await expect(page.locator('h1')).toHaveText('Ask a question. Draw the cards.');
     await expect(page.locator('#features')).toBeAttached();
     await expect(page.locator('#spreads')).toBeAttached();
-    await expect(page.locator('#spreads article')).toHaveCount(3);
+    await expect(page.locator('#spreads article')).toHaveCount(12);
     await expect(page.getByText('This app is made for entertainment')).toBeVisible();
   });
 
@@ -19,10 +19,16 @@ test.describe('home page', () => {
     await expect(page.locator('img[src^="/badges/"]')).toHaveCount(0);
   });
 
-  test('hides the screenshot gallery until screenshots exist', async ({ page }) => {
-    await page.goto('/');
+  test('shows the video and screenshots in the language of the page', async ({ page, request }) => {
+    await page.goto('/es/');
 
-    await expect(page.locator('img[src^="/screenshots/"]')).toHaveCount(0);
+    const video = page.locator('video');
+    await expect(video).toHaveAttribute('src', '/video/preview-es.mp4');
+    await expect(video).toHaveAttribute('preload', 'none');
+    await expect(page.locator('img[src^="/screenshots/es/"]')).toHaveCount(6);
+    for (const src of ['/video/preview-es.mp4', '/video/preview-es.webp', '/screenshots/es/06.webp']) {
+      expect((await request.get(src)).status(), src).toBe(200);
+    }
   });
 
   test('header link to a section scrolls there from another page', async ({ page }) => {
